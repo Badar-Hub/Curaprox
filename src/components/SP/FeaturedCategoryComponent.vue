@@ -1,7 +1,7 @@
 <template>
   <div class="featured-category">
     <div class="left">
-      <img :src="leftImg" />
+      <img :src="require(`@/assets/img/${leftImg}`)" />
       <div class="text">
         <h2>ORTHODONTICS</h2>
         <h3>
@@ -36,7 +36,7 @@
           </p>
         </div>
       </div>
-      <img :src="rightImg" />
+      <img :src="require(`@/assets/img/${rightImg}`)" />
     </div>
   </div>
 </template>

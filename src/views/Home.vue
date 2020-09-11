@@ -3,8 +3,8 @@
     <Header />
     <ProFeaturedComponent />
     <FeaturedCategoryComponent
-      left-img="img/teaser-ortho.79413948.jpg"
-      right-img="img/cps-colors.1b9c0541.jpg"
+      left-img="teaser-ortho.jpg"
+      right-img="cps-colors.jpg"
     />
     <div class="oral-health">
       <h2>ORAL HEALTH, INSTRUCTIONS</h2>
@@ -114,8 +114,8 @@
     </div>-->
     <ProFeaturedComponent />
     <FeaturedCategoryComponent
-      left-img="img/teaser-ortho.79413948.jpg"
-      right-img="img/cps-colors.1b9c0541.jpg"
+      left-img="teaser-ortho.jpg"
+      right-img="cps-colors.jpg"
     />
   </div>
 </template>
