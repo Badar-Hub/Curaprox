@@ -3,19 +3,11 @@
     <div class="left">
       <img :src="require(`@/assets/img/${leftImg}`)" />
       <div class="text">
-        <h2>ORTHODONTICS</h2>
-        <h3>
-          BRUSHING
-          <br />YOUR TEETH
-          <br />WITH CLAS
-        </h3>
+        <h2>{{h2Text}}</h2>
+        <h3>{{h3Text}}</h3>
         <div class="ptext">
-          <p>
-            <a href="#">Learn More</a>
-          </p>
-          <p>
-            <a href="#">Buy</a>
-          </p>
+          <p>{{a1Text}}</p>
+          <p>{{a1Text}}</p>
         </div>
       </div>
     </div>
@@ -52,6 +44,18 @@ export default {
     rightImg: {
       type: String,
       required: true,
+    },
+    h2Text: {
+      type: String,
+    },
+    h3Text: {
+      type: String,
+    },
+    a1Text: {
+      type: String,
+    },
+    a2Text: {
+      type: String,
     },
   },
 };
