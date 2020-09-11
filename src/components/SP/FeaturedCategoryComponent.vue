@@ -1,19 +1,25 @@
 <template>
   <div class="featured-category">
     <div class="left">
-      <img :src="require(`@/assets/img/${leftImg}`)" />
+      <img :src="require(`@/assets/img/${left.img}`)" />
       <div class="text">
-        <h2>{{h2Text}}</h2>
-        <h3>{{h3Text}}</h3>
+        <h2>{{left.h2Text}}</h2>
+        <h3>{{left.h3Text}}</h3>
         <div class="ptext">
-          <p>{{a1Text}}</p>
-          <p>{{a1Text}}</p>
+          <p>{{left.a1Text}}</p>
+          <p>{{left.a1Text}}</p>
         </div>
       </div>
     </div>
     <div class="right">
       <div class="text">
-        <h2>INTERDENTAL BRUSHES</h2>
+        <h2>{{right.h2Text}}</h2>
+        <h3>{{right.h3Text}}</h3>
+        <div class="ptext">
+          <p>{{right.a1Text}}</p>
+          <p>{{right.a1Text}}</p>
+        </div>
+        <!-- <h2>INTERDENTAL BRUSHES</h2>
         <h3>
           RIGHT IN THE MIDDLE
           <br />OF THE INTERDENTAL
@@ -26,9 +32,9 @@
           <p>
             <a href="#">Buy</a>
           </p>
-        </div>
+        </div> -->
       </div>
-      <img :src="require(`@/assets/img/${rightImg}`)" />
+      <img :src="require(`@/assets/img/${right.img}`)" />
     </div>
   </div>
 </template>
@@ -37,26 +43,43 @@
 export default {
   name: "FeaturedCategoryComponent",
   props: {
-    leftImg: {
+    left: {
+      img: {
+        type: String,
+        required: true,
+      },
+      h2Text: {
       type: String,
-      required: true,
+      },
+      h3Text: {
+        type: String,
+      },
+      a1Text: {
+        type: String,
+      },
+      a2Text: {
+        type: String,
+      },
     },
-    rightImg: {
+    right: {
+      img: {
+        type: String,
+        required: true,
+      },
+      h2Text: {
       type: String,
-      required: true,
+      },
+      h3Text: {
+        type: String,
+      },
+      a1Text: {
+        type: String,
+      },
+      a2Text: {
+        type: String,
+      },
     },
-    h2Text: {
-      type: String,
-    },
-    h3Text: {
-      type: String,
-    },
-    a1Text: {
-      type: String,
-    },
-    a2Text: {
-      type: String,
-    },
+    
   },
 };
 </script>

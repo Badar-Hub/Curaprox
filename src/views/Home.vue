@@ -3,8 +3,8 @@
     <Header />
     <ProFeaturedComponent />
     <FeaturedCategoryComponent
-      left-img="teaser-ortho.jpg"
-      right-img="cps-colors.jpg"
+      :left="leftProFeat"
+      :right="rightProFeat"
     />
     <div class="oral-health">
       <h2>ORAL HEALTH, INSTRUCTIONS</h2>
@@ -113,10 +113,10 @@
       <h1>SHOP</h1>
     </div>-->
     <ProFeaturedComponent />
-    <FeaturedCategoryComponent
+    <!-- <FeaturedCategoryComponent
       left-img="teaser-ortho.jpg"
       right-img="cps-colors.jpg"
-    />
+    /> -->
   </div>
 </template>
 
@@ -131,6 +131,24 @@ export default {
     FeaturedCategoryComponent,
     Header,
   },
+  data() {
+    return{
+      leftProFeat: {
+        img: 'teaser-ortho.jpg',
+        h2Text: "Left h2",
+        h3Text: "Left h3",
+        a1Text: "Left a1",
+        a2Text: "Left a2"
+      },
+      rightProFeat: {
+        img: 'cps-colors.jpg',
+        h2Text: "Right h2",
+        h3Text: "Right h3",
+        a1Text: "Right a1",
+        a2Text: "Right a2"
+      }
+    }
+  }
 };
 </script>
 
