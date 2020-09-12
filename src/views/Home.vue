@@ -1,19 +1,30 @@
 <template>
   <div>
     <Header />
-    <ProFeaturedComponent />
-    <FeaturedCategoryComponent
-      :left="leftProFeat"
-      :right="rightProFeat"
+    <ProFeaturedComponent
+      img="Hydrosonic-Pro-toothbrush.jpg"
+      h2-text="HYDROSONIC PRO"
+      h3-text="PROFESSIONAL \n DENTAL CLEANING \n EVERY DAY"
+      :link1="{
+    href: '#',
+    text:'Learn More'
+    }"
+      :link2="{
+    href: '#',
+    text:'Buy'
+    }"
     />
+    <FeaturedCategoryComponent :left="leftProFeat" :right="rightProFeat" />
     <div class="oral-health">
-      <h2>ORAL HEALTH, INSTRUCTIONS</h2>
-      <p>
-        Whether for whitening. Or during pregnancy. Whether for babies or
-        kids. Whether with braces or implants. There’s always something to
-        watch out for. What exactly?
-      </p>
-      <button>Here are our instructions</button>
+      <div class="oral-health-inner">
+        <h2>ORAL HEALTH, INSTRUCTIONS</h2>
+        <p>
+          Whether for whitening. Or during pregnancy. Whether for babies or
+          kids. Whether with braces or implants. There’s always something to
+          watch out for. What exactly?
+        </p>
+        <button>Here are our instructions</button>
+      </div>
     </div>
     <div class="dental-care">
       <div class="dental-care-inner">
@@ -23,100 +34,29 @@
           Or is it?
         </p>
       </div>
-
-      <!-- <div class="featured-category">
-        <div class="first-category">
-          <img src="../assets/img/products/cs-5460.png" alt="CS-5460" />
-          <h4>TOOTHBRUSHES</h4>
-          <h1>…THAT LOVE THE GUMLINE</h1>
-          <p>
-            Brushing your teeth is also about cleaning your gumline. The sulcus
-            – the groove between the teeth and gums – is a breeding ground for
-            bacteria that cause inflammation and periodontitis. Our toothbrushes
-            are so gentle, they clean perfectly – even in the gumline.
-          </p>
-          <div class="product-text">
-            <p>
-              <a href="#">Learn more</a>
-            </p>
-            <p>
-              <a href="#">Buy</a>
-            </p>
-          </div>
-        </div>
-        <div class="second-category">
-          <img src="../assets/img/products/interdental.png" alt="CPS" />
-          <h4>INTERDENTAL BRUSHES</h4>
-          <h1>ONCE IN AND OUT. DONE.</h1>
-          <p>
-            Exceptional cleanliness where it matters most – in the
-            difficult-to-reach narrow spaces between the teeth. All thanks to
-            super-fine, extra-long, ultra-resilient filaments. Combat tooth
-            decay, inflammation and periodontitis. Quick. Easy. Pleasant.
-          </p>
-          <div class="product-text">
-            <p>
-              <a href="#">Learn more</a>
-            </p>
-            <p>
-              <a href="#">Buy</a>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="featured-category">
-        <div class="first-category">
-          <img src="../../assets/img/products/cs-5460.png" alt="CS-5460" />
-          <h4>TOOTHPASTE</h4>
-          <h1>THE BEST IN THE WORLD?</h1>
-          <p>
-            Toothpastes that improve your oral health – and bring joy to your
-            brushing routine. Beautifully-crafted flavours. Healthy ingredients
-            – no nasties. Whitening that actually cares for your tooth enamel.
-            Curaprox toothpastes.
-          </p>
-          <div class="product-text">
-            <p>
-              <a href="#">Learn more</a>
-            </p>
-            <p>
-              <a href="#">Buy</a>
-            </p>
-          </div>
-        </div>
-        <div class="second-category">
-          <img src="../../assets/img/products/interdental.png" alt="CPS" />
-          <h4>SONIC TOOTHBRUSH</h4>
-          <h1>GET A MOVE ON</h1>
-          <p>
-            Up to 42,000 wonderfully gentle brush strokes a minute. The most
-            power you can get outside of a dental office. But this high-tech
-            brushing power is joy for your gumline. And it’s joy for those
-            hard-to-reach spots. All thanks to innovative Swiss brush head
-            technology. All at the touch of a button.
-          </p>
-          <div class="product-text">
-            <p>
-              <a href="#">Learn more</a>
-            </p>
-            <p>
-              <a href="#">Buy</a>
-            </p>
-          </div>
-        </div>
-      </div>-->
-      <div class="button">
+    </div>
+    <ProductDisplay :left="left1" :right="right1" />
+    <ProductDisplay :left="left2" :right="right2" />
+    <div class="new-products">
+      <div class="new-products-inner">
         <button>SHOP</button>
       </div>
     </div>
-    <!-- <div class="new-products">
-      <h1>SHOP</h1>
-    </div>-->
-    <ProFeaturedComponent />
-    <!-- <FeaturedCategoryComponent
-      left-img="teaser-ortho.jpg"
-      right-img="cps-colors.jpg"
-    /> -->
+    <ProFeaturedComponent
+      img="teaser-baby-teething.jpg"
+      h2-text="BABY TEETHING RING"
+      h3-text="TRIPLE FUN"
+      :link1="{
+    href: '#',
+    text:'Learn More'
+    }"
+      :link2="{
+    href: '#',
+    text:'Buy'
+    }"
+    />
+    <FeaturedCategoryComponent :left="leftProFeat1" :right="rightProFeat1" />
+    <Footer />
   </div>
 </template>
 
@@ -124,31 +64,87 @@
 import Header from "../components/Layout/Header";
 import ProFeaturedComponent from "../components/SP/ProFeaturedComponent";
 import FeaturedCategoryComponent from "../components/SP/FeaturedCategoryComponent";
+import ProductDisplay from "../components/SP/ProductDisplay";
+import Footer from "../components/Layout/Footer";
 export default {
   name: "Home",
   components: {
+    Header,
     ProFeaturedComponent,
     FeaturedCategoryComponent,
-    Header,
+    ProductDisplay,
+    Footer,
   },
   data() {
-    return{
+    return {
       leftProFeat: {
-        img: 'teaser-ortho.jpg',
-        h2Text: "Left h2",
-        h3Text: "Left h3",
-        a1Text: "Left a1",
-        a2Text: "Left a2"
+        img: "teaser-ortho.jpg",
+        h2Text: "ORTHODONTICS",
+        h3Text: "BRUSHING YOUR TEETH WITH CLASP",
+        a1Text: "Learn More",
+        a2Text: "Buy",
       },
       rightProFeat: {
-        img: 'cps-colors.jpg',
-        h2Text: "Right h2",
-        h3Text: "Right h3",
-        a1Text: "Right a1",
-        a2Text: "Right a2"
-      }
-    }
-  }
+        img: "cps-colors.jpg",
+        h2Text: "INTERDENTAL BRUSHES",
+        h3Text: "RIGHT IN THE MIDDLE OF THE INTERDENTAL SPACE.",
+        a1Text: "Learn More",
+        a2Text: "Buy",
+      },
+
+      leftProFeat1: {
+        img: "teaser-ortho.jpg",
+        h2Text: "ORTHODONTICS",
+        h3Text: "BRUSHING YOUR TEETH WITH CLASP",
+        a1Text: "Learn More",
+        a2Text: "Buy",
+      },
+      rightProFeat1: {
+        img: "cps-colors.jpg",
+        h2Text: "INTERDENTAL BRUSHES",
+        h3Text: "RIGHT IN THE MIDDLE OF THE INTERDENTAL SPACE.",
+        a1Text: "Learn More",
+        a2Text: "Buy",
+      },
+
+      left1: {
+        img: "others-teaser.jpg",
+        h2Text: "NATURAL, LONG-LASTING CARE",
+        h4Text: "BDC FOR DENTURES",
+        pText: "",
+        a1Text: "Learn more",
+        a2Text: "Buy",
+      },
+      right1: {
+        img: "interdental.png",
+        h2Text: "ONCE IN AND OUT. DONE.",
+        h4Text: "INTERDENTAL BRUSHES",
+        pText:
+          "Exceptional cleanliness where it matters most – in the difficult-to-reach narrow spaces between the teeth. All thanks to super-fine, extra-long, ultra-resilient filaments. Combat tooth decay, inflammation and periodontitis. Quick. Easy. Pleasant.",
+        a1Text: "Learn more",
+        a2Text: "Buy",
+      },
+
+      left2: {
+        img: "toothpaste-pink.png",
+        h2Text: "THE BEST IN THE WORLD?",
+        h4Text: "TOOTHPASTE",
+        pText:
+          "Toothpastes that improve your oral health – and bring joy to your brushing routine. Beautifully-crafted flavours. Healthy ingredients – no nasties. Whitening that actually cares for your tooth enamel. Curaprox toothpastes.",
+        a1Text: "Learn more",
+        a2Text: "Buy",
+      },
+      right2: {
+        img: "toothbrush-sonic.png",
+        h2Text: "GET A MOVE ON",
+        h4Text: "SONIC TOOTHBRUSH",
+        pText:
+          "Up to 42,000 wonderfully gentle brush strokes a minute. The most power you can get outside of a dental office. But this high-tech brushing power is joy for your gumline. And it’s joy for those hard-to-reach spots. All thanks to innovative Swiss brush head technology. All at the touch of a button.",
+        a1Text: "Learn more",
+        a2Text: "Buy",
+      },
+    };
+  },
 };
 </script>
 
@@ -158,6 +154,15 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  height: 70vh;
+  background-color: whitesmoke;
+  padding: 3% 0;
+}
+.oral-health .oral-health-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
 }
 
 .oral-health h2 {
@@ -171,7 +176,6 @@ export default {
   font-size: 30px;
   text-align: center;
   margin: 20px 10%;
-  padding: 0 5rem;
 }
 
 .oral-health button {
@@ -193,6 +197,7 @@ export default {
 
 .dental-care {
   background-color: #fbf4f8;
+  padding: 3% 0;
 }
 
 .dental-care-inner {
@@ -285,7 +290,27 @@ export default {
 
 .new-products {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #fbf4f8;
+}
+
+.new-products .new-products-inner {
+  display: flex;
   justify-content: center;
   max-width: 1200px;
+}
+
+.new-products .new-products-inner button {
+  font-size: 22px;
+  border: rgb(60, 60, 170) 2px solid;
+  text-align: center;
+  margin: 44px 0;
+  padding: 10px 20px;
+  border-radius: 5%;
+}
+
+.new-products .new-products-inner button:hover {
+  border: blue 2px solid;
 }
 </style>

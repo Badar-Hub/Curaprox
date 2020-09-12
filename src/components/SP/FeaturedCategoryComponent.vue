@@ -19,20 +19,6 @@
           <p>{{right.a1Text}}</p>
           <p>{{right.a1Text}}</p>
         </div>
-        <!-- <h2>INTERDENTAL BRUSHES</h2>
-        <h3>
-          RIGHT IN THE MIDDLE
-          <br />OF THE INTERDENTAL
-          <br />SPACE.
-        </h3>
-        <div class="ptext">
-          <p>
-            <a href="#">Learn More</a>
-          </p>
-          <p>
-            <a href="#">Buy</a>
-          </p>
-        </div> -->
       </div>
       <img :src="require(`@/assets/img/${right.img}`)" />
     </div>
@@ -49,7 +35,7 @@ export default {
         required: true,
       },
       h2Text: {
-      type: String,
+        type: String,
       },
       h3Text: {
         type: String,
@@ -67,7 +53,7 @@ export default {
         required: true,
       },
       h2Text: {
-      type: String,
+        type: String,
       },
       h3Text: {
         type: String,
@@ -79,12 +65,15 @@ export default {
         type: String,
       },
     },
-    
   },
 };
 </script>
 
 <style scoped>
+.featured-category div {
+  margin-bottom: 3%;
+}
+
 .featured-category {
   display: flex;
   flex-wrap: wrap;

@@ -96,6 +96,16 @@ header {
   flex-wrap: wrap;
   width: 100%;
   background-color: #ef7fb1;
+  padding: 0 !important;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: #ef7fb1;
 }
 
 header .navigation {
@@ -152,6 +162,7 @@ nav ul li a:hover {
 
 .slider {
   background-color: #ef7fb1;
+  margin-bottom: 3%;
 }
 
 .slider-inner {
