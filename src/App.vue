@@ -16,9 +16,10 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+a {
   font-family: futura-pt, sans-serif;
-  font-weight: 400;
+  font-weight: 200;
   font-style: normal;
 }
 

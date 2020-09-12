@@ -1,6 +1,7 @@
 <template>
   <div>
     <Header />
+    <Slider />
     <ProFeaturedComponent
       img="Hydrosonic-Pro-toothbrush.jpg"
       h2-text="HYDROSONIC PRO"
@@ -62,6 +63,7 @@
 
 <script>
 import Header from "../components/Layout/Header";
+import Slider from "../components/Layout/Slider";
 import ProFeaturedComponent from "../components/SP/ProFeaturedComponent";
 import FeaturedCategoryComponent from "../components/SP/FeaturedCategoryComponent";
 import ProductDisplay from "../components/SP/ProductDisplay";
@@ -70,6 +72,7 @@ export default {
   name: "Home",
   components: {
     Header,
+    Slider,
     ProFeaturedComponent,
     FeaturedCategoryComponent,
     ProductDisplay,
@@ -100,7 +103,7 @@ export default {
         a2Text: "Buy",
       },
       rightProFeat1: {
-        img: "cps-colors.jpg",
+        img: "need-teaser-implants.jpg",
         h2Text: "INTERDENTAL BRUSHES",
         h3Text: "RIGHT IN THE MIDDLE OF THE INTERDENTAL SPACE.",
         a1Text: "Learn More",
