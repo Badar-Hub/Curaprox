@@ -65,7 +65,7 @@ export default {
 .pro-featured-inner {
   position: relative;
   text-align: left;
-  color: white;
+  color: inherit;
 }
 
 .pro-featured-inner img {
@@ -79,7 +79,7 @@ export default {
 }
 
 .pro-featured-inner .text a {
-  color: white;
+  color: inherit;
   text-decoration: none;
   padding-right: 5px;
   font-size: 22px;
