@@ -3,7 +3,7 @@
     <div class="text">
       <div class="text-inner">
         <h2>{{h2Text}}</h2>
-        <p>{{pText}}</p>
+        <!-- <p>{{pText}}</p> -->
       </div>
     </div>
   </div>
@@ -14,7 +14,7 @@ export default {
   name: "FloatingText",
   props: {
     h2Text: String,
-    pText: String,
+    // pText: String,
   },
 };
 </script>
@@ -26,6 +26,7 @@ export default {
   max-width: 1200px;
   margin: auto;
   padding: 2%;
+  text-align: left;
 }
 
 .text .text-inner h2 {

@@ -1,9 +1,9 @@
 <template>
   <div>
-    <div class="sub">
+    <div :style="`background-color:${backgroundColor}`" class="sub">
       <div :style="`flex-direction:${rowDirection}`" class="sub-inner">
         <div class="text">
-          <h2>{{h2text}}</h2>
+          <h2>{{h2text}}"</h2>
           <p>{{ptext}}</p>
         </div>
         <div class="img">
@@ -27,6 +27,12 @@ export default {
       default: function () {
         return "row";
       },
+    backgroundColor: {
+      type: String,
+      default: function(){
+        return "white"
+      }
+    }
     },
   },
 };
@@ -57,10 +63,14 @@ export default {
 
 .sub .sub-inner .text h2 {
   font-size: 50px;
+  margin: 0;
+  padding: 0;
 }
 
 .sub .sub-inner .text p {
   font-size: 22px;
+  margin: 0;
+  padding: 0;
   font-weight: 500;
   font-family: ff-info-text-web-pro, sans-serif;
 }

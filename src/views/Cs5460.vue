@@ -11,8 +11,14 @@
     />
     <SubPage v-bind="text3Slider" />
     <FloatingText
-      h2-text="Experience the difference."
-      p-text="Dental professionals have been recommending our toothbrushes for more than 40 years. Once you’ve tried these brushes… you won’t go back. Developed and manufactured in Switzerland."
+      h2-text="Experience the difference. Dental professionals have been recommending our toothbrushes for more than 40 years. Once you’ve tried these brushes… you won’t go back. Developed and manufactured in Switzerland."
+    />
+    <SubPage
+     background-color="#f9f9f9"
+      row-direction="row-reverse"
+      :h2text="text4Slider.h2text"
+      :ptext="text4Slider.ptext"
+      :img="text4Slider.img"
     />
   </div>
 </template>
@@ -49,6 +55,12 @@ export default {
         ptext:
           "… for optimal cleaning. Tilt the brush at a 45 degree angle – half on the tooth, half on the gum. Move in small, gentle circles – almost without any pressure. Nice and easy.",
         img: "curaprox-toothbrush-overview-angledhead-hand.jpg",
+      },
+      text4Slider: {
+        h2text: "BABY YOU’RE A FIREWORK",
+        ptext:
+          "After years of the same old boring choices… an explosion of beautiful, joyful colour. This toothbrush is now available in 36 colour combinations and further, limited and special editions.",
+        img: "curaprox-image-text-toothbrush-colors-cs5460.jpg",
       },
     };
   },
