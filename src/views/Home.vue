@@ -7,13 +7,13 @@
       h2-text="HYDROSONIC PRO"
       h3-text="PROFESSIONAL \n DENTAL CLEANING \n EVERY DAY"
       :link1="{
-    href: '#',
-    text:'Learn More'
-    }"
+      href: '#',
+      text:'Learn More'
+      }"
       :link2="{
-    href: '#',
-    text:'Buy'
-    }"
+      href: '#',
+      text:'Buy'
+      }"
     />
     <FeaturedCategoryComponent :left="leftProFeat" :right="rightProFeat" />
     <div class="oral-health">

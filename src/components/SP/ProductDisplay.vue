@@ -138,5 +138,6 @@ export default {
   max-width: 400px;
   border-radius: 50%;
   background-color: white;
+  width: 100%;
 }
 </style>
