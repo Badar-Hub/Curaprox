@@ -1,38 +1,26 @@
 <template>
   <div class="slider">
     <div class="slider-inner">
-      <div class="text">
-        <h2>TOOTHBRUSH CS 5460</h2>
-        <h3>
-          GENTLE ON
-          <br />TEETH AND
-          <br />GUMS
-        </h3>
-        <p>
-          Each and every one of the 5,460 CUREN®
-          <br />filaments works together to combat plaque.
-          <br />Hard on plaque. Gentle on teeth and gums.
-        </p>
+      <div class="img">
+        <img :src="require(`@/assets/img/Slider/${img}`)" />
       </div>
     </div>
-    <hr style="max-width: 1200px;
-    margin: auto;" />
     <div class="slider-inner-after">
       <div class="default">
-        <img src="@/assets/img/5460.png" />
-        <span>5,460 filaments densely packed on the brush head to give exceptional cleaning power</span>
+        <img :src="require(`@/assets/img/${text1.img}`)" />
+        <p>{{text1.pText}}</p>
       </div>
       <div class="default">
-        <img src="@/assets/img/Curaprox_Badge_Small-Head.png" />
-        <span>Compact brush head. Slight angle. Optimal cleaning</span>
+        <img :src="require(`@/assets/img/${text2.img}`)" />
+        <p>{{text2.pText}}</p>
       </div>
       <div class="default">
-        <img src="@/assets/img/Curaprox_Badge_Feder.png" />
-        <span>CUREN® filaments. Incredibly gentle, incredibly thin – just 0.1mm in diameter</span>
+        <img :src="require(`@/assets/img/${text3.img}`)" />
+        <p>{{text3.pText}}</p>
       </div>
       <div class="default">
-        <img src="@/assets/img/Curaprox_Badge_Zahl-45.png" />
-        <span>Octagonal handle. It’s almost impossible NOT to clean at the correct angle</span>
+        <img :src="require(`@/assets/img/${text4.img}`)" />
+        <p>{{text4.pText}}</p>
       </div>
     </div>
   </div>
@@ -41,6 +29,25 @@
 <script>
 export default {
   name: "Slider2",
+  props: {
+    img: String,
+    text1: {
+      img: String,
+      pText: String,
+    },
+    text2: {
+      img: String,
+      pText: String,
+    },
+    text3: {
+      img: String,
+      pText: String,
+    },
+    text4: {
+      img: String,
+      pText: String,
+    },
+  },
 };
 </script>
 
@@ -50,58 +57,52 @@ export default {
   margin-bottom: 3%;
 }
 
-.slider-inner {
+.slider .slider-inner {
   display: flex;
-  position: relative;
-  background-image: url(../../assets/img/curaprox-toothbrush-overview-header-cs5460-blue-green.jpg);
-  background-size: cover;
-  width: 100%;
-  height: 85vh;
+  flex-wrap: wrap;
+  justify-content: space-between;
   max-width: 1200px;
   margin: auto;
+  text-align: left;
 }
 
-.slider-inner .text {
-  top: 15%;
+.slider .slider-inner img {
+  position: relative;
+  width: 100%;
+}
+
+.slider .text {
+  top: 25%;
   position: absolute;
 }
 
-.slider-inner .text h2 {
-  font-size: 20px;
+.slider .text h2 {
   margin: 0;
   padding: 0;
-  text-align: left;
-  color: black;
-  font-size: 23px;
-  line-height: 1.1;
-}
-.slider-inner .text h3 {
-  margin: 20px 0;
-  padding: 0;
-  text-align: left;
-  color: black;
-  font-size: 6.25rem;
-  font-weight: 100;
-  line-height: 1.1;
+  font-size: 28px;
 }
 
-.slider-inner p {
+.slider .text h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 100px;
+}
+
+.slider .text p {
+  margin: 0;
+  padding: 0;
   font-size: 30px;
-  margin: 20px;
-  padding: 0;
-  color: black;
 }
 
-.slider-inner-after {
+.slider .slider-inner-after {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  flex-direction: row;
+  justify-content: space-between;
   max-width: 1200px;
   margin: auto;
 }
 
-.default {
+.slider .default {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -109,12 +110,7 @@ export default {
   max-width: 22%;
 }
 
-.default span {
-  font-size: 18px;
-  font-family: ff-info-text-web-pro, sans-serif;
-}
-
-.slider-inner-after img {
+.slider .default img {
   max-width: 200px;
   margin: 0 auto;
   width: 100%;

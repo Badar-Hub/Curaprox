@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header2 />
-    <Slider2 />
+    <Slider2 v-bind="Slider2text1" />
     <SubPage v-bind="textSlider" />
     <SubPage
       row-direction="row-reverse"
@@ -14,12 +14,14 @@
       h2-text="Experience the difference. Dental professionals have been recommending our toothbrushes for more than 40 years. Once you’ve tried these brushes… you won’t go back. Developed and manufactured in Switzerland."
     />
     <SubPage
-     background-color="#f9f9f9"
+      background-color="#f9f9f9"
       row-direction="row-reverse"
       :h2text="text4Slider.h2text"
       :ptext="text4Slider.ptext"
       :img="text4Slider.img"
     />
+    <Slider2 v-bind="Slider2text2" />
+    <TextWithImg v-bind="TxtImg" />
   </div>
 </template>
 
@@ -28,6 +30,7 @@ import Header2 from "../components/Layout/Header2";
 import Slider2 from "../components/Layout/Slider2";
 import SubPage from "../components/SP/SubPage";
 import FloatingText from "../components/SP/FloatingText";
+import TextWithImg from "../components/SP/TextWithImg";
 export default {
   name: "Cs5460",
   components: {
@@ -35,6 +38,7 @@ export default {
     Slider2,
     SubPage,
     FloatingText,
+    TextWithImg,
   },
   data() {
     return {
@@ -61,6 +65,74 @@ export default {
         ptext:
           "After years of the same old boring choices… an explosion of beautiful, joyful colour. This toothbrush is now available in 36 colour combinations and further, limited and special editions.",
         img: "curaprox-image-text-toothbrush-colors-cs5460.jpg",
+      },
+
+      Slider2text1: {
+        img: "01.jpg",
+        text1: {
+          img: "5460.png",
+          pText:
+            "5,460 filaments densely packed on the brush head to give exceptional cleaning power",
+        },
+        text2: {
+          img: "Curaprox_Badge_Small-Head.png",
+          pText: "Compact brush head. Slight angle. Optimal cleaning",
+        },
+        text3: {
+          img: "Curaprox_Badge_Feder.png",
+          pText:
+            "CUREN® filaments. Incredibly gentle, incredibly thin – just 0.1mm in diameter",
+        },
+        text4: {
+          img: "Curaprox_Badge_Zahl-45.png",
+          pText:
+            "Octagonal handle. It’s almost impossible NOT to clean at the correct angle",
+        },
+      },
+      Slider2text2: {
+        img: "02.jpg",
+        text1: {
+          img: "5460.png",
+          pText:
+            "Brush tooth by tooth in small, gentle circles – almost without any pressure. A multitude of ultra-fine filaments – tightly packed together – remove plaque effectively without causing damage. Hold the toothbrush loosely in your hand… like a violin bow.",
+        },
+        text2: {
+          img: "5460.png",
+          pText:
+            "5,460 filaments – up to ten times the number of bristles used in conventional brushes – tightly packed together on the brush head. This extra dense cleaning surface is designed to prevent tooth decay and gum disease. The CS 5460 is plaque’s worst nightmare.",
+        },
+        text3: {
+          img: "5460.png",
+          pText:
+            "But it needs gentle care. Now you can rely on gentle filaments – to remove plaque without grinding down the enamel… and to brush the gumline without hurting.",
+        },
+        text4: {
+          img: "5460.png",
+          pText: "",
+        },
+      },
+
+      TxtImg: {
+        txtimg: {
+          h2Text: "WHAT’S THE BEST WAY TO BRUSH MY TEETH?",
+          pText:
+            "There are many different techniques. And every mouth, tooth and interdental space is different. But there’s a proven method that works for everyone.",
+        },
+        category1: {
+          img: "angle.png",
+          pText:
+            "Start with the best angle – half on the teeth, half on the gums",
+        },
+        category2: {
+          img: "angle.png",
+          pText:
+            "Start with the best angle – half on the teeth, half on the gums",
+        },
+        category3: {
+          img: "angle.png",
+          pText:
+            "Start with the best angle – half on the teeth, half on the gums",
+        },
       },
     };
   },

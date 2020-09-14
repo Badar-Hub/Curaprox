@@ -27,12 +27,12 @@ export default {
       default: function () {
         return "row";
       },
+    },
     backgroundColor: {
       type: String,
-      default: function(){
-        return "white"
-      }
-    }
+      default: function () {
+        return "white";
+      },
     },
   },
 };
@@ -40,7 +40,7 @@ export default {
 
 <style scoped>
 .sub {
-  padding: 5rem;
+  margin-bottom: 3%;
 }
 .sub .sub-inner {
   display: flex;
@@ -56,7 +56,7 @@ export default {
   max-width: 48%;
 }
 
-.sub .sub-inner .img {
+.sub .sub-inner img {
   max-width: 600px;
   width: 100%;
 }
