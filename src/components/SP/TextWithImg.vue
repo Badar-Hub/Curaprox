@@ -2,8 +2,8 @@
   <div>
     <div class="textWithImg">
       <div class="text">
-        <h2>{{textimg.h2Text}}</h2>
-        <p>{{textimg.pText}}</p>
+        <h2>{{txtimg.h2Text}}</h2>
+        <p>{{txtimg.pText}}</p>
       </div>
       <div class="category">
         <div class="default">
@@ -19,6 +19,7 @@
           <p>{{category3.pText}}</p>
         </div>
       </div>
+      <button>How to brush - the video</button>
     </div>
   </div>
 </template>
@@ -48,6 +49,10 @@ export default {
 </script>
 
 <style scoped>
+.textWithImg {
+  background-color: #f9f9f9;
+}
+
 .text {
   display: flex;
   flex-wrap: wrap;
@@ -59,7 +64,9 @@ export default {
 .category {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .category img {
@@ -69,5 +76,29 @@ export default {
 
 .category p {
   font-size: 18px;
+}
+
+.default {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 25%;
+}
+
+h2 {
+  font-size: 50px;
+}
+
+p {
+  font-size: 30px;
+}
+
+button {
+  margin: 5%;
+  padding: 10px;
+  font-size: 22px;
+  color: #0167b1;
+  border-radius: 5%;
 }
 </style>

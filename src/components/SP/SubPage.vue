@@ -3,7 +3,7 @@
     <div :style="`background-color:${backgroundColor}`" class="sub">
       <div :style="`flex-direction:${rowDirection}`" class="sub-inner">
         <div class="text">
-          <h2>{{h2text}}"</h2>
+          <h2>{{h2text}}</h2>
           <p>{{ptext}}</p>
         </div>
         <div class="img">

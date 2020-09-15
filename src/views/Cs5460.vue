@@ -22,6 +22,31 @@
     />
     <Slider2 v-bind="Slider2text2" />
     <TextWithImg v-bind="TxtImg" />
+    <ProFeaturedComponent
+      style="color:white"
+      img="need-teaser-sensitive-teeth.jpg"
+      h2Text="EXPOSED TOOTH ROOTS"
+      h3Text="WHAT CAN YOU DO ABOUT THEM?"
+      :link1="{
+      href: '#',
+      text:'Learn More'
+      }"
+      :link2="{
+      href: '#',
+      text:'Buy'
+      }"
+    />
+    <FeaturedCategoryComponent :left="leftProFeat" :right="rightProFeat" />
+    <TextBlockWithImg
+      img="curaprox-related-product-toothbrush-single-green-pink.jpg"
+      h2Text="CS SINGLE"
+      h3Text="TOOTH BY TOOTH"
+    />
+    <TextBlockWithImg
+      img="curaprox-related-product-toothbrush-baby-blue-pink.jpg"
+      h2Text="Baby toothbrush"
+      h3Text="Fun, gentle, effective – from the first tooth"
+    />
   </div>
 </template>
 
@@ -31,6 +56,9 @@ import Slider2 from "../components/Layout/Slider2";
 import SubPage from "../components/SP/SubPage";
 import FloatingText from "../components/SP/FloatingText";
 import TextWithImg from "../components/SP/TextWithImg";
+import ProFeaturedComponent from "../components/SP/ProFeaturedComponent";
+import FeaturedCategoryComponent from "../components/SP/FeaturedCategoryComponent";
+import TextBlockWithImg from "../components/SP/TextBlockWithImg";
 export default {
   name: "Cs5460",
   components: {
@@ -39,6 +67,9 @@ export default {
     SubPage,
     FloatingText,
     TextWithImg,
+    ProFeaturedComponent,
+    FeaturedCategoryComponent,
+    TextBlockWithImg,
   },
   data() {
     return {
@@ -124,15 +155,28 @@ export default {
             "Start with the best angle – half on the teeth, half on the gums",
         },
         category2: {
-          img: "angle.png",
-          pText:
-            "Start with the best angle – half on the teeth, half on the gums",
+          img: "downarrow.png",
+          pText: "Clean gently… almost without any pressure",
         },
         category3: {
-          img: "angle.png",
-          pText:
-            "Start with the best angle – half on the teeth, half on the gums",
+          img: "circle.png",
+          pText: "Small, gentle circles – let your toothbrush guide you",
         },
+      },
+
+      leftProFeat: {
+        img: "curaprox-more-travel-set-pink.jpg",
+        h2Text: "TRAVEL SET",
+        h3Text: "BRUSH YOUR TEETH ON THE MOVE",
+        a1Text: "Learn More",
+        a2Text: "Buy",
+      },
+      rightProFeat: {
+        img: "need-post-cleen-teeth.jpg",
+        h2Text: "GUM CARE",
+        h3Text: "CLEANING INSTEAD OF SCRUBBING",
+        a1Text: "Learn More",
+        a2Text: "Buy",
       },
     };
   },
