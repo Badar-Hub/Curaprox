@@ -90,8 +90,10 @@ export default {
 }
 
 .product .product-inner {
-  display: grid;
-  grid-template: auto / auto auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: space-between;
   text-align: left;
   max-width: 1200px;
 }
@@ -119,17 +121,11 @@ export default {
 }
 
 .product .product-inner .product-left {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  /* width: 45%; */
+  max-width: 450px;
 }
 
 .product .product-inner .product-right {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  /* width: 45%; */
+  max-width: 450px;
 }
 
 .product .product-inner img {
@@ -139,5 +135,15 @@ export default {
   border-radius: 50%;
   background-color: white;
   width: 100%;
+}
+
+@media (max-width: 900px) {
+  .product .product-inner .product-left {
+    margin: auto;
+  }
+
+  .product .product-inner .product-right {
+    margin: auto;
+  }
 }
 </style>

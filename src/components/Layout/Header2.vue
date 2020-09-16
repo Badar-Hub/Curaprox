@@ -23,19 +23,16 @@
           <nav>
             <ul>
               <li>
-                <router-link to="/TOOTHBRUSHES">TOOTHBRUSHES</router-link>
+                <router-link to="/Toothbrush">TOOTHBRUSHES</router-link>
               </li>
               <li>
-                <router-link to="/sonic-toothbrushes">SONIC TOOTHBRUSHES</router-link>
+                <router-link to="/Toothpaste">TOOTHPASTE</router-link>
               </li>
               <li>
-                <router-link to="/interdental">INTERDENTAL</router-link>
+                <router-link to="/Interdental">INTERDENTAL</router-link>
               </li>
               <li>
-                <router-link to="/baby">BABY</router-link>
-              </li>
-              <li>
-                <router-link to="/more">MORE</router-link>
+                <router-link to="/Mouthwash">MOUTHWASH</router-link>
               </li>
               <li>
                 <router-link to="/shop">SHOP</router-link>

@@ -76,6 +76,7 @@ export default {
   position: absolute;
   top: 8px;
   left: 16px;
+  max-width: 500px;
 }
 
 .pro-featured-inner .text a {
@@ -85,19 +86,75 @@ export default {
   font-size: 22px;
 }
 
-.pro-featured-inner .text h2 {
+h2 {
   font-size: 25px;
+  margin: 0;
 }
 
-.pro-featured-inner .text h3 {
+h3 {
   font-size: 50px;
+  margin: 20px 0;
 }
 
-.pro-featured-inner .text span {
+span {
   padding-right: 20px;
 }
 
 .pro-featured-inner .text a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  h3 {
+    font-size: 45px;
+    margin: 5px 0;
+  }
+
+  h2 {
+    font-size: 25px;
+    margin: 0;
+  }
+
+  a,
+  p,
+  span {
+    font-size: 25px;
+    margin: 0;
+  }
+  .pro-featured-inner img {
+    width: 100%;
+    max-height: 550px;
+    min-height: 350px;
+  }
+}
+@media (max-width: 600px) {
+  h3 {
+    font-size: 30px;
+    margin: 5px 0;
+    line-height: 40px;
+  }
+
+  h2 {
+    font-size: 15px;
+    margin: 0;
+  }
+
+  a,
+  p,
+  span {
+    font-size: 17px;
+    margin: 0;
+  }
+  .pro-featured-inner img {
+    width: 100%;
+    height: 350px;
+  }
+
+  .pro-featured-inner .text {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    max-width: 300px;
+  }
 }
 </style>

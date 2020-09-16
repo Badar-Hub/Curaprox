@@ -5,7 +5,7 @@
       style="color : BLACK"
       img="toothbrush-cs5460-mood-beyou-1200x600.jpg"
       h2-text="HYDROSONIC PRO"
-      h3-text="PROFESSIONAL \n DENTAL CLEANING \n EVERY DAY"
+      h3-text="PROFESSIONAL DENTAL CLEANING EVERY DAY"
       :link1="{
     href: '#',
     text:'Learn More'
@@ -16,15 +16,11 @@
     }"
     />
     <FeaturedCategoryComponent :left="leftCategory" :right="rightCategory" />
-    <section>
-      <div class="burshing">
-        <div class="burshing-inner">
-          <h3>CURAPROX TOOTHBRUSHES</h3>
-          <h2>BRUSHING YOUR TEETH IS PURE JOY</h2>
-          <p>Dental professionals have been recommending our toothbrushes for more than 40 years. So gentle on the teeth and gums. So effective in combating plaque.</p>
-        </div>
-      </div>
-    </section>
+    <BrushingText
+      h3Text="CURAPROX TOOTHBRUSHES"
+      h2Text="BRUSHING YOUR TEETH IS PURE JOY"
+      pText="Dental professionals have been recommending our toothbrushes for more than 40 years. So gentle on the teeth and gums. So effective in combating plaque."
+    />
     <ProFeaturedComponent
       style="color : BLACK"
       img="curaprox-toothbrush-love-edition-grey-1200x600.jpg"
@@ -47,12 +43,14 @@
 import Header2 from "../components/Layout/Header2";
 import ProFeaturedComponent from "../components/SP/ProFeaturedComponent";
 import FeaturedCategoryComponent from "../components/SP/FeaturedCategoryComponent";
+import BrushingText from "../components/SP/BurshingText";
 export default {
   name: "Toothbrush",
   components: {
     Header2,
     ProFeaturedComponent,
     FeaturedCategoryComponent,
+    BrushingText,
   },
 
   data() {
@@ -94,31 +92,4 @@ export default {
 </script>
 
 <style scoped>
-.burshing {
-}
-
-.burshing .burshing-inner {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: auto;
-  justify-content: center;
-}
-
-.burshing .burshing-inner h3 {
-  font-size: 28px;
-  margin: 0;
-}
-
-.burshing .burshing-inner h2 {
-  font-size: 100px;
-  padding: 20px;
-  margin: 0;
-  color: #8dc73f;
-}
-
-.burshing .burshing-inner p {
-  font-size: 30px;
-  margin: 0;
-}
 </style>

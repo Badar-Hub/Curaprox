@@ -71,7 +71,8 @@ export default {
 
 <style scoped>
 .featured-category div {
-  margin-bottom: 3%;
+  margin-top: 3%;
+  margin-bottom: 6%;
 }
 
 .featured-category {
@@ -86,12 +87,14 @@ export default {
   position: relative;
   text-align: left;
   color: black;
+  max-width: 600px;
 }
 
 .featured-category .right {
   position: relative;
   text-align: left;
   color: black;
+  max-width: 600px;
 }
 
 .featured-category .text {
@@ -117,16 +120,90 @@ export default {
   flex-wrap: wrap;
 }
 
-.featured-category .ptext p {
+p {
   padding-right: 20px;
 }
 
-.featured-category h2 {
+h2 {
   font-size: 25px;
 }
 
-.featured-category h3 {
+h3 {
   font-size: 45px;
   margin: 0;
+}
+
+@media (max-width: 910px) {
+  .featured-category .left {
+    margin: auto;
+  }
+
+  .featured-category .right {
+    margin: auto;
+  }
+  .featured-category {
+    margin-top: 3%;
+    margin-bottom: 6%;
+  }
+  h3 {
+    font-size: 45px;
+    margin: 5px 0;
+  }
+
+  h2 {
+    font-size: 25px;
+    margin: 0;
+  }
+
+  a,
+  p,
+  span {
+    font-size: 25px;
+    margin: 0;
+  }
+  .featured-category .text {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 600px) {
+  .featured-category .left {
+    margin: auto;
+  }
+
+  .featured-category .right {
+    margin: auto;
+  }
+  .featured-category {
+    margin-top: 3%;
+    margin-bottom: 6%;
+  }
+
+  h3 {
+    font-size: 35px;
+    margin: 5px 0;
+    line-height: 40px;
+  }
+
+  h2 {
+    font-size: 15px;
+    margin: 0;
+  }
+
+  a,
+  p,
+  span {
+    font-size: 17px;
+    margin: 0;
+  }
+  .featured-category .text {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    max-width: 280px;
+  }
 }
 </style>

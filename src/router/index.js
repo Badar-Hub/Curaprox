@@ -29,6 +29,33 @@ const routes = [
       import(/* webpackChunkName: "about" */ "../views/Toothbrush.vue"),
   },
   {
+    path: "/toothpaste",
+    name: "Toothpaste",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/Toothpaste.vue"),
+  },
+  {
+    path: "/interdental",
+    name: "Interdental",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/Interdental.vue"),
+  },
+  {
+    path: "/mouthwash",
+    name: "Mouthwash",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/Mouthwash.vue"),
+  },
+  {
     path: "/cs5460",
     name: "Cs5460",
     // route level code-splitting

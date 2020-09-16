@@ -3,9 +3,10 @@
     <Header />
     <Slider />
     <ProFeaturedComponent
+      style="color:white;"
       img="Hydrosonic-Pro-toothbrush.jpg"
       h2-text="HYDROSONIC PRO"
-      h3-text="PROFESSIONAL \n DENTAL CLEANING \n EVERY DAY"
+      h3-text="PROFESSIONAL DENTAL CLEANING EVERY DAY"
       :link1="{
       href: '#',
       text:'Learn More'
@@ -96,25 +97,26 @@ export default {
       },
 
       leftProFeat1: {
-        img: "teaser-ortho.jpg",
-        h2Text: "ORTHODONTICS",
-        h3Text: "BRUSHING YOUR TEETH WITH CLASP",
+        img: "others-teaser.jpg",
+        h2Text: "BDC FOR DENTURES",
+        h3Text: "NATURAL, LONG-LASTING CARE",
         a1Text: "Learn More",
         a2Text: "Buy",
       },
       rightProFeat1: {
         img: "need-teaser-implants.jpg",
-        h2Text: "INTERDENTAL BRUSHES",
-        h3Text: "RIGHT IN THE MIDDLE OF THE INTERDENTAL SPACE.",
+        h2Text: "IMPLANTS",
+        h3Text: "BECAUSE THEY DESERVE SPECIAL CARE",
         a1Text: "Learn More",
         a2Text: "Buy",
       },
 
       left1: {
         img: "others-teaser.jpg",
-        h2Text: "NATURAL, LONG-LASTING CARE",
-        h4Text: "BDC FOR DENTURES",
-        pText: "",
+        h2Text: "TOOTHBRUSH",
+        h4Text: "…THAT LOVE THE GUMLINE",
+        pText:
+          "Brushing your teeth is also about cleaning your gumline. The sulcus – the groove between the teeth and gums – is a breeding ground for bacteria that cause inflammation and periodontitis. Our toothbrushes are so gentle, they clean perfectly – even in the gumline.",
         a1Text: "Learn more",
         a2Text: "Buy",
       },
@@ -156,9 +158,7 @@ export default {
 .oral-health {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   height: 70vh;
-  background-color: whitesmoke;
   padding: 3% 0;
 }
 .oral-health .oral-health-inner {
@@ -166,6 +166,7 @@ export default {
   flex-wrap: wrap;
   justify-content: center;
   max-width: 1200px;
+  margin: auto;
 }
 
 .oral-health h2 {
@@ -206,7 +207,8 @@ export default {
 .dental-care-inner {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .dental-care-inner h2 {
@@ -315,5 +317,105 @@ export default {
 
 .new-products .new-products-inner button:hover {
   border: blue 2px solid;
+}
+
+@media (max-width: 900px) {
+  /* Oral Health Start */
+
+  .oral-health h2 {
+    font-size: 42px;
+    text-align: center;
+    margin-bottom: 50px;
+    margin: auto;
+  }
+
+  .oral-health p {
+    font-size: 22px;
+    text-align: center;
+    margin: auto;
+  }
+
+  .oral-health button {
+    font-size: 22px;
+    border: rgb(60, 60, 170) 2px solid;
+    text-align: center;
+    margin: 32px 0;
+    padding: 8px 17px;
+    border-radius: 5%;
+  }
+
+  .oral-health .oral-health-inner {
+    margin: auto;
+  }
+
+  /* Oral Health End */
+
+  /* Dental Care Start */
+
+  .dental-care-inner h2 {
+    font-size: 42px;
+    text-align: center;
+    margin-bottom: 50px;
+    margin: 20px 15%;
+    color: #0060aa;
+  }
+
+  .dental-care-inner p {
+    font-size: 30px;
+    text-align: center;
+    margin: 20px 10%;
+    padding: 0 5rem;
+    color: #0060aa;
+  }
+  /* Dental Care End */
+}
+
+@media (max-width: 615px) {
+  /* Oral Health Start */
+
+  .oral-health h2 {
+    font-size: 34px;
+    text-align: center;
+    margin-bottom: 50px;
+    margin: auto;
+  }
+
+  .oral-health p {
+    font-size: 22px;
+    text-align: center;
+    margin: auto;
+  }
+
+  .oral-health button {
+    font-size: 20px;
+    border: rgb(60, 60, 170) 2px solid;
+    text-align: center;
+    margin: 22px 0;
+    padding: 5px 15px;
+    border-radius: 5%;
+  }
+
+  .oral-health .oral-health-inner {
+    margin: auto;
+  }
+
+  /* Oral Health End */
+
+  .dental-care-inner h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+    margin: 12px;
+    color: #0060aa;
+  }
+
+  .dental-care-inner p {
+    font-size: 20px;
+    text-align: center;
+    margin: 20px 10%;
+    padding: 0 5rem;
+    color: #0060aa;
+  }
+  /* Dental Care End */
 }
 </style>
