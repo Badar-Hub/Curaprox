@@ -44,6 +44,9 @@
         <button>SHOP</button>
       </div>
     </div>
+    <div style="width:100%">
+      <ProductSlider />
+    </div>
     <ProFeaturedComponent
       img="teaser-baby-teething.jpg"
       h2-text="BABY TEETHING RING"
@@ -69,6 +72,7 @@ import ProFeaturedComponent from "../components/SP/ProFeaturedComponent";
 import FeaturedCategoryComponent from "../components/SP/FeaturedCategoryComponent";
 import ProductDisplay from "../components/SP/ProductDisplay";
 import Footer from "../components/Layout/Footer";
+import ProductSlider from "../components/SP/ProductSlider";
 export default {
   name: "Home",
   components: {
@@ -78,6 +82,7 @@ export default {
     FeaturedCategoryComponent,
     ProductDisplay,
     Footer,
+    ProductSlider,
   },
   data() {
     return {

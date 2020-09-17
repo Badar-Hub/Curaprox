@@ -1,6 +1,8 @@
 <template>
   <div>
     <Header />
+
+    <ProductSlider />
     <ProFeaturedComponent />
     <FeaturedCategoryComponent
       left-img="img/teaser-ortho.79413948.jpg"
@@ -121,11 +123,13 @@
 import Header from "../components/Layout/Header";
 import ProFeaturedComponent from "../components/SP/ProFeaturedComponent";
 import FeaturedCategoryComponent from "../components/SP/FeaturedCategoryComponent";
+import ProductSlider from "../components/SP/ProductSlider";
 export default {
   name: "Home",
   components: {
     ProFeaturedComponent,
     FeaturedCategoryComponent,
+    ProductSlider,
     Header,
   },
 };
