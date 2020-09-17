@@ -45,12 +45,7 @@
         <hr />
         <div class="sub-bar-inner">
           <ul>
-            <li>
-              <a href="#">CS 5460</a>
-            </li>
-            <li>
-              <a href="#">CS 1006</a>
-            </li>
+            <slot></slot>
           </ul>
           <span>
             <button>BUY</button>

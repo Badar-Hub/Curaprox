@@ -71,8 +71,8 @@ import Slider from "../components/Layout/Slider";
 import ProFeaturedComponent from "../components/SP/ProFeaturedComponent";
 import FeaturedCategoryComponent from "../components/SP/FeaturedCategoryComponent";
 import ProductDisplay from "../components/SP/ProductDisplay";
-import Footer from "../components/Layout/Footer";
 import ProductSlider from "../components/SP/ProductSlider";
+import Footer from "../components/Layout/Footer";
 export default {
   name: "Home",
   components: {

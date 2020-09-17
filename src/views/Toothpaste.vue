@@ -1,6 +1,13 @@
 <template>
   <div>
-    <Header2 />
+    <Header2>
+      <li>
+        <a href="#/BE-YOU">[BE YOU.]</a>
+      </li>
+      <li>
+        <a href="#/BLACK-IS-WHITE">BLACK IS WHITE</a>
+      </li>
+    </Header2>
     <ProFeaturedComponent
       style="color : BLACK"
       img="cps-toothpaste-teaser-beyou-colors-1200x600.jpg"

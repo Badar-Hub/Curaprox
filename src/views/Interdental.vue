@@ -1,6 +1,10 @@
 <template>
   <div>
-    <Header2 />
+    <Header2>
+      <li>
+        <a href="#/INTERDENTAL-BRUSH">INTERDENTAL BRUSH</a>
+      </li>
+    </Header2>
     <ProFeaturedComponent
       style="color : BLACK"
       img="cps-idb-teaser-prime-colors-1200x600.jpg"

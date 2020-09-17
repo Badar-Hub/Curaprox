@@ -1,6 +1,13 @@
 <template>
   <div>
-    <Header2 />
+    <Header2>
+      <li>
+        <a href="#/Cs5460">CS 5460</a>
+      </li>
+      <li>
+        <a href="#">CS 1006</a>
+      </li>
+    </Header2>
     <ProFeaturedComponent
       style="color : BLACK"
       img="toothbrush-cs5460-mood-beyou-1200x600.jpg"
