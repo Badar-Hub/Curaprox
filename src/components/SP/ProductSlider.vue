@@ -1,14 +1,4 @@
 <template>
-<<<<<<< HEAD
-  <div></div>
-</template>
-
-<script>
-export default {};
-</script>
-
-<style>
-=======
   <div>
       <vueper-slides 
         style="padding: 100px"
@@ -106,5 +96,4 @@ export default {
 
 <style>
 
->>>>>>> feature/slider-npm
 </style>
