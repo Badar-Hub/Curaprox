@@ -146,6 +146,9 @@ nav ul li a:hover {
   color: pink;
 }
 .sub-bar {
+  transition: background 250ms ease;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+  padding: 10px;
 }
 
 .sub-bar-inner {
@@ -159,6 +162,7 @@ nav ul li a:hover {
 .sub-bar-inner ul {
   padding: 0;
   margin: 0;
+  margin-top: 6px;
 }
 
 .sub-bar-inner a {
