@@ -67,23 +67,18 @@
           </ul>
         </div>
       </div>
-      <div class="footer-after">
-        <div class="footer-after-inner">
-          <ul>
-            <li>
-              <a href="#">GTB of the online Shop</a>
-            </li>
-            <p>|</p>
-            <li>
-              <a href="#">Legal notice</a>
-            </li>
-            <p>|</p>
-            <li>
-              <a href="#">Privacy mode</a>
-            </li>
-            <p>|</p>
-          </ul>
-          <p>© Curaden.PK - All rights reserved</p>
+      <div class="footer-af">
+        <div class="footer-after">
+          <div class="footer-after-inner">
+            <div class="footer-after-inner-text">
+              <p>
+                <a href="#">GTB of the Online Shop</a> |
+                <a href="#">Legal Notice</a> |
+                <a href="#">Privacy Notice</a>
+              </p>
+              <p>© Curaden.PK - All rights reserved</p>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
@@ -96,9 +91,6 @@ export default {};
 
 <style>
 footer {
-  /* display: flex;
-  flex-wrap: wrap;
-  justify-content: center; */
   background-color: #f0f0f0;
 }
 
@@ -108,7 +100,9 @@ footer .footer-inner {
   margin: auto;
   max-width: 1200px;
   text-align: left;
-  color: black;
+  color: #002440;
+  transition: all 500ms ease;
+  line-height: 1.5;
 }
 
 footer .footer-inner div {
@@ -134,20 +128,24 @@ footer .footer-inner li a:hover {
   text-decoration: underline;
 }
 
+.footer-af {
+  background-color: #002440;
+  color: white;
+}
+
 .footer-after {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  background-color: #002440;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .footer-after .footer-after-inner {
   display: flex;
   flex-direction: column;
-  justify-content: left;
-  max-width: 1200px;
-  margin: auto;
+
   background-color: #002440;
+  text-align: left;
 }
 
 .footer-after .footer-after-inner ul {

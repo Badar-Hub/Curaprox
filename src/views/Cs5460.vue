@@ -2,6 +2,33 @@
   <div>
     <Header2 />
     <Slider2 v-bind="Slider2text1" />
+    <Slider3>
+      <template v-slot:textOverlay>
+        <p>TOOTHBRUSH CS 5460</p>
+        <h2>
+          GENTAL ON
+          <br />TEETH AND
+          <br />GUMS
+        </h2>
+        <p>
+          Each and every one of the 5,460 CUREN®
+          <br />filaments works together to combat plaque.
+          <br />Hard on plaque. Gentle on teeth and gums.
+        </p>
+      </template>
+      <template v-slot:smShow>
+        <p>TOOTHBRUSH CS 5460</p>
+        <h2>
+          GENTAL ON
+          TEETH AND
+          GUMS
+        </h2>
+        <p>
+          Each and every one of the 5,460 CUREN®
+          Hard on plaque. Gentle on teeth and gums.
+        </p>
+      </template>
+    </Slider3>
     <SubPage v-bind="textSlider" />
     <SubPage
       row-direction="row-reverse"
@@ -53,6 +80,7 @@
 <script>
 import Header2 from "../components/Layout/Header2";
 import Slider2 from "../components/Layout/Slider2";
+import Slider3 from "../components/Layout/Slider3";
 import SubPage from "../components/SP/SubPage";
 import FloatingText from "../components/SP/FloatingText";
 import TextWithImg from "../components/SP/TextWithImg";
@@ -64,6 +92,7 @@ export default {
   components: {
     Header2,
     Slider2,
+    Slider3,
     SubPage,
     FloatingText,
     TextWithImg,

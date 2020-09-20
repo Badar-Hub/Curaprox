@@ -44,6 +44,7 @@
     }"
     />
     <FeaturedCategoryComponent :left="leftCategory1" :right="rightCategory1" />
+    <Footer />
   </div>
 </template>
 
@@ -54,6 +55,7 @@ import FeaturedCategoryComponent from "../components/SP/FeaturedCategoryComponen
 import BrushingText from "../components/SP/BurshingText";
 import ProductComponent from "../components/SP/ProductComponent";
 import productData from "../components/data/database";
+import Footer from "../components/Layout/Footer";
 export default {
   name: "Toothbrush",
   components: {
@@ -62,6 +64,7 @@ export default {
     FeaturedCategoryComponent,
     BrushingText,
     ProductComponent,
+    Footer,
   },
 
   data() {
