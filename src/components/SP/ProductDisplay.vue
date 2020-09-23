@@ -79,7 +79,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .product {
   background-color: #fbf4f8;
   display: flex;

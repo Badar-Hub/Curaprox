@@ -28,12 +28,6 @@
           <p>{{content3.pText}}</p>
         </div>
       </div>
-      <div class="col">
-        <img :src="require(`@/assets/img/${content4.img}`)" />
-        <div class="text-after">
-          <p>{{content4.pText}}</p>
-        </div>
-      </div>
     </div>
   </div>
 </template>
@@ -63,16 +57,6 @@ export default {
       },
       pText: String,
     },
-    content4: {
-      img: {
-        type: String,
-        required: false,
-      },
-      pText: {
-        type: String,
-        required: false,
-      },
-    },
   },
 };
 </script>
@@ -81,7 +65,6 @@ export default {
 .main {
   margin-bottom: 3%;
   padding-bottom: 3%;
-  background-color: #f9f9f9;
 }
 
 .Slider {
@@ -182,6 +165,11 @@ p {
 }
 
 @media (max-width: 650px) {
+  .text {
+    padding: 0;
+    background-size: contain;
+    line-height: 1.4;
+  }
   .Slider {
     min-height: 400px;
   }

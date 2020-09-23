@@ -74,4 +74,38 @@ export default {
   font-weight: 500;
   font-family: ff-info-text-web-pro, sans-serif;
 }
+
+@media (max-width: 1124px) {
+  .sub .sub-inner {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  .sub .sub-inner .text {
+    padding-top: 10%;
+    text-align: left;
+    max-width: 48%;
+  }
+}
+
+/* 
+@media (max-width: 910px) {
+  .sub .sub-inner .text h2 {
+    font-size: 42px;
+  }
+
+  .sub .sub-inner .text p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 750px) {
+  .sub .sub-inner .text h2 {
+    font-size: 32px;
+  }
+
+  .sub .sub-inner .text p {
+    font-size: 16px;
+  }
+} */
 </style>

@@ -3,7 +3,7 @@
     <div class="productSlider">
       <div class="productSlider-inner">
         <vueper-slides
-          style="padding: 100px"
+          style="padding: 100px;"
           class="no-shadow"
           :arrows="true"
           :bullets="false"
@@ -14,13 +14,19 @@
           :dragging-distance="200"
           :breakpoints="{ 800: { visibleSlides: 2, slideMultiple: 2 } }"
         >
-          <vueper-slide
-            v-for="(slide, i) in slides"
-            :key="i"
-            :image="slide.image"
-            :title="slide.title"
-            :content="slide.content"
-          />
+          <vueper-slide style="height:800px" v-for="(slide, i) in slides" :key="i">
+            <template v-slot:content>
+              <div class="vueperslide__content-wrapper" style="flex-direction: row">
+                <SingleProduct
+                  :name="slide.title"
+                  :img="slide.image"
+                  :id="i"
+                  price="500"
+                  :shortDesc="slide.content"
+                />
+              </div>
+            </template>
+          </vueper-slide>
         </vueper-slides>
       </div>
     </div>
@@ -30,43 +36,45 @@
 <script>
 import { VueperSlides, VueperSlide } from "vueperslides";
 import "vueperslides/dist/vueperslides.css";
+import SingleProduct from "../SP/SingleProduct";
 
 export default {
   name: "ProductSlider",
   components: {
     VueperSlides,
     VueperSlide,
+    SingleProduct,
   },
   data() {
     return {
       slides: [
         {
-          image: require("@/assets/img/products/cs-5460.png"),
+          image: "cs-5460.png",
           title: "CS 5460",
           content: "Slide content.",
         },
         {
-          image: require("@/assets/img/products/cs-5460.png"),
+          image: "cs-5460.png",
           title: "CS 5460",
           content: "Slide content.",
         },
         {
-          image: require("@/assets/img/products/cs-5460.png"),
+          image: "cs-5460.png",
           title: "CS 5460",
           content: "Slide content.",
         },
         {
-          image: require("@/assets/img/products/cs-5460.png"),
+          image: "cs-5460.png",
           title: "CS 5460",
           content: "Slide content.",
         },
         {
-          image: require("@/assets/img/products/cs-5460.png"),
+          image: "cs-5460.png",
           title: "CS 5460",
           content: "Slide content.",
         },
         {
-          image: require("@/assets/img/products/cs-5460.png"),
+          image: "cs-5460.png",
           title: "CS 5460",
           content: "Slide content.",
         },

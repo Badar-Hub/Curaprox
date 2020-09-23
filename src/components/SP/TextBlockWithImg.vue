@@ -44,6 +44,10 @@ export default {
   max-width: 30%;
 }
 
+img {
+  width: 100%;
+}
+
 h2 {
   font-size: 1.5rem;
 }

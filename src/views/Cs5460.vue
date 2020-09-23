@@ -1,8 +1,10 @@
 <template>
   <div>
     <Header2 />
-    <Slider2 v-bind="Slider2text1" />
-    <Slider3>
+    <Slider3
+      v-bind="SliderContent"
+      image="curaprox-toothbrush-overview-header-cs5460-blue-green.jpg"
+    >
       <template v-slot:textOverlay>
         <p>TOOTHBRUSH CS 5460</p>
         <h2>
@@ -47,7 +49,35 @@
       :ptext="text4Slider.ptext"
       :img="text4Slider.img"
     />
-    <Slider2 v-bind="Slider2text2" />
+    <Slider4 v-bind="SliderContent1">
+      <template v-slot:textOverlay>
+        <p></p>
+        <h2>
+          TENDER
+          <br />LOVING
+          <br />CARE
+        </h2>
+        <p>
+          Many people brush with too much pressure…
+          <br />and with hard bristles. This leads to damage
+          <br />such as receding gums. Our ultra-fine CUREN®
+          <br />filaments make all the difference. They’re
+          <br />gentle. And they clean exceptionally well.
+        </p>
+      </template>
+      <template v-slot:smShow>
+        <p>TOOTHBRUSH CS 5460</p>
+        <h2>
+          GENTAL ON
+          TEETH AND
+          GUMS
+        </h2>
+        <p>
+          Each and every one of the 5,460 CUREN®
+          Hard on plaque. Gentle on teeth and gums.
+        </p>
+      </template>
+    </Slider4>
     <TextWithImg v-bind="TxtImg" />
     <ProFeaturedComponent
       style="color:white"
@@ -74,31 +104,34 @@
       h2Text="Baby toothbrush"
       h3Text="Fun, gentle, effective – from the first tooth"
     />
+    <Footer />
   </div>
 </template>
 
 <script>
 import Header2 from "../components/Layout/Header2";
-import Slider2 from "../components/Layout/Slider2";
 import Slider3 from "../components/Layout/Slider3";
+import Slider4 from "../components/Layout/Slider4";
 import SubPage from "../components/SP/SubPage";
 import FloatingText from "../components/SP/FloatingText";
 import TextWithImg from "../components/SP/TextWithImg";
 import ProFeaturedComponent from "../components/SP/ProFeaturedComponent";
 import FeaturedCategoryComponent from "../components/SP/FeaturedCategoryComponent";
 import TextBlockWithImg from "../components/SP/TextBlockWithImg";
+import Footer from "../components/Layout/Footer";
 export default {
   name: "Cs5460",
   components: {
     Header2,
-    Slider2,
     Slider3,
+    Slider4,
     SubPage,
     FloatingText,
     TextWithImg,
     ProFeaturedComponent,
     FeaturedCategoryComponent,
     TextBlockWithImg,
+    Footer,
   },
   data() {
     return {
@@ -127,28 +160,46 @@ export default {
         img: "curaprox-image-text-toothbrush-colors-cs5460.jpg",
       },
 
-      Slider2text1: {
-        img: "01.jpg",
-        text1: {
+      SliderContent: {
+        content1: {
           img: "5460.png",
           pText:
             "5,460 filaments densely packed on the brush head to give exceptional cleaning power",
         },
-        text2: {
+        content2: {
           img: "Curaprox_Badge_Small-Head.png",
           pText: "Compact brush head. Slight angle. Optimal cleaning",
         },
-        text3: {
+        content3: {
           img: "Curaprox_Badge_Feder.png",
           pText:
             "CUREN® filaments. Incredibly gentle, incredibly thin – just 0.1mm in diameter",
         },
-        text4: {
+        content4: {
           img: "Curaprox_Badge_Zahl-45.png",
           pText:
             "Octagonal handle. It’s almost impossible NOT to clean at the correct angle",
         },
       },
+
+      SliderContent1: {
+        image: "curaprox-toothbrush-cs5460-hand-white-green.jpg",
+        content1: {
+          img: "5460.png",
+          pText:
+            "5,460 filaments densely packed on the brush head to give exceptional cleaning power",
+        },
+        content2: {
+          img: "Curaprox_Badge_Small-Head.png",
+          pText: "Compact brush head. Slight angle. Optimal cleaning",
+        },
+        content3: {
+          img: "Curaprox_Badge_Feder.png",
+          pText:
+            "CUREN® filaments. Incredibly gentle, incredibly thin – just 0.1mm in diameter",
+        },
+      },
+
       Slider2text2: {
         img: "02.jpg",
         text1: {

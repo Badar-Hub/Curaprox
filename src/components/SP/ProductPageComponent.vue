@@ -3,8 +3,8 @@
     <div class="productPage">
       <div class="productPage-inner">
         <div class="text">
-          <h1>CS 5460</h1>
-          <p>RS: 650</p>
+          <h1>{{product.name}}</h1>
+          <p>Rs. {{product.price}}</p>
           <div class="qty">
             <button v-on:click="minusQty">
               <span>-</span>
@@ -15,11 +15,11 @@
             </button>
           </div>
           <br />
-          <button class="addToCartBtn">Add to cart</button>
+          <button @click="addProduct(product)" class="addToCartBtn">Add to cart</button>
           <h2>variant</h2>
         </div>
         <div class="img">
-          <img src="@/assets/img/products/cs-5460.png" />
+          <img :src="require(`@/assets/img/products/${product.img}`)" />
         </div>
       </div>
       <div class="description">
@@ -30,18 +30,9 @@
         <hr />
         <div :style="`display:${display}`" class="description-inner">
           <p>
-            <strong>When your gums fall in love</strong>
+            <strong>{{product.shortDesc}}</strong>
           </p>
-          <p>
-            Why do dental professionals recommend the CS 5460? Two words. Gentle. And efficient. The ultra-fine, CUREN® filaments are densely packed on the brush head to give exceptional cleaning power. And it looks beautiful.
-            Plaque’s toughest enemy is the gentleness of CUREN®-bristles: CS toothbrushes really are incredibly gentle. The 5460 CUREN®-filaments of the CS 5460 ultra soft form an uncommonly dense and efficient cleaning surface. While they are gentle on gums and teeth, CUREN®-filaments are extremely hard on plaque. Anyone who tries a CS toothbrush will never want to do without this
-            brushing experience again.
-            CURAPROX toothbrushes not only prevent brushing damage, but also break up and remove plaque perfectly. CUREN ®-filaments are stiffer than nylon and remain just as stable in the mouth as when they are dry. These properties make it possible to produce toothbrushes with a large number of ultrafine bristles.
-            Gentle action thanks to CUREN®-filaments
-            Efficient cleaning surface thanks to a dense array of CUREN®-filaments
-            There’s no escape: compact head, slightly angled
-            Octagonal handle helps users to brush at the correct angle
-          </p>
+          <p>{{product.longDesc}}</p>
         </div>
       </div>
       <div class="productDetails">
@@ -106,19 +97,18 @@
       <div class="viwProduct">
         <h1>Viewed Products</h1>
         <ProductSlider />
-        <Footer />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { mapActions } from "vuex";
 import ProductSlider from "../SP/ProductSlider";
-import Footer from "../Layout/Footer";
+import axios from "axios";
 export default {
   components: {
     ProductSlider,
-    Footer,
   },
   name: "ProductPageComponent",
   data() {
@@ -126,6 +116,7 @@ export default {
       quantity: 0,
       display: "flex",
       displays: "flex",
+      product: {},
     };
   },
   methods: {
@@ -150,6 +141,14 @@ export default {
         this.displays = "flex";
       }
     },
+    ...mapActions(["addProduct"]),
+  },
+  mounted() {
+    console.log(this.$route);
+    axios.get(`/api/product/${this.$route.params.id}`).then((res) => {
+      console.log(res);
+      this.product = res.data;
+    });
   },
 };
 </script>
@@ -205,7 +204,9 @@ export default {
 
 .productPage-inner .img {
   max-width: 700px;
-  border: black 1px solid;
+  -webkit-box-shadow: 0px 0px 6px 2px rgba(194, 194, 194, 1);
+  -moz-box-shadow: 0px 0px 6px 2px rgba(194, 194, 194, 1);
+  box-shadow: 0px 0px 6px 2px rgba(194, 194, 194, 1);
 }
 
 .productPage-inner img {
@@ -233,7 +234,6 @@ export default {
 .description .description-inner {
   flex-direction: column;
   margin: 30px 0;
-  border: black 1px solid;
   text-align: left;
   text-align: justify;
 }

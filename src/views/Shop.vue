@@ -1,17 +1,20 @@
 <template>
   <div>
     <Header2 />
-    <ProductPageComponent />
+    <!-- <ProductPageComponent /> -->
+    <!-- <ProductListingComponent /> -->
+    <router-view />
+    <Footer />
   </div>
 </template>
 
 <script>
 import Header2 from "../components/Layout/Header2";
-import ProductPageComponent from "../components/SP/ProductPageComponent";
+import Footer from "../components/Layout/Footer";
 export default {
   components: {
     Header2,
-    ProductPageComponent,
+    Footer,
   },
 };
 </script>
