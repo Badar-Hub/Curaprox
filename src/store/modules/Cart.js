@@ -4,6 +4,7 @@ const state = {
 
 const getters = {
   getAllProducts: (state) => state.products,
+  getTotalCost: (state) => state.products.reduce((pV, cV) => (pV += cV)),
 };
 
 const actions = {

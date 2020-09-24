@@ -1,19 +1,24 @@
 <template>
   <div>
-    <cart />
-    <h1>Hello World!</h1>
+    <header2 />
+    <CartfinaL />
+    <Footer />
   </div>
 </template>
 
 <script>
-import cart from "../components/SP/Cart";
+import header2 from "../components/Layout/Header2";
+import CartfinaL from "../components/SP/Cart-finaL";
+import Footer from "../components/Layout/Footer";
 export default {
-  name: "cart",
+  name: "Cart",
   components: {
-    cart,
+    header2,
+    CartfinaL,
+    Footer,
   },
 };
 </script>
 
-<style>
+<style scoped lang="sass">
 </style>
