@@ -121,11 +121,11 @@ export default {
   },
   methods: {
     plusQty() {
-      this.quantity += 1;
+      this.quantity++;
     },
 
     minusQty() {
-      this.quantity -= 1;
+      this.quantity--;
     },
     toogleDesc() {
       if (this.display === "flex") {

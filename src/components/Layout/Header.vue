@@ -38,6 +38,13 @@
                 <router-link to="/shop">SHOP</router-link>
               </li>
             </ul>
+            <ul>
+              <li>
+                <a href="/#/cart">
+                  <img src="@/assets/img/cart.png" />
+                </a>
+              </li>
+            </ul>
           </nav>
         </div>
       </div>
@@ -87,15 +94,6 @@ header {
   padding: 0 !important;
 }
 
-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 100%;
-  background-color: #ef7fb1;
-}
-
 header .navigation {
   background-color: #ef7fb1;
 }
@@ -115,9 +113,19 @@ header .navigation-inner a {
   color: white;
 }
 
+nav {
+  display: flex;
+}
+
+nav img {
+  max-width: 25px;
+  height: 25px !important;
+  cursor: pointer;
+}
+
 header img {
   width: 180px;
-  height: 35px;
+  height: 45px;
 }
 
 header .navigation:hover {

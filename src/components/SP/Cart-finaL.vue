@@ -19,16 +19,16 @@
             </div>
           </div>
           <div class="price">
-            <p>{{prod.price}}</p>
+            <p>Rs. {{prod.price}}</p>
           </div>
           <div class="quantity">
             <div class="qty">
-              <button>+</button>
-              <p>0</p>
-              <button>-</button>
+              <button v-on:click="qtyPlus">+</button>
+              <p>{{quantity}}</p>
+              <button v-on:click="qtyMinus">-</button>
             </div>
           </div>
-          <div class="total">Rs. 650</div>
+          <div v-on="totalP" class="total">Rs. {{Total}}</div>
         </div>
         <hr />
       </div>
@@ -53,7 +53,7 @@
                 <strong>subtotal</strong>
               </p>
               <p>
-                <strong>Rs. 650</strong>
+                <strong>Rs. {{getTotalCost}}</strong>
               </p>
             </div>
             <hr />
@@ -62,7 +62,7 @@
                 <strong>Total</strong>
               </p>
               <p>
-                <strong>{{getTotalCost}}</strong>
+                <strong>Rs. {{getTotalCost}}</strong>
               </p>
             </div>
             <hr />
@@ -81,6 +81,23 @@
 import { mapGetters } from "vuex";
 export default {
   name: "Cart-finaL",
+  data() {
+    return {
+      quantity: 0,
+      Total: 0,
+    };
+  },
+  methods: {
+    qtyPlus() {
+      this.quantity++;
+    },
+    qtyMinus() {
+      this.quantity--;
+    },
+    totalP() {
+      this.Total = this.quantity * this.getAllProducts.price;
+    },
+  },
   computed: mapGetters(["getAllProducts", "getTotalCost"]),
 };
 </script>

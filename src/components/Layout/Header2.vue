@@ -38,6 +38,13 @@
                 <router-link to="/shop">SHOP</router-link>
               </li>
             </ul>
+            <ul>
+              <li>
+                <a href="/#/cart">
+                  <img src="@/assets/img/cart.png" />
+                </a>
+              </li>
+            </ul>
           </nav>
         </div>
       </div>
@@ -63,6 +70,10 @@ export default {
 </script>
 
 <style scoped>
+hr {
+  margin-top: 0;
+}
+
 header .social-top {
   background-color: #414141;
 }
@@ -121,10 +132,21 @@ header .navigation-inner a {
 header img {
   width: 180px;
   height: 35px;
+  margin: auto 0;
 }
 
 header .navigation:hover a {
   color: black;
+}
+
+nav {
+  display: flex;
+}
+
+nav img {
+  max-width: 25px;
+  height: auto;
+  cursor: pointer;
 }
 
 ul {
@@ -148,7 +170,7 @@ nav ul li a:hover {
 .sub-bar {
   transition: background 250ms ease;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
-  padding: 10px;
+  padding-bottom: 10px;
 }
 
 .sub-bar-inner {
