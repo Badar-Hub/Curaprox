@@ -23,12 +23,14 @@
           </div>
           <div class="quantity">
             <div class="qty">
-              <button v-on:click="qtyPlus">+</button>
-              <p>{{quantity}}</p>
-              <button v-on:click="qtyMinus">-</button>
+              <button class="btn-secondary" v-on:click="addProduct(prod)">+</button>
+              <p>{{prod.qty}}</p>
+              <button class="btn-secondary bg-danger" v-on:click="addProduct(prod)">-</button>
             </div>
           </div>
-          <div v-on="totalP" class="total">Rs. {{Total}}</div>
+          <div class="total">
+            <p>Rs. {{prod.total}}</p>
+          </div>
         </div>
         <hr />
       </div>
@@ -50,10 +52,19 @@
             <hr />
             <div class="subtotal">
               <p>
-                <strong>subtotal</strong>
+                <strong>Subtotal</strong>
               </p>
               <p>
                 <strong>Rs. {{getTotalCost}}</strong>
+              </p>
+            </div>
+            <hr />
+            <div class="shipping">
+              <p>
+                <strong>Shipping</strong>
+              </p>
+              <p>
+                <strong>Rs. {{shippingPrice}}</strong>
               </p>
             </div>
             <hr />
@@ -62,13 +73,13 @@
                 <strong>Total</strong>
               </p>
               <p>
-                <strong>Rs. {{getTotalCost}}</strong>
+                <strong>Rs. {{getTotalCost + shippingPrice}}</strong>
               </p>
             </div>
             <hr />
             <div class="btn">
-              <button>Update Cart</button>
-              <button>Proceed To Checkout</button>
+              <button @click="names(['badar'])">Proceed To Checkout</button>
+              <h1>{{getAllNames[0]}}</h1>
             </div>
           </div>
         </div>
@@ -78,27 +89,17 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapActions, mapGetters } from "vuex";
 export default {
-  name: "Cart-finaL",
   data() {
     return {
-      quantity: 0,
-      Total: 0,
+      shippingPrice: 200,
     };
   },
   methods: {
-    qtyPlus() {
-      this.quantity++;
-    },
-    qtyMinus() {
-      this.quantity--;
-    },
-    totalP() {
-      this.Total = this.quantity * this.getAllProducts.price;
-    },
+    ...mapActions(["names", "addProduct"]),
   },
-  computed: mapGetters(["getAllProducts", "getTotalCost"]),
+  computed: mapGetters(["getAllProducts", "getTotalCost", "getAllNames"]),
 };
 </script>
 
@@ -163,13 +164,16 @@ export default {
       .subtotal
         display: flex
         justify-content: space-between    
+      .shipping
+        display: flex
+        justify-content: space-between    
       .total
         display: flex
         justify-content: space-between    
       .btn
         display: flex
         flex-direction: column
-      button
+      button 
         max-width: 200px
         margin: 5px auto  
 

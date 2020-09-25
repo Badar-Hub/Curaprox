@@ -15,7 +15,10 @@
             </button>
           </div>
           <br />
-          <button @click="addProduct(product)" class="addToCartBtn">Add to cart</button>
+          <button
+            @click="product.qty = quantity; addProduct(product)"
+            class="addToCartBtn"
+          >Add to cart</button>
           <h2>variant</h2>
         </div>
         <div class="img">
@@ -113,7 +116,7 @@ export default {
   name: "ProductPageComponent",
   data() {
     return {
-      quantity: 0,
+      quantity: 1,
       display: "flex",
       displays: "flex",
       product: {},

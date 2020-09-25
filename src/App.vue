@@ -49,4 +49,28 @@ p {
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+
+.btn-secondary {
+  padding: 0;
+  margin: auto 10px;
+  font-size: 18px;
+  background-color: white;
+  color: #0167b1;
+  border: #0167b1 1px solid;
+  padding: 0 7px;
+  border-radius: 10%;
+}
+
+.btn-secondary:hover {
+  background-color: #0167b1;
+  color: white;
+}
+
+.bg-danger:hover {
+  background-color: #b32d28;
+}
+
+.bg-primary {
+  background-color: #0167b1;
+}
 </style>

@@ -21,7 +21,7 @@
                   :name="slide.title"
                   :img="slide.image"
                   :id="i"
-                  price="500"
+                  :price="500"
                   :shortDesc="slide.content"
                 />
               </div>
