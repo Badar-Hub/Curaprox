@@ -5,7 +5,7 @@
         <a href="#/Cs5460">CS 5460</a>
       </li>
       <li>
-        <a href="#">CS 1006</a>
+        <a href="#/Cs1006">CS 1006</a>
       </li>
     </Header2>
     <ProFeaturedComponent

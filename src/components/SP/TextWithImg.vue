@@ -19,7 +19,7 @@
           <p>{{category3.pText}}</p>
         </div>
       </div>
-      <button>How to brush - the video</button>
+      <slot></slot>
     </div>
   </div>
 </template>

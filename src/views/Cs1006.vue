@@ -10,44 +10,37 @@
     </Header2>
     <Slider3
       v-bind="SliderContent"
-      image="curaprox-toothbrush-overview-header-cs5460-blue-green.jpg"
+      image="curaprox-toothbrush-overview-header-single-pink-blue-1200x800.jpg"
     >
       <template v-slot:textOverlay>
-        <p>TOOTHBRUSH CS 5460</p>
+        <p>CS SINGLE TOOTHBRUSH</p>
         <h2>
-          GENTAL ON
-          <br />TEETH AND
-          <br />GUMS
+          WHEN LESS
+          <br />IS MORE
         </h2>
         <p>
-          Each and every one of the 5,460 CUREN®
-          <br />filaments works together to combat plaque.
-          <br />Hard on plaque. Gentle on teeth and gums.
+          Plaque on the teeth and in the gumline.
+          <br />Discoloured particles. The CS single cleans up –
+          <br />even in those hard-to-reach-spots. It’s like
+          <br />having a personal dental hygienist in your
+          <br />bathroom.
         </p>
       </template>
       <template v-slot:smShow>
-        <p>TOOTHBRUSH CS 5460</p>
+        <p>CS SINGLE TOOTHBRUSH</p>
         <h2>
-          GENTAL ON
-          TEETH AND
-          GUMS
+          WHEN LESS
+          IS MORE
         </h2>
         <p>
-          Each and every one of the 5,460 CUREN®
-          Hard on plaque. Gentle on teeth and gums.
+          Plaque on the teeth and in the gumline. Discoloured particles. The CS single cleans up – even in those hard-to-reach-spots. It’s like
+          having a personal dental hygienist in your bathroom.
         </p>
       </template>
     </Slider3>
-    <SubPage v-bind="textSlider" />
-    <SubPage
-      row-direction="row-reverse"
-      :h2text="text2Slider.h2text"
-      :ptext="text2Slider.ptext"
-      :img="text2Slider.img"
-    />
-    <SubPage v-bind="text3Slider" />
+    <DFTC v-bind="dftc" />
     <FloatingText
-      h2-text="Experience the difference. Dental professionals have been recommending our toothbrushes for more than 40 years. Once you’ve tried these brushes… you won’t go back. Developed and manufactured in Switzerland."
+      h2-text="CS single and chill. It takes a little practice to master those precise, gentle movements along the gumline. Once perfected, it’s the ultimate way to brush. Happy brushers do it while reading Facebook or watching a movie."
     />
     <SubPage
       background-color="#f9f9f9"
@@ -90,9 +83,9 @@
     </TextWithImg>
     <ProFeaturedComponent
       style="color:white"
-      img="need-teaser-sensitive-teeth.jpg"
-      h2Text="EXPOSED TOOTH ROOTS"
-      h3Text="WHAT CAN YOU DO ABOUT THEM?"
+      img="curaprox-sonic-toothbrush-teaser-pro-single-1200x600.jpg"
+      h2Text="HYDROSONIC PRO"
+      h3Text="SONIC TOOTHBRUSH WITH SINGLE BRUSHHEAD"
       :link1="{
       href: '#',
       text:'Learn More'
@@ -120,8 +113,8 @@
 <script>
 import Header2 from "../components/Layout/Header2";
 import Slider3 from "../components/Layout/Slider3";
+import DFTC from "../components/SP/DoubleFloatingTextComponent";
 import Slider4 from "../components/Layout/Slider4";
-import SubPage from "../components/SP/SubPage";
 import FloatingText from "../components/SP/FloatingText";
 import TextWithImg from "../components/SP/TextWithImg";
 import ProFeaturedComponent from "../components/SP/ProFeaturedComponent";
@@ -133,8 +126,8 @@ export default {
   components: {
     Header2,
     Slider3,
+    DFTC,
     Slider4,
-    SubPage,
     FloatingText,
     TextWithImg,
     ProFeaturedComponent,
@@ -171,23 +164,20 @@ export default {
 
       SliderContent: {
         content1: {
-          img: "5460.png",
-          pText:
-            "5,460 filaments densely packed on the brush head to give exceptional cleaning power",
+          img: "Curaprox_Badge_Single-Head.png",
+          pText: "A single tuft. Precise, exceptional care",
         },
         content2: {
-          img: "Curaprox_Badge_Small-Head.png",
-          pText: "Compact brush head. Slight angle. Optimal cleaning",
+          img: "Curaprox_Badge_Zahl-6mm.png",
+          pText: "6mm-long ultra-fine CUREN® filaments",
         },
         content3: {
-          img: "Curaprox_Badge_Feder.png",
-          pText:
-            "CUREN® filaments. Incredibly gentle, incredibly thin – just 0.1mm in diameter",
+          img: "Curaprox_Badge_To-Go.png",
+          pText: "No need for toothpaste. Perfect on-the-go",
         },
         content4: {
-          img: "Curaprox_Badge_Zahl-45.png",
-          pText:
-            "Octagonal handle. It’s almost impossible NOT to clean at the correct angle",
+          img: "Curaprox_Badge_Smiley-Spange.png",
+          pText: "Cleans in those hard-to-reach spots… even with braces",
         },
       },
 
@@ -206,6 +196,20 @@ export default {
           img: "Curaprox_Badge_Feder.png",
           pText:
             "CUREN® filaments. Incredibly gentle, incredibly thin – just 0.1mm in diameter",
+        },
+      },
+
+      dftc: {
+        left: {
+          title: "WE ❤️ CS SINGLE",
+          desc:
+            "Toothbrush aficionados love making those precise, gentle movements along the gumline – cleaning in places where it hardly seems possible. Even between teeth and braces, brackets or retainers.",
+        },
+
+        right: {
+          title: "WHY “CS SINGLE”?",
+          desc:
+            "Because all the hard work is carried out by a single tuft. Which is why it’s perfect for tooth-by-tooth and gumline cleaning. It’s the ultimate way to clean your teeth. It’s time to spend a bit of quality time with yourself.",
         },
       },
 
@@ -234,22 +238,24 @@ export default {
 
       TxtImg: {
         txtimg: {
-          h2Text: "WHAT’S THE BEST WAY TO BRUSH MY TEETH?",
+          h2Text: "CLEAN THE RIGHT WAY",
           pText:
-            "There are many different techniques. And every mouth, tooth and interdental space is different. But there’s a proven method that works for everyone.",
+            "Guide the CS single along your gumline with precise, gentle, movements – almost without any pressure. CURAPROX developed the CS single specifically for this brushing method – known as ‘the solo technique’.",
         },
         category1: {
-          img: "angle.png",
+          img: "Curaprox_Icons_Movement_Single_winkel.jpg",
           pText:
-            "Start with the best angle – half on the teeth, half on the gums",
+            "Hold your brush vertically and apply to one side of the tooth’s surface",
         },
         category2: {
-          img: "downarrow.png",
-          pText: "Clean gently… almost without any pressure",
+          img: "Curaprox_Icons_Movement_Single_saum.jpg",
+          pText:
+            "Carefully move the filaments of the brush head so they’re just touching the gumline",
         },
         category3: {
-          img: "circle.png",
-          pText: "Small, gentle circles – let your toothbrush guide you",
+          img: "Curaprox_Icons_Movement_Single_bewegung.jpg",
+          pText:
+            "Now move the CS single with precise, gentle, “shaking” movements along the gumline – from one side of the tooth to the other",
         },
       },
 

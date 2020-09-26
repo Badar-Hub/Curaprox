@@ -2,11 +2,7 @@
   <div>
     <div class="text">
       <div class="text-inner">
-        <h2>
-          Experience the difference.
-          <p>Dental professionals have been recommending our toothbrushes for more than 40 years. Once you’ve tried these brushes… you won’t go back. Developed and manufactured in Switzerland.</p>
-        </h2>
-        <!-- <p>{{pText}}</p> -->
+        <h2>{{h2Text}}</h2>
       </div>
     </div>
   </div>
