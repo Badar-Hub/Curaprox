@@ -15,7 +15,9 @@
       </div>
       <div class="navigation">
         <div class="navigation-inner">
-          <img src="../../assets/img/logo.jpg" alt="logo" />
+          <a href="/">
+            <img src="../../assets/img/logo.jpg" alt="logo" />
+          </a>
           <!-- <div id="nav">
             <router-link to="/">Home</router-link>|
             <router-link to="/about">About</router-link>

@@ -8,42 +8,95 @@
         <a href="#/Cs1006">CS 1006</a>
       </li>
     </Header2>
-    <ProFeaturedComponent
-      style="color : BLACK"
-      img="toothbrush-cs5460-mood-beyou-1200x600.jpg"
-      h2-text="HYDROSONIC PRO"
-      h3-text="PROFESSIONAL DENTAL CLEANING EVERY DAY"
-      :link1="{
-    href: '#',
-    text:'Learn More'
-    }"
-      :link2="{
-    href: '#',
-    text:'Buy',
-    }"
-    />
-    <FeaturedCategoryComponent :left="leftCategory" :right="rightCategory" />
+    <ProFeaturedComponent img="toothbrush-cs5460-mood-beyou-1200x600.jpg">
+      <template v-slot:text>
+        <h2 style="black">CS 5460</h2>
+        <h3 style="black">
+          WHEN YOUR GUMS
+          <br />FALL IN LOVE
+        </h3>
+        <p>
+          <span style="color:#0167b1;">
+            <a href="link1.href">Learn More</a>
+            >
+          </span>
+          <span style="color:#0167b1;">
+            <a href="link2.href">Buy</a>
+            >
+          </span>
+        </p>
+      </template>
+    </ProFeaturedComponent>
+    <CategoryComponent
+      img-right="curaprox-toothbrush-teaser-baby-toothbrush-pink.jpg"
+      img-left="curaprox-toothbrush-teaser-single-love.jpg"
+    >
+      <template v-slot:left>
+        <h2>TOOTH BY TOOTH</h2>
+        <h3>CS SINGLE</h3>
+        <div class="onel">
+          <p>
+            <a href="#">Learn More</a>
+          </p>
+          <p>
+            <a href="#">Buy</a>
+          </p>
+        </div>
+      </template>
+      <template v-slot:right>
+        <h2>BABY TOOTHBRUSH</h2>
+        <h3>
+          FUN, GENTLE,
+          <br />EFFECTIVE – FROM THE
+          <br />FIRST TOOTH
+        </h3>
+        <div class="onel">
+          <p>
+            <a href="#">Learn More</a>
+          </p>
+          <p>
+            <a href="#">Buy</a>
+          </p>
+        </div>
+      </template>
+    </CategoryComponent>
     <BrushingText
       h3Text="CURAPROX TOOTHBRUSHES"
       h2Text="BRUSHING YOUR TEETH IS PURE JOY"
       pText="Dental professionals have been recommending our toothbrushes for more than 40 years. So gentle on the teeth and gums. So effective in combating plaque."
     />
     <ProductComponent :products="ProductData" />
-    <ProFeaturedComponent
-      style="color : BLACK"
-      img="curaprox-toothbrush-love-edition-grey-1200x600.jpg"
-      h2-text
-      h3-text
-      :link1="{
-    href: '#',
-    text:''
-    }"
-      :link2="{
-    href: '#',
-    text:'',
-    }"
-    />
-    <FeaturedCategoryComponent :left="leftCategory1" :right="rightCategory1" />
+    <ProFeaturedComponent img="Hawaii-Edition_Desktop-1200x600.jpg"></ProFeaturedComponent>
+    <CategoryComponent img-right="cps-colors.jpg" img-left="need-post-cleen-teeth-585x600.jpg">
+      <template v-slot:left>
+        <h2>CLEAN TEETH</h2>
+        <h3>THE ULTIMATE GUIDE</h3>
+        <div class="onel">
+          <p>
+            <a href="#">Learn More</a>
+          </p>
+          <p>
+            <a href="#">Buy</a>
+          </p>
+        </div>
+      </template>
+      <template v-slot:right>
+        <h2>INTERDENTAL BRUSHES</h2>
+        <h3>
+          RIGHT IN THE MIDDLE
+          <br />OF THE INTERDENTAL
+          <br />SPACE
+        </h3>
+        <div class="onel">
+          <p>
+            <a href="#">Learn More</a>
+          </p>
+          <p>
+            <a href="#">Buy</a>
+          </p>
+        </div>
+      </template>
+    </CategoryComponent>
     <Footer />
   </div>
 </template>
@@ -51,7 +104,7 @@
 <script>
 import Header2 from "../components/Layout/Header2";
 import ProFeaturedComponent from "../components/SP/ProFeaturedComponent";
-import FeaturedCategoryComponent from "../components/SP/FeaturedCategoryComponent";
+import CategoryComponent from "../components/SP/CategoryComponent";
 import BrushingText from "../components/SP/BurshingText";
 import ProductComponent from "../components/SP/ProductComponent";
 import productData from "../components/data/database";
@@ -61,7 +114,7 @@ export default {
   components: {
     Header2,
     ProFeaturedComponent,
-    FeaturedCategoryComponent,
+    CategoryComponent,
     BrushingText,
     ProductComponent,
     Footer,
@@ -72,38 +125,6 @@ export default {
       // Product Data
       ProductData: [...productData],
       // Product Data
-
-      // Category Images
-      leftCategory: {
-        img: "curaprox-toothbrush-teaser-single-love.jpg",
-        h2Text: "TOOTH BY TOOTH",
-        h3Text: "CS SINGLE",
-        a1Text: "Learn more",
-        a2Text: "Buy",
-      },
-      rightCategory: {
-        img: "curaprox-toothbrush-teaser-baby-toothbrush-pink.jpg",
-        h2Text: "BABY TOOTHBRUSH",
-        h3Text: "FUN, GENTLE, EFFECTIVE – FROM THE FIRST TOOTH",
-        a1Text: "Learn more",
-        a2Text: "Buy",
-      },
-
-      leftCategory1: {
-        img: "need-post-cleen-teeth-585x600.jpg",
-        h2Text: "CLEAN TEETH",
-        h3Text: "THE ULTIMATE GUIDE",
-        a1Text: "Learn more",
-        a2Text: "Buy",
-      },
-      rightCategory1: {
-        img: "cps-colors.jpg",
-        h2Text: "INTERDENTAL BRUSHES",
-        h3Text: "RIGHT IN THE MIDDLE OF THE INTERDENTAL SPACE",
-        a1Text: "Learn more",
-        a2Text: "Buy",
-      },
-      // Category Images
     };
   },
   mounted() {

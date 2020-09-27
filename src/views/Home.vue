@@ -2,21 +2,61 @@
   <div>
     <Header />
     <Slider />
-    <ProFeaturedComponent
-      style="color:white;"
-      img="Hydrosonic-Pro-toothbrush.jpg"
-      h2-text="HYDROSONIC PRO"
-      h3-text="PROFESSIONAL DENTAL CLEANING EVERY DAY"
-      :link1="{
-      href: '#',
-      text:'Learn More'
-      }"
-      :link2="{
-      href: '#',
-      text:'Buy'
-      }"
-    />
-    <FeaturedCategoryComponent :left="leftProFeat" :right="rightProFeat" />
+    <ProFeaturedComponent img="Hydrosonic-Pro-toothbrush.jpg">
+      <template v-slot:text>
+        <h2 style="color:white;">HYDROSONIC PRO</h2>
+        <h3 style="color:white;">
+          PROFESSIONAL
+          <br />DENTAL CLEANING
+          <br />EVERY DAY
+        </h3>
+        <p>
+          <span style="color:white;">
+            <a href="link1.href">Learn More</a>
+            >
+          </span>
+          <span style="color:white;">
+            <a href="link2.href">Buy</a>
+            >
+          </span>
+        </p>
+      </template>
+    </ProFeaturedComponent>
+    <!-- Category Component -->
+    <CategoryComponent img-right="cps-colors.jpg" img-left="teaser-ortho.jpg">
+      <template v-slot:left>
+        <h2>ORTHODONTICS</h2>
+        <h3>
+          BRUSHING
+          <br />YOUR TEETH
+          <br />WITH CLASP
+        </h3>
+        <div class="onel">
+          <p>
+            <a href="#">Learn More</a>
+          </p>
+          <p>
+            <a href="#">Buy</a>
+          </p>
+        </div>
+      </template>
+      <template v-slot:right>
+        <h2>INTERDENTAL BRUSHES</h2>
+        <h3>
+          RIGHT IN THE MIDDLE
+          <br />OF THE INTERDENTAL
+          <br />SPACE.
+        </h3>
+        <div class="onel">
+          <p>
+            <a href="#">Learn More</a>
+          </p>
+          <p>
+            <a href="#">Buy</a>
+          </p>
+        </div>
+      </template>
+    </CategoryComponent>
     <div class="oral-health">
       <div class="oral-health-inner">
         <h2>ORAL HEALTH, INSTRUCTIONS</h2>
@@ -47,20 +87,57 @@
     <div style="width:100%">
       <ProductSlider />
     </div>
-    <ProFeaturedComponent
-      img="teaser-baby-teething.jpg"
-      h2-text="BABY TEETHING RING"
-      h3-text="TRIPLE FUN"
-      :link1="{
-    href: '#',
-    text:'Learn More'
-    }"
-      :link2="{
-    href: '#',
-    text:'Buy'
-    }"
-    />
-    <FeaturedCategoryComponent :left="leftProFeat1" :right="rightProFeat1" />
+    <ProFeaturedComponent img="teaser-baby-teething.jpg">
+      <template v-slot:text>
+        <h2 style="color:white;">BABY TEETHING RING</h2>
+        <h3 style="color:white;">
+          TRIPLE
+          <br />FUN
+        </h3>
+        <p>
+          <span style="color:white;">
+            <a href="link1.href">Learn More</a>
+            >
+          </span>
+          <span style="color:white;">
+            <a href="link2.href">Buy</a>
+            >
+          </span>
+        </p>
+      </template>
+    </ProFeaturedComponent>
+    <CategoryComponent img-right="need-teaser-implants-585x600.jpg" img-left="others-teaser.jpg">
+      <template v-slot:left>
+        <h2>BDC FOR DENTURES</h2>
+        <h3>
+          NATURAL, LONG-
+          <br />LASTING CARE
+        </h3>
+        <div class="onel">
+          <p>
+            <a href="#">Learn More</a>
+          </p>
+          <p>
+            <a href="#">Buy</a>
+          </p>
+        </div>
+      </template>
+      <template v-slot:right>
+        <h2>IMPLANTS</h2>
+        <h3>
+          BECAUSE THEY
+          <br />DESERVE SPECIAL CARE
+        </h3>
+        <div class="onel">
+          <p>
+            <a href="#">Learn More</a>
+          </p>
+          <p>
+            <a href="#">Buy</a>
+          </p>
+        </div>
+      </template>
+    </CategoryComponent>
     <Footer />
   </div>
 </template>
@@ -69,7 +146,7 @@
 import Header from "../components/Layout/Header";
 import Slider from "../components/Layout/Slider";
 import ProFeaturedComponent from "../components/SP/ProFeaturedComponent";
-import FeaturedCategoryComponent from "../components/SP/FeaturedCategoryComponent";
+import CategoryComponent from "../components/SP/CategoryComponent";
 import ProductDisplay from "../components/SP/ProductDisplay";
 import ProductSlider from "../components/SP/ProductSlider";
 import Footer from "../components/Layout/Footer";
@@ -79,43 +156,13 @@ export default {
     Header,
     Slider,
     ProFeaturedComponent,
-    FeaturedCategoryComponent,
+    CategoryComponent,
     ProductDisplay,
     Footer,
     ProductSlider,
   },
   data() {
     return {
-      leftProFeat: {
-        img: "teaser-ortho.jpg",
-        h2Text: "ORTHODONTICS",
-        h3Text: "BRUSHING YOUR TEETH WITH CLASP",
-        a1Text: "Learn More",
-        a2Text: "Buy",
-      },
-      rightProFeat: {
-        img: "cps-colors.jpg",
-        h2Text: "INTERDENTAL BRUSHES",
-        h3Text: "RIGHT IN THE MIDDLE OF THE INTERDENTAL SPACE.",
-        a1Text: "Learn More",
-        a2Text: "Buy",
-      },
-
-      leftProFeat1: {
-        img: "others-teaser.jpg",
-        h2Text: "BDC FOR DENTURES",
-        h3Text: "NATURAL, LONG-LASTING CARE",
-        a1Text: "Learn More",
-        a2Text: "Buy",
-      },
-      rightProFeat1: {
-        img: "need-teaser-implants.jpg",
-        h2Text: "IMPLANTS",
-        h3Text: "BECAUSE THEY DESERVE SPECIAL CARE",
-        a1Text: "Learn More",
-        a2Text: "Buy",
-      },
-
       left1: {
         img: "others-teaser.jpg",
         h2Text: "TOOTHBRUSH",

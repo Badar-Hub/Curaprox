@@ -39,6 +39,62 @@
       </template>
     </Slider3>
     <DFTC v-bind="dftc" />
+    <Slider5>
+      <div
+        :style="`background-image: url(${require('@/assets/img/curaprox-toothbrush-single-white-1200x550.jpg')})`"
+        class="imgBack-inner"
+      >
+        <div class="heading">
+          <h3>
+            SMALL BRUSH…
+            <br />BIG DIFFERENCE
+          </h3>
+          <p>
+            Bigger is not always better. Small brush head. Huge cleaning
+            <br />power.
+          </p>
+        </div>
+      </div>
+      <div class="hidden">
+        <h3>SMALL BRUSH… BIG DIFFERENCE</h3>
+        <p>Bigger is not always better. Small brush head. Huge cleaning power.</p>
+      </div>
+      <div class="txt">
+        <div class="c1">
+          <h4>
+            <strong>Old ways. New technology.</strong>
+          </h4>
+          <p>
+            Old ways. New technology.In the olden days – before the
+            modern toothbrush was invented – people were already brushing
+            their teeth. They chewed twigs or roots until the ends frayed…
+            and used them as toothbrushes. The CS single is inspired by this
+            tradition.
+          </p>
+        </div>
+        <div class="c1">
+          <h4>
+            <strong>Delicately does it</strong>
+          </h4>
+          <p>
+            The filaments of the CS single are stiffer than the filaments in
+            our other toothbrushes. Carefully place the outer bristles of the
+            tuft head so they only just enter the gumline. As you carefully
+            clean, tooth-by-tooth, the filaments fan up and clean in the gumline.
+          </p>
+        </div>
+        <div class="c1">
+          <h4>
+            <strong>Always by your side</strong>
+          </h4>
+          <p>
+            There’s no need for toothpaste. So you can clean with the CS single whenever
+            you like… while watching a movie, reading a book, waiting for a bus, travelling
+            to work on the train…
+          </p>
+        </div>
+      </div>
+    </Slider5>
     <FloatingText
       h2-text="CS single and chill. It takes a little practice to master those precise, gentle movements along the gumline. Once perfected, it’s the ultimate way to brush. Happy brushers do it while reading Facebook or watching a movie."
     />
@@ -49,53 +105,61 @@
       :ptext="text4Slider.ptext"
       :img="text4Slider.img"
     />
-    <Slider4 v-bind="SliderContent1">
-      <template v-slot:textOverlay>
-        <p></p>
-        <h2>
-          TENDER
-          <br />LOVING
-          <br />CARE
-        </h2>
-        <p>
-          Many people brush with too much pressure…
-          <br />and with hard bristles. This leads to damage
-          <br />such as receding gums. Our ultra-fine CUREN®
-          <br />filaments make all the difference. They’re
-          <br />gentle. And they clean exceptionally well.
-        </p>
-      </template>
-      <template v-slot:smShow>
-        <p>TOOTHBRUSH CS 5460</p>
-        <h2>
-          GENTAL ON
-          TEETH AND
-          GUMS
-        </h2>
-        <p>
-          Each and every one of the 5,460 CUREN®
-          Hard on plaque. Gentle on teeth and gums.
-        </p>
-      </template>
-    </Slider4>
     <TextWithImg v-bind="TxtImg">
       <button>How to brush - the video</button>
     </TextWithImg>
-    <ProFeaturedComponent
-      style="color:white"
-      img="curaprox-sonic-toothbrush-teaser-pro-single-1200x600.jpg"
-      h2Text="HYDROSONIC PRO"
-      h3Text="SONIC TOOTHBRUSH WITH SINGLE BRUSHHEAD"
-      :link1="{
-      href: '#',
-      text:'Learn More'
-      }"
-      :link2="{
-      href: '#',
-      text:'Buy'
-      }"
-    />
-    <FeaturedCategoryComponent :left="leftProFeat" :right="rightProFeat" />
+    <ProFeaturedComponent img="curaprox-sonic-toothbrush-teaser-pro-single-1200x600.jpg">
+      <template v-slot:text>
+        <h2 style="color:black;">HYDROSONIC PRO</h2>
+        <h3 style="color:black;">
+          SONIC TOOTHBRUSH WITH
+          <br />SINGLE BRUSHHEAD
+        </h3>
+        <p>
+          <span style="color:#0167b1;">
+            <a href="link1.href">Learn More</a>
+            >
+          </span>
+          <span style="color:#0167b1;">
+            <a href="link2.href">Buy</a>
+            >
+          </span>
+        </p>
+      </template>
+    </ProFeaturedComponent>
+    <CategoryComponent img-right="cps-colors.jpg" img-left="need-teaser-gum-care-585x600.jpg">
+      <template v-slot:left>
+        <h2 style="color:white">GUM CARE</h2>
+        <h3 style="color:white">
+          SHOW THEM YOU
+          <br />CARE
+        </h3>
+        <div class="onel">
+          <p>
+            <a style="color:white" href="#">Learn More</a>
+          </p>
+          <p>
+            <a style="color:white" href="#">Buy</a>
+          </p>
+        </div>
+      </template>
+      <template v-slot:right>
+        <h2>INTERDENTAL BRUSHES</h2>
+        <h3>
+          EFFECTIVE BRUSHING
+          <br />IN THE SPACES
+          <br />BETWEEN YOUR TEETH
+        </h3>
+        <div class="onel">
+          <p>
+            <a style="color:#0167b1" href="#">Learn More</a>
+          </p>
+          <p>
+            <a style="color:#0167b1" href="#">Buy</a>
+          </p>
+        </div>
+      </template>
+    </CategoryComponent>
     <TextBlockWithImg
       img="curaprox-related-product-toothbrush-single-green-pink.jpg"
       h2Text="CS SINGLE"
@@ -114,11 +178,12 @@
 import Header2 from "../components/Layout/Header2";
 import Slider3 from "../components/Layout/Slider3";
 import DFTC from "../components/SP/DoubleFloatingTextComponent";
-import Slider4 from "../components/Layout/Slider4";
+import Slider5 from "../components/Layout/Slider5";
+import SubPage from "../components/SP/SubPage";
 import FloatingText from "../components/SP/FloatingText";
 import TextWithImg from "../components/SP/TextWithImg";
+import CategoryComponent from "../components/SP/CategoryComponent";
 import ProFeaturedComponent from "../components/SP/ProFeaturedComponent";
-import FeaturedCategoryComponent from "../components/SP/FeaturedCategoryComponent";
 import TextBlockWithImg from "../components/SP/TextBlockWithImg";
 import Footer from "../components/Layout/Footer";
 export default {
@@ -127,11 +192,12 @@ export default {
     Header2,
     Slider3,
     DFTC,
-    Slider4,
+    Slider5,
+    SubPage,
     FloatingText,
     TextWithImg,
     ProFeaturedComponent,
-    FeaturedCategoryComponent,
+    CategoryComponent,
     TextBlockWithImg,
     Footer,
   },
@@ -178,24 +244,6 @@ export default {
         content4: {
           img: "Curaprox_Badge_Smiley-Spange.png",
           pText: "Cleans in those hard-to-reach spots… even with braces",
-        },
-      },
-
-      SliderContent1: {
-        image: "curaprox-toothbrush-cs5460-hand-white-green.jpg",
-        content1: {
-          img: "5460.png",
-          pText:
-            "5,460 filaments densely packed on the brush head to give exceptional cleaning power",
-        },
-        content2: {
-          img: "Curaprox_Badge_Small-Head.png",
-          pText: "Compact brush head. Slight angle. Optimal cleaning",
-        },
-        content3: {
-          img: "Curaprox_Badge_Feder.png",
-          pText:
-            "CUREN® filaments. Incredibly gentle, incredibly thin – just 0.1mm in diameter",
         },
       },
 
@@ -257,21 +305,6 @@ export default {
           pText:
             "Now move the CS single with precise, gentle, “shaking” movements along the gumline – from one side of the tooth to the other",
         },
-      },
-
-      leftProFeat: {
-        img: "curaprox-more-travel-set-pink.jpg",
-        h2Text: "TRAVEL SET",
-        h3Text: "BRUSH YOUR TEETH ON THE MOVE",
-        a1Text: "Learn More",
-        a2Text: "Buy",
-      },
-      rightProFeat: {
-        img: "need-post-cleen-teeth.jpg",
-        h2Text: "GUM CARE",
-        h3Text: "CLEANING INSTEAD OF SCRUBBING",
-        a1Text: "Learn More",
-        a2Text: "Buy",
       },
     };
   },

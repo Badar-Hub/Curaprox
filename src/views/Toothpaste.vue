@@ -8,21 +8,61 @@
         <a href="#/BLACK-IS-WHITE">BLACK IS WHITE</a>
       </li>
     </Header2>
-    <ProFeaturedComponent
-      style="color : BLACK"
-      img="cps-toothpaste-teaser-beyou-colors-1200x600.jpg"
-      h2-text="[BE YOU.]"
-      h3-text="ZESTY, FRESH FLAVOURS. WHITER TEETH"
-      :link1="{
-    href: '#',
-    text:'Learn More'
-    }"
-      :link2="{
-    href: '#',
-    text:'Buy',
-    }"
-    />
-    <FeaturedCategoryComponent :left="leftCategory" :right="rightCategory" />
+    <ProFeaturedComponent img="cps-toothpaste-teaser-beyou-colors-1200x600.jpg">
+      <template v-slot:text>
+        <h2 style="black">[BE YOU.]</h2>
+        <h3 style="black">
+          ZESTY, FRESH FLAVOURS.
+          <br />WHITER TEETH
+        </h3>
+        <p>
+          <span style="color:#0167b1;">
+            <a href="link1.href">Learn More</a>
+            >
+          </span>
+          <span style="color:#0167b1;">
+            <a href="link2.href">Buy</a>
+            >
+          </span>
+        </p>
+      </template>
+    </ProFeaturedComponent>
+    <CategoryComponent
+      img-right="curaprox-toothpaste-teaser-biw-black-585x600.jpg"
+      img-left="curaprox-toothpaste-enzycal-585x600.jpg"
+    >
+      <template v-slot:left>
+        <h2>ENZYCAL</h2>
+        <h3>
+          GENTLE, MILD,
+          <br />EFFECTIVE
+        </h3>
+        <div class="onel">
+          <p>
+            <a href="#">Learn More</a>
+          </p>
+          <p>
+            <a href="#">Buy</a>
+          </p>
+        </div>
+      </template>
+      <template v-slot:right>
+        <h2 style="color:white">BLACK IS WHITE</h2>
+        <h3 style="color:white">
+          HELLO GENTLE TOOTH
+          <br />CARE. GOODBYE
+          <br />STAINS
+        </h3>
+        <div class="onel">
+          <p>
+            <a style="color:white" href="#">Learn More</a>
+          </p>
+          <p>
+            <a style="color:white" href="#">Buy</a>
+          </p>
+        </div>
+      </template>
+    </CategoryComponent>
     <BrushingText
       h3Text="CURAPROX TOOTHPASTE"
       h2Text="GENTLE CARE. GREAT TASTE."
@@ -31,21 +71,60 @@
     <FloatingText
       h2Text="What’s your toothpaste? Whichever toothpaste you choose, you can be sure of one thing: It’s full of oral health goodness. Strictly no harmful ingredients – no SLS, no Triclosan, no plastic microbeads. Would you want your toothpaste any other way?"
     />
-    <ProFeaturedComponent
-      style="color : white"
-      img="need-teaser-sensitive-teeth-1200x600.jpg"
-      h2-text="SENSITIVE TEETH"
-      h3-text="OUCH! EXPOSED TOOTH ROOTS. FINALLY, HELP IS AVAILABLE."
-      :link1="{
-    href: '#',
-    text:'Learn More'
-    }"
-      :link2="{
-    href: '#',
-    text:'Buy',
-    }"
-    />
-    <FeaturedCategoryComponent :left="leftCategory1" :right="rightCategory1" />
+    <ProFeaturedComponent img="need-teaser-sensitive-teeth-1200x600.jpg">
+      <template v-slot:text>
+        <h2 style="color:white;">SENSITIVE TEETH</h2>
+        <h3 style="color:white;">
+          OUCH! EXPOSED TOOTH ROOTS.
+          <br />FINALLY, HELP IS AVAILABLE.
+        </h3>
+        <p>
+          <span style="color:white;">
+            <a href="link1.href">Learn More</a>
+            >
+          </span>
+          <span style="color:white;">
+            <a href="link2.href">Buy</a>
+            >
+          </span>
+        </p>
+      </template>
+    </ProFeaturedComponent>
+    <CategoryComponent
+      img-right="toothbrush-cs5460-mood-beyou-585x600.jpg"
+      img-left="need-whitening-2-585x600.jpg"
+    >
+      <template v-slot:left>
+        <h2 style="color:white">WHITENING</h2>
+        <h3 style="color:white">
+          WHITER TEETH –
+          <br />THE GENTLE WAY
+        </h3>
+        <div class="onel">
+          <p>
+            <a style="color:white" href="#">Learn More</a>
+          </p>
+          <p>
+            <a style="color:white" href="#">Buy</a>
+          </p>
+        </div>
+      </template>
+      <template v-slot:right>
+        <h2>CS 5460</h2>
+        <h3>
+          WHEN YOUR GUMS
+          <br />FALL IN LOVE
+        </h3>
+        <div class="onel">
+          <p>
+            <a href="#">Learn More</a>
+          </p>
+          <p>
+            <a href="#">Buy</a>
+          </p>
+        </div>
+      </template>
+    </CategoryComponent>
     <Footer />
   </div>
 </template>
@@ -53,7 +132,7 @@
 <script>
 import Header2 from "../components/Layout/Header2";
 import ProFeaturedComponent from "../components/SP/ProFeaturedComponent";
-import FeaturedCategoryComponent from "../components/SP/FeaturedCategoryComponent";
+import CategoryComponent from "../components/SP/CategoryComponent";
 import FloatingText from "../components/SP/FloatingText";
 import BrushingText from "../components/SP/BurshingText";
 import Footer from "../components/Layout/Footer";
@@ -62,46 +141,14 @@ export default {
   components: {
     Header2,
     ProFeaturedComponent,
-    FeaturedCategoryComponent,
+    CategoryComponent,
     FloatingText,
     BrushingText,
     Footer,
   },
 
   data() {
-    return {
-      // Category Images
-      leftCategory: {
-        img: "curaprox-toothpaste-enzycal-585x600.jpg",
-        h2Text: "ENZYCAL",
-        h3Text: "GENTLE, MILD, EFFECTIVE",
-        a1Text: "Learn more",
-        a2Text: "Buy",
-      },
-      rightCategory: {
-        img: "curaprox-toothpaste-teaser-biw-black-585x600.jpg",
-        h2Text: "BLACK IS WHITE",
-        h3Text: "HELLO GENTLE TOOTH CARE. GOODBYE STAINS",
-        a1Text: "Learn more",
-        a2Text: "Buy",
-      },
-
-      leftCategory1: {
-        img: "need-whitening-2-585x600.jpg",
-        h2Text: "WHITENING",
-        h3Text: "WHITER TEETH – THE GENTLE WAY",
-        a1Text: "Learn more",
-        a2Text: "Buy",
-      },
-      rightCategory1: {
-        img: "toothbrush-cs5460-mood-beyou-585x600.jpg",
-        h2Text: "CS 5460",
-        h3Text: "WHEN YOUR GUMS FALL IN LOVE",
-        a1Text: "Learn more",
-        a2Text: "Buy",
-      },
-      // Category Images
-    };
+    return {};
   },
 };
 </script>

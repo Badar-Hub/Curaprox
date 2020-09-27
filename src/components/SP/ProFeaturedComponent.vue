@@ -3,18 +3,7 @@
     <div class="pro-featured-inner">
       <img :src="require(`@/assets/img/${img}`)" />
       <div class="text">
-        <h2>{{h2Text}}</h2>
-        <h3>{{h3Text}}</h3>
-        <p>
-          <span>
-            <a :href="link1.href">{{link1.text}}</a>
-            >
-          </span>
-          <span>
-            <a :href="link2.href">{{link2.text}}</a>
-            >
-          </span>
-        </p>
+        <slot name="text"></slot>
       </div>
     </div>
   </div>
@@ -27,23 +16,6 @@ export default {
     img: {
       type: String,
       required: true,
-    },
-    h2Text: {
-      type: String,
-    },
-
-    h3Text: {
-      type: String,
-    },
-
-    link1: {
-      href: String,
-      text: String,
-    },
-
-    link2: {
-      href: String,
-      text: String,
     },
   },
 };
@@ -76,23 +48,22 @@ export default {
   position: absolute;
   top: 8px;
   left: 16px;
-  max-width: 500px;
 }
 
 .pro-featured-inner .text a {
   color: inherit;
   text-decoration: none;
   padding-right: 5px;
-  font-size: 22px;
+  font-size: 1.3rem;
 }
 
 h2 {
-  font-size: 25px;
+  font-size: 1.7rem;
   margin: 0;
 }
 
 h3 {
-  font-size: 50px;
+  font-size: 2rem;
   margin: 20px 0;
 }
 
@@ -106,19 +77,19 @@ span {
 
 @media (max-width: 900px) {
   h3 {
-    font-size: 45px;
+    font-size: 1.8rem;
     margin: 5px 0;
   }
 
   h2 {
-    font-size: 25px;
+    font-size: 1.1rem;
     margin: 0;
   }
 
   a,
   p,
   span {
-    font-size: 25px;
+    font-size: 1.1rem;
     margin: 0;
   }
   .pro-featured-inner img {
@@ -129,20 +100,19 @@ span {
 }
 @media (max-width: 600px) {
   h3 {
-    font-size: 30px;
-    margin: 5px 0;
-    line-height: 40px;
+    font-size: 1rem;
+    line-height: 1.3rem;
   }
 
   h2 {
-    font-size: 15px;
+    font-size: 0.8rem;
     margin: 0;
   }
 
   a,
   p,
   span {
-    font-size: 17px;
+    font-size: 0.8rem;
     margin: 0;
   }
   .pro-featured-inner img {
@@ -154,7 +124,6 @@ span {
     position: absolute;
     top: 8px;
     left: 16px;
-    max-width: 300px;
   }
 }
 </style>

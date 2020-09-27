@@ -42,20 +42,21 @@ export default {
 }
 .leftText {
   max-width: 450px;
-  text-align: justify;
+  text-align: left;
   padding: 30px;
 }
 .rightText {
   max-width: 450px;
-  text-align: justify;
+  text-align: left;
   padding: 30px;
 }
 p {
   font-size: 20px;
+  text-align: justify;
 }
 
 h2 {
-  font-size: 40px;
+  font-size: 2.2rem;
   margin: 0;
 }
 @media (max-width: 910px) {
@@ -64,11 +65,11 @@ h2 {
     justify-content: center;
   }
   p {
-    font-size: 20px;
+    font-size: 1.2rem;
   }
 
   h2 {
-    font-size: 40px;
+    font-size: 1.9rem;
     margin: 0;
   }
 }

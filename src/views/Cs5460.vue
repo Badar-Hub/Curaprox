@@ -88,21 +88,60 @@
     <TextWithImg v-bind="TxtImg">
       <button>How to brush - the video</button>
     </TextWithImg>
-    <ProFeaturedComponent
-      style="color:white"
-      img="need-teaser-sensitive-teeth.jpg"
-      h2Text="EXPOSED TOOTH ROOTS"
-      h3Text="WHAT CAN YOU DO ABOUT THEM?"
-      :link1="{
-      href: '#',
-      text:'Learn More'
-      }"
-      :link2="{
-      href: '#',
-      text:'Buy'
-      }"
-    />
-    <FeaturedCategoryComponent :left="leftProFeat" :right="rightProFeat" />
+    <ProFeaturedComponent img="need-teaser-sensitive-teeth.jpg">
+      <template v-slot:text>
+        <h2 style="color:white;">EXPOSED TOOTH ROOTS</h2>
+        <h3 style="color:white;">
+          WHAT CAN YOU DO
+          <br />ABOUT THEM?
+        </h3>
+        <p>
+          <span style="color:white;">
+            <a href="link1.href">Learn More</a>
+            >
+          </span>
+          <span style="color:white;">
+            <a href="link2.href">Buy</a>
+            >
+          </span>
+        </p>
+      </template>
+    </ProFeaturedComponent>
+    <CategoryComponent
+      img-right="need-post-cleen-teeth.jpg"
+      img-left="curaprox-more-travel-set-pink.jpg"
+    >
+      <template v-slot:left>
+        <h2 style="color:white">TRAVEL SET</h2>
+        <h3 style="color:white">
+          BRUSH YOUR TEETH
+          <br />ON THE MOVE
+        </h3>
+        <div class="onel">
+          <p>
+            <a style="color:white" href="#">Learn More</a>
+          </p>
+          <p>
+            <a style="color:white" href="#">Buy</a>
+          </p>
+        </div>
+      </template>
+      <template v-slot:right>
+        <h2 style="color:black">GUM CARE</h2>
+        <h3 style="color:black">
+          CLEANING INSTEAD
+          <br />OF SCRUBBING
+        </h3>
+        <div class="onel">
+          <p>
+            <a style="color:#0167b1" href="#">Learn More</a>
+          </p>
+          <p>
+            <a style="color:#0167b1" href="#">Buy</a>
+          </p>
+        </div>
+      </template>
+    </CategoryComponent>
     <TextBlockWithImg
       img="curaprox-related-product-toothbrush-single-green-pink.jpg"
       h2Text="CS SINGLE"
@@ -124,8 +163,8 @@ import Slider4 from "../components/Layout/Slider4";
 import SubPage from "../components/SP/SubPage";
 import FloatingText from "../components/SP/FloatingText";
 import TextWithImg from "../components/SP/TextWithImg";
+import CategoryComponent from "../components/SP/CategoryComponent";
 import ProFeaturedComponent from "../components/SP/ProFeaturedComponent";
-import FeaturedCategoryComponent from "../components/SP/FeaturedCategoryComponent";
 import TextBlockWithImg from "../components/SP/TextBlockWithImg";
 import Footer from "../components/Layout/Footer";
 export default {
@@ -138,7 +177,7 @@ export default {
     FloatingText,
     TextWithImg,
     ProFeaturedComponent,
-    FeaturedCategoryComponent,
+    CategoryComponent,
     TextBlockWithImg,
     Footer,
   },
@@ -251,21 +290,6 @@ export default {
           img: "circle.png",
           pText: "Small, gentle circles – let your toothbrush guide you",
         },
-      },
-
-      leftProFeat: {
-        img: "curaprox-more-travel-set-pink.jpg",
-        h2Text: "TRAVEL SET",
-        h3Text: "BRUSH YOUR TEETH ON THE MOVE",
-        a1Text: "Learn More",
-        a2Text: "Buy",
-      },
-      rightProFeat: {
-        img: "need-post-cleen-teeth.jpg",
-        h2Text: "GUM CARE",
-        h3Text: "CLEANING INSTEAD OF SCRUBBING",
-        a1Text: "Learn More",
-        a2Text: "Buy",
       },
     };
   },
