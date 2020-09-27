@@ -17,7 +17,7 @@ productData = [
     Efficient cleaning surface thanks to a dense array of CUREN®-filaments
     There’s no escape: compact head, slightly angled
     Octagonal handle helps users to brush at the correct angle`,
-    price: "650",
+    price: 650,
     img: "Toothbrush/CS-5460.jpg",
   },
   {
@@ -31,7 +31,7 @@ productData = [
     CURAPROX toothbrushes not only prevent brushing damages, but also break up and remove plaque perfectly. CUREN®-filaments are stiffer than nylon and remain just as stable in the mouth as when they are dry. These properties make it possible to produce toothbrushes with a large number of ultrafine bristles.
     
     CURAPROX CS toothbrushes break up und remove plaque more thoroughly – thanks to the extremely dense bristles.`,
-    price: "650",
+    price: 650,
     img: "Toothbrush/CS-3960.jpg",
   },
   {
@@ -47,7 +47,7 @@ productData = [
     CURAPROX toothbrushes not only prevent brushing damages, but also break up and remove plaque perfectly. CUREN®-bristles are stiffer than nylon and remain just as stable in the mouth as when they are dry. These properties make it possible to produce toothbrushes with a large number of ultrafine bristles.
     
     CURAPROX CS toothbrushes break up und remove plaque more thoroughly – thanks to the extremely dense bristles.`,
-    price: "650",
+    price: 650,
     img: "Toothbrush/CS-1560.jpg",
   },
   {
@@ -68,7 +68,7 @@ productData = [
     Efficient cleaning surface thanks to a dense array of CUREN®-filaments
     There’s no escape: compact head, slightly angled
     Octagonal handle helps users to brush at the correct angle`,
-    price: "650",
+    price: 650,
     img: "Toothbrush/CS-SMART.jpg",
   },
 ];

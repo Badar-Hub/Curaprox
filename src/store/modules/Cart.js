@@ -14,8 +14,8 @@ const getters = {
 };
 
 const actions = {
-  async addProduct({ commit }, product) {
-    commit("addProduct", product);
+  async updateCart({ commit }, product) {
+    commit("updateCart", product);
     console.log(product);
     console.log(state.products);
   },
@@ -31,21 +31,22 @@ const actions = {
 };
 
 const mutations = {
-  addProduct: (state, product) => {
+  updateCart: (state, product) => {
     const prod = state.products.find((p) => p.id == product.id);
     if (prod) {
-      prod.qty++;
+      prod.qty+=product.qty;
       prod.total = prod.qty * prod.price;
       console.log(
         "test",
         state.products.find((p) => p.id == product.id)
       );
     } else {
-      if (!product.qty) product.qty = 1;
-      product.total = product.price;
-      state.products.push(product);
+      // product.total = product.price;
+      console.log(product);
+      state.products.push({...product});
     }
   },
+
 
   namenn: (state, name) => {
     state.namen = name;

@@ -16,7 +16,7 @@
           </div>
           <br />
           <button
-            @click="product.qty = quantity; addProduct(product)"
+            @click="$set(product, 'qty', quantity); $set(product, 'total', product.price * quantity); updateCart(product)"
             class="addToCartBtn"
           >Add to cart</button>
           <h2>variant</h2>
@@ -109,6 +109,8 @@
 import { mapActions } from "vuex";
 import ProductSlider from "../SP/ProductSlider";
 import axios from "axios";
+import productData from '../data/database'
+
 export default {
   components: {
     ProductSlider,
@@ -144,13 +146,15 @@ export default {
         this.displays = "flex";
       }
     },
-    ...mapActions(["addProduct"]),
+    ...mapActions(["updateCart"]),
   },
   mounted() {
-    console.log(this.$route);
     axios.get(`/api/product/${this.$route.params.id}`).then((res) => {
       console.log(res);
       this.product = res.data;
+    })
+    .catch(() => {
+      this.product = productData.find(x => x.id == this.$route.params.id);
     });
   },
 };

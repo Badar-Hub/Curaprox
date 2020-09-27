@@ -11,6 +11,7 @@
 <script>
 import SingleProduct from "./SingleProduct";
 import axios from "axios";
+import productData from '../data/database'
 export default {
   components: {
     SingleProduct,
@@ -24,6 +25,9 @@ export default {
     axios.get("/api/products").then((res) => {
       console.log(res);
       this.products = res.data.default;
+    }).catch(() => {
+      console.log('mocking!', productData);
+      this.products = productData;
     });
   },
 };

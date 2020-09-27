@@ -23,9 +23,9 @@
           </div>
           <div class="quantity">
             <div class="qty">
-              <button class="btn-secondary" v-on:click="addProduct(prod)">+</button>
+              <button class="btn-secondary bg-danger" v-on:click="$set(prod, 'qty', prod.qty-1); $set(prod, 'total', prod.qty * prod.price)">-</button>
               <p>{{prod.qty}}</p>
-              <button class="btn-secondary bg-danger" v-on:click="addProduct(prod)">-</button>
+              <button class="btn-secondary" v-on:click="$set(prod, 'qty', prod.qty+1); $set(prod, 'total', prod.qty * prod.price)">+</button>
             </div>
           </div>
           <div class="total">
@@ -78,8 +78,7 @@
             </div>
             <hr />
             <div class="btn">
-              <button @click="names(['badar'])">Proceed To Checkout</button>
-              <h1>{{getAllNames[0]}}</h1>
+              <button>Proceed To Checkout</button>
             </div>
           </div>
         </div>
@@ -97,7 +96,7 @@ export default {
     };
   },
   methods: {
-    ...mapActions(["names", "addProduct"]),
+    ...mapActions(["names", "updateCart"]),
   },
   computed: mapGetters(["getAllProducts", "getTotalCost", "getAllNames"]),
 };
