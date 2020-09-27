@@ -13,7 +13,6 @@ export default {
   name: "FloatingText",
   props: {
     h2Text: String,
-    // pText: String,
   },
 };
 </script>
@@ -29,11 +28,7 @@ export default {
 }
 
 .text .text-inner h2 {
-  font-size: 73px;
+  font-size: 4rem;
   color: #652d89;
-}
-
-.text .text-inner p {
-  font-size: 73px;
 }
 </style>

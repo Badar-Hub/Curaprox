@@ -41,7 +41,7 @@
     </Slider3>
     <SubPage v-bind="textSlider" />
     <dftc v-bind="dftc" />
-    <GifComponent />
+    <GifComponent img="curaprox-toothpaste.gif" />
 
     <FloatingText
       h2-text="Why [BE YOU.]?  Whitening vs Bleaching…The vibrant colours. The zesty, fresh flavours. Gentle whitening with a natural enzyme that also takes care of your tooth enamel and gums. [BE YOU.] Beautiful inside and out."

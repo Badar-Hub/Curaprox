@@ -39,6 +39,9 @@ export default {
 </script>
 
 <style scoped>
+img {
+  width: 100%;
+}
 .sub {
   margin-bottom: 3%;
 }
@@ -77,14 +80,46 @@ export default {
 
 @media (max-width: 1124px) {
   .sub .sub-inner {
-    flex-direction: column-reverse;
-    justify-content: center;
+    flex-direction: column-reverse !important;
   }
 
   .sub .sub-inner .text {
     padding-top: 10%;
     text-align: left;
     max-width: 48%;
+    margin: auto;
+  }
+  .sub .sub-inner .text h2 {
+    font-size: 2.3rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .sub .sub-inner .text p {
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+    font-family: ff-info-text-web-pro, sans-serif;
+  }
+}
+
+@media (max-width: 600px) {
+  .sub .sub-inner .text {
+    margin: auto;
+  }
+  .sub .sub-inner .text h2 {
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .sub .sub-inner .text p {
+    font-size: 1.22rem;
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+    font-family: ff-info-text-web-pro, sans-serif;
   }
 }
 

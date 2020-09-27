@@ -113,6 +113,24 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/BE-You.vue"),
   },
+  {
+    path: "/black-is-white",
+    name: "Black-is-White",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/Black-is-White.vue"),
+  },
+  {
+    path: "/interdentalBrush",
+    name: "InterdentalBrush",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/InterdentalBrush.vue"),
+  },
 ];
 
 const router = new VueRouter({

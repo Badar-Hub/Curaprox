@@ -58,6 +58,10 @@
 </script>
 
 <style scoped>
+.router-link-active {
+  color: #0167b1;
+}
+
 header .social-top {
   background-color: #414141;
 }
@@ -127,7 +131,6 @@ nav img {
 
 header img {
   width: 180px;
-  height: 45px;
 }
 
 header .navigation:hover {

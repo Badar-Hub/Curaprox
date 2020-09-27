@@ -1,13 +1,18 @@
 <template>
   <div class="gif">
     <div class="gif-inner">
-      <img src="@/assets/img/curaprox-toothpaste.gif" />
+      <img :src="require(`@/assets/img/${img}`)" />
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  name: "GifComponent",
+  props: {
+    img: String,
+  },
+};
 </script>
 
 <style scoped>

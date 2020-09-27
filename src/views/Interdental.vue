@@ -2,7 +2,7 @@
   <div>
     <Header2>
       <li>
-        <a href="#/INTERDENTAL-BRUSH">INTERDENTAL BRUSH</a>
+        <a href="#/InterdentalBrush">INTERDENTAL BRUSH</a>
       </li>
     </Header2>
     <ProFeaturedComponent img="cps-idb-teaser-prime-colors-1200x600.jpg">

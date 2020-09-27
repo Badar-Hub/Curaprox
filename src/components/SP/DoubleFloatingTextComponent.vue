@@ -39,6 +39,7 @@ export default {
   max-width: 1200px;
   margin: auto;
   column-gap: 5em;
+  justify-content: center;
 }
 .leftText {
   max-width: 450px;

@@ -62,8 +62,8 @@ export default {
 }
 
 .category {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   justify-content: space-evenly;
   max-width: 1200px;
   margin: auto;
@@ -83,7 +83,6 @@ export default {
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
-  max-width: 25%;
 }
 
 h2 {
@@ -100,5 +99,13 @@ button {
   font-size: 22px;
   color: #0167b1;
   border-radius: 5%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  text-decoration: underline;
 }
 </style>
