@@ -9,7 +9,7 @@
           <div class="total-main">Total</div>
         </div>
         <hr />
-        <div v-for="prod in getAllProducts" :key="prod.id" class="title-inner">
+        <div v-for="prod in getAllProducts" :key="prod._id" class="title-inner">
           <div class="product">
             <div class="textP">
               <img :src="require(`@/assets/img/products/${prod.img}`)" />

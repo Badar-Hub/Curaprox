@@ -20,8 +20,8 @@ export default {
     id: Number,
     name: String,
     price: Number,
-    shortDesc: String,
-    img: String,
+    shortDesc: { type: String, required: false },
+    img: { type: String, required: false },
   },
 };
 </script>
