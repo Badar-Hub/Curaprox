@@ -2,13 +2,13 @@
   <div @click="$router.push({name: 'shop-product', params: {id: id}})">
     <div class="singleProduct">
       <div class="img">
-        <img :src="require(`@/assets/img/products/${img}`)" />
+        <!-- <img :src="require(`@/assets/img/products/${img}`)" /> -->
       </div>
       <div class="text">
         <hr />
         <h2>{{name}}</h2>
         <h3>RS: {{price}}</h3>
-        <p>{{shortDesc}}</p>
+        <!-- <p>{{shortDesc}}</p> -->
       </div>
     </div>
   </div>
@@ -17,11 +17,11 @@
 <script>
 export default {
   props: {
-    id: Number,
+    _id: Number,
     name: String,
     price: Number,
-    shortDesc: { type: String, required: false },
-    img: { type: String, required: false },
+    // shortDesc: { type: String, required: false },
+    // img: { type: String, required: false },
   },
 };
 </script>
