@@ -22,7 +22,7 @@
           <h2>variant</h2>
         </div>
         <div class="img">
-          <img :src="`${product.img}`" />
+          <img :src="`${!isDev? '/admin/' : '' + product.img}`" />
         </div>
       </div>
       <div class="description">
@@ -122,6 +122,7 @@ export default {
       display: "flex",
       displays: "flex",
       product: {},
+      isDev: false,
     };
   },
   methods: {
@@ -149,6 +150,7 @@ export default {
     ...mapActions(["updateCart"]),
   },
   mounted() {
+    this.isDev = process.env.NODE_ENV !== "development";
     console.log(this.$route.params.id);
     axios
       .get(`/api/product/${this.$route.params.id}`)

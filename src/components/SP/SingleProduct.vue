@@ -2,7 +2,7 @@
   <div @click="$router.push({name: 'shop-product', params: {id: _id}})">
     <div class="singleProduct">
       <div class="img">
-        <img :src="img" />
+        <img :src="`${(!isDev? '/admin/' : '' ) + img}`" />
       </div>
       <div class="text">
         <hr />
@@ -16,6 +16,14 @@
 
 <script>
 export default {
+  data() {
+    return {
+      isDev: false,
+    };
+  },
+  mounted() {
+    this.isDev = process.env.NODE_ENV === "development";
+  },
   props: {
     _id: String,
     name: String,
