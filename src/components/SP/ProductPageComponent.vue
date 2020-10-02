@@ -22,7 +22,7 @@
           <h2>variant</h2>
         </div>
         <div class="img">
-          <img :src="`${!isDev? '/admin/' : '' + product.img}`" />
+          <img :src="`${(!isDev? '/admin/' : '') + product.img}`" />
         </div>
       </div>
       <div class="description">
