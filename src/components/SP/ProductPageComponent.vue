@@ -22,7 +22,7 @@
           <h2>variant</h2>
         </div>
         <div class="img">
-          <img :src="require(`@/assets/img/products/${product.img}`)" />
+          <img :src="`${product.img}`" />
         </div>
       </div>
       <div class="description">
@@ -109,7 +109,7 @@
 import { mapActions } from "vuex";
 import ProductSlider from "../SP/ProductSlider";
 import axios from "axios";
-import productData from '../data/database'
+import productData from "../data/database";
 
 export default {
   components: {
@@ -149,13 +149,16 @@ export default {
     ...mapActions(["updateCart"]),
   },
   mounted() {
-    axios.get(`/api/product/${this.$route.params.id}`).then((res) => {
-      console.log(res);
-      this.product = res.data;
-    })
-    .catch(() => {
-      this.product = productData.find(x => x.id == this.$route.params.id);
-    });
+    console.log(this.$route.params.id);
+    axios
+      .get(`/api/product/${this.$route.params.id}`)
+      .then((res) => {
+        console.log(res);
+        this.product = res.data;
+      })
+      .catch(() => {
+        this.product = productData.find((x) => x.id == this.$route.params.id);
+      });
   },
 };
 </script>

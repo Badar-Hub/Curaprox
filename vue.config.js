@@ -10,6 +10,13 @@ module.exports = {
           "^/api": "/api",
         },
       },
+      "/files": {
+        target: "http://localhost",
+        changeOrigin: true,
+        pathRewrite: {
+          "^/files": "/admin/files",
+        },
+      },
     },
   },
 };

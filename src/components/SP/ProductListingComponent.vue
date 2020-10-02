@@ -2,7 +2,7 @@
   <div>
     <div class="product">
       <div class="product-inner">
-        <SingleProduct v-for="prod of products" :key="prod.id" v-bind="prod" />
+        <SingleProduct v-for="prod of products" :key="prod._id" v-bind="prod" />
       </div>
     </div>
   </div>

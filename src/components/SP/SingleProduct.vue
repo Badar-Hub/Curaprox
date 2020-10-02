@@ -1,8 +1,8 @@
 <template>
-  <div @click="$router.push({name: 'shop-product', params: {id: id}})">
+  <div @click="$router.push({name: 'shop-product', params: {id: _id}})">
     <div class="singleProduct">
       <div class="img">
-        <!-- <img :src="require(`@/assets/img/products/${img}`)" /> -->
+        <img :src="img" />
       </div>
       <div class="text">
         <hr />
@@ -17,11 +17,11 @@
 <script>
 export default {
   props: {
-    id: Number,
+    _id: String,
     name: String,
     price: Number,
     // shortDesc: { type: String, required: false },
-    // img: { type: String, required: false },
+    img: { type: String, required: false },
   },
 };
 </script>
