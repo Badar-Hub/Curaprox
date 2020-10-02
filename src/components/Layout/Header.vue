@@ -96,12 +96,12 @@ header {
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
-  background-color: #ef7fb1;
+  background-color: #fcb6b6;
   padding: 0 !important;
 }
 
 header .navigation {
-  background-color: #ef7fb1;
+  background-color: #fcb6b6;
 }
 
 header .navigation-inner {

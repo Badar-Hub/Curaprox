@@ -17,7 +17,7 @@
 <script>
 export default {
   props: {
-    _id: Number,
+    id: Number,
     name: String,
     price: Number,
     // shortDesc: { type: String, required: false },

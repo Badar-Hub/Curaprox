@@ -2,7 +2,7 @@
   <div>
     <div class="product">
       <div class="product-inner">
-        <SingleProduct v-for="prod of products" :key="prod._id" v-bind="prod" />
+        <SingleProduct v-for="prod of products" :key="prod.id" v-bind="prod" />
       </div>
     </div>
   </div>
@@ -25,11 +25,11 @@ export default {
     axios
       .get("/api/products")
       .then((res) => {
-        console.log(res);
-        this.products = res.data.default;
+        this.products = res.data;
+        console.log(res, "result");
       })
-      .catch(() => {
-        console.log("mocking!", productData);
+      .catch((ex) => {
+        console.log("mocking!", productData, ex);
         this.products = productData;
       });
   },

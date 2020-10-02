@@ -4,10 +4,10 @@ module.exports = {
     proxy: {
       // proxy all requests starting with /api to backend
       "/api": {
-        target: "http://localhost:8085",
+        target: "http://localhost",
         changeOrigin: true,
         pathRewrite: {
-          "^/api": "",
+          "^/api": "/api",
         },
       },
     },

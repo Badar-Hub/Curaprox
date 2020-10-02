@@ -2,20 +2,19 @@
   <div>
     <Header />
     <Slider />
-    <ProFeaturedComponent img="Hydrosonic-Pro-toothbrush.jpg">
+    <ProFeaturedComponent img="curaprox-others-perioplus-range-full-1200x600.jpg">
       <template v-slot:text>
-        <h2 style="color:white;">HYDROSONIC PRO</h2>
-        <h3 style="color:white;">
-          PROFESSIONAL
-          <br />DENTAL CLEANING
-          <br />EVERY DAY
+        <h2 style="color:black;">PERIO PLUS+</h2>
+        <h3 style="color:black;">
+          NATURALLY EFFECTIVE
+          <br />MOUTHWASHES
         </h3>
         <p>
-          <span style="color:white;">
-            <a href="link1.href">Learn More</a>
+          <span style="color:#0167b8;">
+            <a href="https://curaprox.ch/en/info/dental-care/perio-plus">Learn More</a>
             >
           </span>
-          <span style="color:white;">
+          <span style="color:#0167b8;">
             <a href="link2.href">Buy</a>
             >
           </span>
@@ -27,16 +26,16 @@
       <template v-slot:left>
         <h2>ORTHODONTICS</h2>
         <h3>
-          BRUSHING
-          <br />YOUR TEETH
-          <br />WITH CLASP
+          PERFECT ORTHO CARE
+          <br />SOLUTIONS FOR
+          <br />YOUR BRACES
         </h3>
         <div class="onel">
           <p>
-            <a href="#">Learn More</a>
+            <a href="https://curaprox.ch/en/blog/post/how-do-i-look-after-my-braces">Learn More</a>
           </p>
           <p>
-            <a href="#">Buy</a>
+            <a href="http://localhost:8080/#/Interdental">Buy</a>
           </p>
         </div>
       </template>
@@ -57,17 +56,7 @@
         </div>
       </template>
     </CategoryComponent>
-    <div class="oral-health">
-      <div class="oral-health-inner">
-        <h2>ORAL HEALTH, INSTRUCTIONS</h2>
-        <p>
-          Whether for whitening. Or during pregnancy. Whether for babies or
-          kids. Whether with braces or implants. There’s always something to
-          watch out for. What exactly?
-        </p>
-        <button>Here are our instructions</button>
-      </div>
-    </div>
+
     <div class="dental-care">
       <div class="dental-care-inner">
         <h2>DENTAL CARE FROM SWITZERLAND</h2>
@@ -81,31 +70,25 @@
     <ProductDisplay :left="left2" :right="right2" />
     <div class="new-products">
       <div class="new-products-inner">
-        <button>SHOP</button>
+        <button>
+          <a href="https://curaprox.ch/en/blog">SHOP NOW</a>
+        </button>
       </div>
     </div>
     <div style="width:100%">
       <ProductSlider />
     </div>
-    <ProFeaturedComponent img="teaser-baby-teething.jpg">
-      <template v-slot:text>
-        <h2 style="color:white;">BABY TEETHING RING</h2>
-        <h3 style="color:white;">
-          TRIPLE
-          <br />FUN
-        </h3>
+    <div class="oral-health">
+      <div class="oral-health-inner">
+        <h2>ORAL HEALTH, INSTRUCTIONS</h2>
         <p>
-          <span style="color:white;">
-            <a href="link1.href">Learn More</a>
-            >
-          </span>
-          <span style="color:white;">
-            <a href="link2.href">Buy</a>
-            >
-          </span>
+          Whether for whitening. Or during pregnancy. Whether for babies or
+          kids. Whether with braces or implants. There’s always something to
+          watch out for. What exactly?
         </p>
-      </template>
-    </ProFeaturedComponent>
+        <button>Here are our instructions</button>
+      </div>
+    </div>
     <CategoryComponent img-right="need-teaser-implants-585x600.jpg" img-left="others-teaser.jpg">
       <template v-slot:left>
         <h2>BDC FOR DENTURES</h2>
@@ -130,7 +113,9 @@
         </h3>
         <div class="onel">
           <p>
-            <a href="#">Learn More</a>
+            <a
+              href="https://curaprox.ch/en/blog/post/how-do-i-look-after-my-dental-implants"
+            >Learn More</a>
           </p>
           <p>
             <a href="#">Buy</a>
@@ -164,7 +149,7 @@ export default {
   data() {
     return {
       left1: {
-        img: "others-teaser.jpg",
+        img: "cs-5460.png",
         h2Text: "TOOTHBRUSH",
         h4Text: "…THAT LOVE THE GUMLINE",
         pText:
@@ -183,7 +168,7 @@ export default {
       },
 
       left2: {
-        img: "toothpaste-pink.png",
+        img: "BLACKISWHITE.jpg",
         h2Text: "THE BEST IN THE WORLD?",
         h4Text: "TOOTHPASTE",
         pText:
