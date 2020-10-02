@@ -12,7 +12,7 @@
         <div v-for="prod in getAllProducts" :key="prod._id" class="title-inner">
           <div class="product">
             <div class="textP">
-              <img :src="require(`@/assets/img/products/${prod.img}`)" />
+              <img :src="`${(!isDev? '/admin/' : '' ) + prod.img}`" />
               <div class="text">
                 <p>{{prod.name}}</p>
               </div>
@@ -23,9 +23,15 @@
           </div>
           <div class="quantity">
             <div class="qty">
-              <button class="btn-secondary bg-danger" v-on:click="$set(prod, 'qty', prod.qty-1); $set(prod, 'total', prod.qty * prod.price)">-</button>
+              <button
+                class="btn-secondary bg-danger"
+                v-on:click="$set(prod, 'qty', prod.qty-1); $set(prod, 'total', prod.qty * prod.price)"
+              >-</button>
               <p>{{prod.qty}}</p>
-              <button class="btn-secondary" v-on:click="$set(prod, 'qty', prod.qty+1); $set(prod, 'total', prod.qty * prod.price)">+</button>
+              <button
+                class="btn-secondary"
+                v-on:click="$set(prod, 'qty', prod.qty+1); $set(prod, 'total', prod.qty * prod.price)"
+              >+</button>
             </div>
           </div>
           <div class="total">
@@ -93,10 +99,14 @@ export default {
   data() {
     return {
       shippingPrice: 200,
+      isDev: false,
     };
   },
   methods: {
     ...mapActions(["names", "updateCart"]),
+  },
+  mounted() {
+    this.isDev = process.env.NODE_ENV === "development";
   },
   computed: mapGetters(["getAllProducts", "getTotalCost", "getAllNames"]),
 };
