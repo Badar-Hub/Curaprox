@@ -150,7 +150,7 @@ export default {
     ...mapActions(["updateCart"]),
   },
   mounted() {
-    this.isDev = process.env.NODE_ENV !== "development";
+    this.isDev = process.env.NODE_ENV == "development";
     console.log(this.$route.params.id);
     axios
       .get(`/api/product/${this.$route.params.id}`)
