@@ -32,10 +32,10 @@
         </div>
         <hr />
         <div :style="`display:${display}`" class="description-inner">
-          <p>
+          <!-- <p>
             <strong>{{product.shortDesc}}</strong>
-          </p>
-          <p>{{product.longDesc}}</p>
+          </p>-->
+          <p>{{product.description}}</p>
         </div>
       </div>
       <div class="productDetails">
@@ -44,7 +44,7 @@
           <h1 @click="toogleProductDetail">+</h1>
         </div>
         <hr />
-        <div :style="`display:${displays}`" class="productDetails-inner">
+        <!-- <div :style="`display:${displays}`" class="productDetails-inner">
           <div class="prd">
             <div class="prd-left">
               <p>
@@ -91,7 +91,7 @@
               <p>Adult</p>
             </div>
           </div>
-        </div>
+        </div>-->
       </div>
       <div class="remProduct">
         <h1>Recommended Products</h1>
