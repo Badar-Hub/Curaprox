@@ -38,13 +38,13 @@
           <p>{{product.description}}</p>
         </div>
       </div>
-      <div class="productDetails">
+      <!-- <div class="productDetails">
         <div class="text">
           <h1 @click="toogleProductDetail">Product Details</h1>
           <h1 @click="toogleProductDetail">+</h1>
         </div>
         <hr />
-        <!-- <div :style="`display:${displays}`" class="productDetails-inner">
+        <div :style="`display:${displays}`" class="productDetails-inner">
           <div class="prd">
             <div class="prd-left">
               <p>
@@ -91,8 +91,8 @@
               <p>Adult</p>
             </div>
           </div>
-        </div>-->
-      </div>
+        </div>
+      </div>-->
       <div class="remProduct">
         <h1>Recommended Products</h1>
         <ProductSlider />
@@ -230,6 +230,7 @@ export default {
   max-width: 1200px;
   margin: auto;
   text-align: left;
+  padding: 3% 0;
 }
 
 .description .text {
@@ -248,6 +249,12 @@ export default {
   margin: 30px 0;
   text-align: left;
   text-align: justify;
+}
+
+.description .description-inner p {
+  color: #002440;
+  line-height: 1.2;
+  font-size: 1.1rem;
 }
 
 .productDetails {
