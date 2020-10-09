@@ -97,10 +97,10 @@
         <h1>Recommended Products</h1>
         <ProductSlider />
       </div>
-      <div class="viwProduct">
+      <!-- <div class="viwProduct">
         <h1>Viewed Products</h1>
         <ProductSlider />
-      </div>
+      </div>-->
     </div>
   </div>
 </template>
