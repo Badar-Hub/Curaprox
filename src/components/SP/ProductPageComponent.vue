@@ -253,7 +253,7 @@ export default {
 
 .description .description-inner p {
   color: #002440;
-  line-height: 1.2;
+  line-height: 1.5;
   font-size: 1.1rem;
 }
 
