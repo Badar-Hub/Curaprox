@@ -95,7 +95,7 @@
       </div>-->
       <div class="remProduct">
         <h1>Recommended Products</h1>
-        <ProductSlider />
+        <ProductSlider :slides="relatedProducts" />
       </div>
       <!-- <div class="viwProduct">
         <h1>Viewed Products</h1>
@@ -123,6 +123,7 @@ export default {
       displays: "flex",
       product: {},
       isDev: false,
+      relatedProducts: [],
     };
   },
   methods: {
@@ -160,6 +161,20 @@ export default {
       })
       .catch(() => {
         this.product = productData.find((x) => x.id == this.$route.params.id);
+      });
+    // Related Products
+    axios
+      .get(`/api/product/${this.$route.params.id}/related`)
+      .then((res) => {
+        console.log(res);
+        this.relatedProducts = res.data;
+      })
+      .catch(() => {
+        this.relatedProducts = productData.find(
+          (x) =>
+            x.id !== this.$route.params.id &&
+            x.category === this.product.category
+        );
       });
   },
 };

@@ -45,40 +45,13 @@ export default {
     VueperSlide,
     SingleProduct,
   },
+  props: {
+    slides: {
+      type: Array,
+    },
+  },
   data() {
     return {
-      slides: [
-        {
-          image: "cs-5460.png",
-          title: "CS 5460",
-          content: "Slide content.",
-        },
-        {
-          image: "cs-5460.png",
-          title: "CS 5460",
-          content: "Slide content.",
-        },
-        {
-          image: "cs-5460.png",
-          title: "CS 5460",
-          content: "Slide content.",
-        },
-        {
-          image: "cs-5460.png",
-          title: "CS 5460",
-          content: "Slide content.",
-        },
-        {
-          image: "cs-5460.png",
-          title: "CS 5460",
-          content: "Slide content.",
-        },
-        {
-          image: "cs-5460.png",
-          title: "CS 5460",
-          content: "Slide content.",
-        },
-      ],
       settings: {
         dots: true,
         infinite: false,
