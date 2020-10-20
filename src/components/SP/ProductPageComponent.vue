@@ -18,7 +18,7 @@
           <p v-if="qtyAbove">Available Quantity: {{ product.qty }}</p>
 
           <button
-            @click="$set(product, 'qty', quantity); $set(product, 'total', product.price * quantity); updateCart(product)"
+            @click="$set(product, 'cartQty', quantity); $set(product, 'total', product.price * quantity); updateCart(product)"
             class="addToCartBtn"
           >{{!isInvalidQty ? "Add To Cart" : "Out Of Stock"}}</button>
           <h2>variant</h2>
