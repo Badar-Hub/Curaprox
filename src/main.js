@@ -5,6 +5,21 @@ import store from "./store";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faUserSecret } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import {
+  Swiper as SwiperClass,
+  Pagination,
+  Navigation,
+  Mousewheel,
+  Autoplay,
+} from "swiper/swiper.esm";
+import getAwesomeSwiper from "vue-awesome-swiper/dist/exporter";
+
+SwiperClass.use([Pagination, Mousewheel, Navigation, Autoplay]);
+Vue.use(getAwesomeSwiper(SwiperClass));
+
+// import style
+import "swiper/swiper-bundle.min.css";
+Vue.config.productionTip = false;
 
 library.add(faUserSecret);
 

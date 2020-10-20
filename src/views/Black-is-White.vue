@@ -1,12 +1,12 @@
 <template>
   <div>
     <Header2>
-      <li>
+      <!-- <li>
         <a href="#/be-you">[BE YOU]</a>
       </li>
       <li>
         <a href="#/black-is-white">BLACK IS WHITE</a>
-      </li>
+      </li>-->
     </Header2>
     <Slider3
       v-bind="SliderContent"

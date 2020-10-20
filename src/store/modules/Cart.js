@@ -5,6 +5,9 @@ const state = {
 
 const getters = {
   getAllProducts: (state) => state.products,
+  // productsCount: (state) => state.products,
+  productsCounts: (state) =>
+    state.products.reduce((prev, cur) => (prev += cur.qty), 0),
   getTotalCost: (state) =>
     state.products.reduce(
       (pV, cV) => pV + parseFloat(cV.price * (cV.qty ? cV.qty : 1)),
@@ -34,7 +37,7 @@ const mutations = {
   updateCart: (state, product) => {
     const prod = state.products.find((p) => p.id == product.id);
     if (prod) {
-      prod.qty+=product.qty;
+      prod.qty += product.qty;
       prod.total = prod.qty * prod.price;
       console.log(
         "test",
@@ -43,10 +46,9 @@ const mutations = {
     } else {
       // product.total = product.price;
       console.log(product);
-      state.products.push({...product});
+      state.products.push({ ...product });
     }
   },
-
 
   namenn: (state, name) => {
     state.namen = name;

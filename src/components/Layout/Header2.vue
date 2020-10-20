@@ -28,7 +28,7 @@
                 <router-link to="/Toothbrush">TOOTHBRUSHES</router-link>
               </li>
               <li>
-                <router-link to="/Toothpaste">TOOTHPASTE</router-link>
+                <router-link to="/BLACK-IS-WHITE">TOOTHPASTE</router-link>
               </li>
               <li>
                 <router-link to="/Interdental">INTERDENTAL</router-link>
@@ -42,9 +42,48 @@
             </ul>
             <ul>
               <li>
-                <a href="/#/cart">
-                  <img src="@/assets/img/cart.png" />
-                </a>
+                <div class="cart">
+                  <a href="blog">
+                    <img style="padding-right:8px;" src="@/assets/img/blog.svg" />
+                  </a>
+
+                  <div class="showOrder">
+                    <a href="/#/cart">
+                      <p style="padding-left:8px">{{productsCounts}}</p>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="21"
+                        height="25"
+                        src="https://curaprox.ch/themes/classic-rocket/assets/img/basket.svg"
+                      >
+                        <g
+                          transform="translate(0 1)"
+                          stroke="#000000"
+                          stroke-width="2px"
+                          fill="none"
+                          fill-rule="evenodd"
+                        >
+                          <rect
+                            x="1"
+                            y="5"
+                            width="19"
+                            height="18"
+                            rx="2"
+                            stroke="#ffffff"
+                            fill="none"
+                            stroke-width="2px"
+                          />
+                          <path
+                            d="M15 4c0-2.21-2.015-4-4.5-4S6 1.79 6 4"
+                            stroke="#ffffff"
+                            fill="none"
+                            stroke-width="2px"
+                          />
+                        </g>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
               </li>
             </ul>
           </nav>
@@ -66,8 +105,9 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 export default {
-  name: "Header2",
+  computed: mapGetters(["productsCount", "productsCounts"]),
 };
 </script>
 
@@ -211,5 +251,15 @@ nav ul li a:hover {
 
 .sub-bar-inner a:hover {
   color: #0167b1;
+}
+.cart {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cart p {
+  position: absolute;
+  /* bottom: 700px; */
+  top: 93px;
 }
 </style>

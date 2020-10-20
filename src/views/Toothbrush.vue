@@ -66,7 +66,7 @@
       pText="Dental professionals have been recommending our toothbrushes for more than 40 years. So gentle on the teeth and gums. So effective in combating plaque."
     />
     <ProductComponent :products="ProductData" />
-    <ProFeaturedComponent img="Hawaii-Edition_Desktop-1200x600.jpg"></ProFeaturedComponent>
+    <!-- <ProFeaturedComponent img="Hawaii-Edition_Desktop-1200x600.jpg"></ProFeaturedComponent> -->
     <CategoryComponent img-right="cps-colors.jpg" img-left="need-post-cleen-teeth-585x600.jpg">
       <template v-slot:left>
         <h2>CLEAN TEETH</h2>

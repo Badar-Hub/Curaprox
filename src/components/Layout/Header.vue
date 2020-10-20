@@ -28,7 +28,7 @@
                 <router-link to="/Toothbrush">TOOTHBRUSHES</router-link>
               </li>
               <li>
-                <router-link to="/Toothpaste">TOOTHPASTE</router-link>
+                <router-link to="/BLACK-IS-WHITE">TOOTHPASTE</router-link>
               </li>
               <li>
                 <router-link to="/Interdental">INTERDENTAL</router-link>
@@ -42,9 +42,18 @@
             </ul>
             <ul>
               <li>
-                <a href="/#/cart">
-                  <img src="@/assets/img/cart.png" />
-                </a>
+                <div class="cart">
+                  <a href="blog">
+                    <img style="padding-right:8px;" src="@/assets/img/blog.svg" />
+                  </a>
+
+                  <div class="showOrder">
+                    <a href="/#/cart">
+                      <p style="padding-left:8px">{{productsCounts}}</p>
+                      <img src="@/assets/img/bag.svg" />
+                    </a>
+                  </div>
+                </div>
               </li>
             </ul>
           </nav>
@@ -55,6 +64,10 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
+export default {
+  computed: mapGetters(["productsCounts"]),
+};
 </script>
 
 <style scoped>
@@ -159,5 +172,15 @@ nav ul li a {
 
 nav ul li a:hover {
   color: pink;
+}
+.cart {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cart p {
+  position: absolute;
+  /* bottom: 700px; */
+  top: 93px;
 }
 </style>

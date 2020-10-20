@@ -15,10 +15,12 @@
             </button>
           </div>
           <br />
+          <p v-if="qtyAbove">Available Quantity: {{ product.qty }}</p>
+
           <button
             @click="$set(product, 'qty', quantity); $set(product, 'total', product.price * quantity); updateCart(product)"
             class="addToCartBtn"
-          >Add to cart</button>
+          >{{!isInvalidQty ? "Add To Cart" : "Out Of Stock"}}</button>
           <h2>variant</h2>
         </div>
         <div class="img">
@@ -94,8 +96,13 @@
         </div>
       </div>-->
       <div class="remProduct">
-        <h1>Recommended Products</h1>
-        <ProductSlider :slides="relatedProducts" />
+        <awesomeSlider>
+          <template>
+            <swiper-slide>
+              <SingleProduct v-for="prod of relatedProducts" :key="prod._id" v-bind="prod" />
+            </swiper-slide>
+          </template>
+        </awesomeSlider>
       </div>
       <!-- <div class="viwProduct">
         <h1>Viewed Products</h1>
@@ -107,13 +114,14 @@
 
 <script>
 import { mapActions } from "vuex";
-import ProductSlider from "../SP/ProductSlider";
+// import ProductSlider from "../SP/ProductSlider";
 import axios from "axios";
 import productData from "../data/database";
+import awesomeSlider from "./awesomeSlider";
 
 export default {
   components: {
-    ProductSlider,
+    awesomeSlider,
   },
   name: "ProductPageComponent",
   data() {
@@ -124,15 +132,27 @@ export default {
       product: {},
       isDev: false,
       relatedProducts: [],
+      qtyAbove: false,
     };
+  },
+  computed: {
+    isInvalidQty() {
+      return this.quantity < 1 || this.quantity > this.product.qty;
+    },
   },
   methods: {
     plusQty() {
-      this.quantity++;
+      if (this.quantity < this.product.qty) {
+        this.quantity++;
+      } else {
+        this.qtyAbove = true;
+      }
     },
 
     minusQty() {
-      this.quantity--;
+      if (this.quantity > 1) {
+        this.quantity--;
+      }
     },
     toogleDesc() {
       if (this.display === "flex") {
@@ -166,7 +186,7 @@ export default {
     axios
       .get(`/api/product/${this.$route.params.id}/related`)
       .then((res) => {
-        console.log(res);
+        console.log(res, "Related Products");
         this.relatedProducts = res.data;
       })
       .catch(() => {

@@ -11,6 +11,26 @@ body {
   margin: 0;
 }
 
+.default {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.btn-shop {
+  background-color: #0060aa; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  width: 250px;
+}
+
+.btn-shop a {
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+}
 h1,
 h2,
 h3,

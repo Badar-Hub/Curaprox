@@ -24,7 +24,7 @@
         </p>
       </template>
     </ProFeaturedComponent>
-    <ProFeaturedComponent img="curaprox-df-teaser-df-834-new-1200x600.jpg">
+    <!-- <ProFeaturedComponent img="curaprox-df-teaser-df-834-new-1200x600.jpg">
       <template v-slot:text>
         <h2 style="color:black;">DENTAL FLOSS</h2>
         <h3 style="color:black;">
@@ -42,7 +42,7 @@
           </span>
         </p>
       </template>
-    </ProFeaturedComponent>
+    </ProFeaturedComponent>-->
     <BrushingText
       h3Text="INTERDENTAL BRUSHES AND DENTAL FLOSS"
       h2Text="CLEANING IN TIGHT SPACES"
