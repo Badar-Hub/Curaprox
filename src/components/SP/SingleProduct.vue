@@ -52,9 +52,10 @@ export default {
     -moz-box-shadow: 0px 0px 5px 3px rgba(204,198,198,1)
 
   img
-    max-width: 350px
+    width: 260px
+    height: 260px
+
   .text
     padding: 20px
-    text-align: left  
-        
+    text-align: left
 </style>

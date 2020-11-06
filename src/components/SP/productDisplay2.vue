@@ -37,7 +37,7 @@ export default {};
 
 img {
   max-width: 400px;
-  border-radius: 50%;
+  border-radius: 33%;
   background-color: white;
   width: 100%;
 }

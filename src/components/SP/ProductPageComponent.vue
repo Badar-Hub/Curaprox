@@ -37,7 +37,7 @@
           <!-- <p>
             <strong>{{product.shortDesc}}</strong>
           </p>-->
-          <p>{{product.description}}</p>
+          <div v-html="product.description"></div>
         </div>
       </div>
       <!-- <div class="productDetails">
@@ -258,7 +258,8 @@ export default {
 
 .productPage-inner img {
   max-width: 400px;
-  width: 100%;
+  width: 400px;
+  height: 400px;
 }
 
 .description {

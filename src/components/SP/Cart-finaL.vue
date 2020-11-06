@@ -90,12 +90,17 @@
         </div>
       </div>
     </div>
+    <CheckOut />
   </div>
 </template>
 
 <script>
 import { mapActions, mapGetters } from "vuex";
+import CheckOut from "../Layout/Checkout";
 export default {
+  components: {
+    CheckOut,
+  },
   data() {
     return {
       shippingPrice: 200,
