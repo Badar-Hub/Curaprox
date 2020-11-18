@@ -1,7 +1,7 @@
 <template>
   <div>
     <footer>
-      <div class="footer-inner">
+      <!-- <div class="footer-inner">
         <div class="NewsLetter">
           <p>
             <strong>NewsLetter</strong>
@@ -66,17 +66,17 @@
             </li>
           </ul>
         </div>
-      </div>
+      </div>-->
       <div class="footer-af">
         <div class="footer-after">
           <div class="footer-after-inner">
             <div class="footer-after-inner-text">
-              <p>
+              <!-- <p>
                 <a href="#">GTB of the Online Shop</a> |
                 <a href="#">Legal Notice</a> |
                 <a href="#">Privacy Notice</a>
-              </p>
-              <p>© Curaden.PK - All rights reserved</p>
+              </p>-->
+              <p>© Curaprox.PK - All rights reserved</p>
             </div>
           </div>
         </div>

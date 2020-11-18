@@ -31,10 +31,10 @@
                 <router-link to="/BLACK-IS-WHITE">TOOTHPASTE</router-link>
               </li>
               <li>
-                <router-link to="/Interdental">INTERDENTAL</router-link>
+                <router-link to="/InterdentalBrush">INTERDENTAL</router-link>
               </li>
               <li>
-                <router-link to="/Mouthwash">MOUTHWASH</router-link>
+                <router-link to="/MouthwashPerio">MOUTHWASH</router-link>
               </li>
               <li>
                 <router-link to="/shop">SHOP</router-link>
