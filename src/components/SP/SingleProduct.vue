@@ -39,8 +39,9 @@ export default {
   display: flex
   flex-wrap: wrap
   flex-direction: column
-  max-width: 1200px
-  margin: auto
+  max-width: 300px
+  width: auto
+  padding-right: 15px
   transition: 0.2s
   box-shadow: 0px 0px 5px 0px rgba(207,201,201,1)
   -webkit-box-shadow: 0px 0px 5px 0px rgba(207,201,201,1)

@@ -62,7 +62,7 @@
         </p>
       </template>
     </ProFeaturedComponent>
-    <CategoryComponent
+    <!-- <CategoryComponent
       img-right="curaprox-toothpaste-teaser-biw-sonic-toothbrush-585x600.jpg"
       img-left="curaprox-toothpaste-teaser-biw-585x600.jpg"
     >
@@ -94,17 +94,7 @@
           </p>
         </div>
       </template>
-    </CategoryComponent>
-    <TextBlockWithImg
-      img="curaprox-related-product-toothpaste-beyou-400x250.png"
-      h2Text="[BE YOU.] TOOTHPASTE"
-      h3Text="ZESTY, FRESH FLAVOURS. WHITER TEETH"
-    />
-    <TextBlockWithImg
-      img="curaprox-related-product-toothpaste-enzycal-400x250.png"
-      h2Text="ENZYCAL TOOTHPASTE"
-      h3Text="GENTLE, MILD, EFFECTIVE"
-    />
+    </CategoryComponent> -->
     <Footer />
   </div>
 </template>
@@ -115,9 +105,8 @@ import Slider3 from "../components/Layout/Slider3";
 import GifComponent from "../components/SP/GifComponent";
 import SubPage from "../components/SP/SubPage";
 import FloatingText from "../components/SP/FloatingText";
-import CategoryComponent from "../components/SP/CategoryComponent";
+// import CategoryComponent from "../components/SP/CategoryComponent";
 import ProFeaturedComponent from "../components/SP/ProFeaturedComponent";
-import TextBlockWithImg from "../components/SP/TextBlockWithImg";
 import Footer from "../components/Layout/Footer";
 export default {
   name: "Cs5460",
@@ -128,8 +117,7 @@ export default {
     SubPage,
     FloatingText,
     ProFeaturedComponent,
-    CategoryComponent,
-    TextBlockWithImg,
+    // CategoryComponent,
     Footer,
   },
   data() {

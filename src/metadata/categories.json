@@ -1,0 +1,29 @@
+{
+  "categories": [
+    {
+    "label": "SALE",
+    "displaySub": false,
+    "link": "/sale"
+    },
+    {
+    "label": "TOOTHBRUSH",
+    "displaySub": false,
+    "link": "/new"
+    },
+    {
+    "label": "TOOTHPASTE",
+    "displaySub": false,
+    "link": "/lips"
+    },
+    {
+    "label": "INTERDENTAL",
+    "displaySub":false,
+    "link": "/eyes"
+    },
+    {
+    "label": "MOUTHWASH",
+    "displaySub": false,
+    "link": "/nails"
+    }
+  ]
+}

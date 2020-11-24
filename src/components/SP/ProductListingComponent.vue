@@ -1,8 +1,33 @@
 <template>
   <div>
-    <div class="product">
+    <div class="row subbar">
+      <div class="subcategory">
+        <h4 style="text-align: left;">Filter</h4>
+      </div>
       <div class="product-inner">
-        <SingleProduct v-for="prod of products" :key="prod._id" v-bind="prod" />
+        <h4 style="text-align: right;">Sort By</h4>
+      </div>
+    </div>
+    <hr  style="margin: 0"/>
+    <div class="row">
+      <div class="subcategory">
+        <h4>Categories</h4>
+        <hr />
+        <h4>Categories</h4>
+        <hr />
+        <h4>Categories</h4>
+        <hr />
+        <h4>Categories</h4>
+        <hr />
+        <h4>Categories</h4>
+        <hr />
+        <h4>Categories</h4>
+        <hr />
+      </div>
+      <div class="product-inner">
+        <div class="row">
+          <SingleProduct v-for="prod of products" :key="prod._id" v-bind="prod" />
+        </div>
       </div>
     </div>
   </div>
@@ -36,15 +61,23 @@ export default {
 };
 </script>
 
-<style scoped lang='sass'>
-.product 
-  .product-inner 
-    display: flex
-    flex-wrap: wrap
-    justify-content: center
-    max-width: 1200px
-    margin: auto
-    padding: 30px
-    gap: 40px
-  
+<style scoped lang='scss'>
+.row {
+  display: flex;
+  flex-direction: row;
+  max-width: 1200px;
+  margin: auto;
+}
+.subcategory{
+  flex: 3;
+  text-align: left;
+  margin: 0 50px;
+}
+.product-inner{
+  flex: 9;
+  margin: 30px;
+}
+.subbar{
+  background-color: white;
+}
 </style>
