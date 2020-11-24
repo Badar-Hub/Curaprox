@@ -64,6 +64,6 @@ export default {
     width: auto
 
   .text
-    padding: 0 20px
+    margin: auto
     text-align: left
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header />
-    <shop-head HeadingText= "All Products" />
+    <shop-head HeadingText="All Products" />
     <div class="row">
       <div style="text-align:left" class="categoryBar">
         <h4 style="margin-right:10px">FILTERS</h4>
@@ -59,7 +59,6 @@ export default {
         categories: categories.categories,
       },
     };
-    
   },
   mounted() {
     axios
@@ -73,7 +72,7 @@ export default {
         this.products = productData;
       });
   },
-}
+};
 </script>
 
 <style scoped>
@@ -107,7 +106,6 @@ export default {
   flex: 9;
   justify-content: center;
   text-align: center;
-  padding: 0 3rem;
 }
 .smrow {
   display: flex;
