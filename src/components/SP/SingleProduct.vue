@@ -23,6 +23,7 @@ export default {
 
 <style>
 .prodmain {
+  padding-right: 20px;
 }
 
 .single-product {
