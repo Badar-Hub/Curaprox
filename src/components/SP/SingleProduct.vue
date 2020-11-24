@@ -54,14 +54,16 @@ export default {
     -webkit-box-shadow: 0px 0px 5px 3px rgba(204,198,198,1)
     -moz-box-shadow: 0px 0px 5px 3px rgba(204,198,198,1)
   .img
-    width: 280px
-    hight: 300px
+    width: 260px
+    max-hight: 300px
+    height: auto
+    padding: 20px
   img
-    max-width: 280px
+    max-width: 260px
     max-height: 300px
     width: auto
 
   .text
-    padding: 20px
+    padding: 0 20px
     text-align: left
 </style>
