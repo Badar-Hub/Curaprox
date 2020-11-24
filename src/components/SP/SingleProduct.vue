@@ -23,15 +23,26 @@ export default {
 
 <style>
 .prodmain {
-  padding-right: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+  padding: 5px;
 }
 
 .single-product {
+  position: relative;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   max-width: 400px;
   width: auto;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+.prodmain:hover {
+  transition: background 250ms ease;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
 }
 
 .img {
