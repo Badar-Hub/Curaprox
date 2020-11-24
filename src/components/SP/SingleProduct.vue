@@ -46,7 +46,7 @@ export default {
 }
 
 .img {
-  width: 280px;
+  width: 265px;
 }
 
 img {
