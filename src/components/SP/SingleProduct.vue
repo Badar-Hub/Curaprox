@@ -1,5 +1,5 @@
 <template>
-  <div @click="$router.push({name: 'shop-product', params: {id: _id}})">
+  <div class="prodmain" @click="$router.push({name: 'shop-product', params: {id: _id}})">
     <div class="singleProduct">
       <div class="img">
         <img :src="`${(!isDev? '/admin/' : '' ) + img}`" />
@@ -35,6 +35,8 @@ export default {
 </script>
 
 <style scoped lang="sass">
+.prodmain
+  padding-right: 1rem
 .singleProduct
   display: flex
   flex-wrap: wrap
@@ -53,8 +55,9 @@ export default {
     -moz-box-shadow: 0px 0px 5px 3px rgba(204,198,198,1)
 
   img
-    width: 260px
-    height: 260px
+    max-width: 260px
+    max-height: 300px
+    width: auto
 
   .text
     padding: 20px
