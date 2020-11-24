@@ -36,12 +36,12 @@ export default {
 
 <style scoped lang="sass">
 .prodmain
-  padding-right: 1rem
+  padding: 0.8rem
 .singleProduct
   display: flex
   flex-wrap: wrap
   flex-direction: column
-  max-width: 300px
+  max-width: 240px
   width: auto
   padding-right: 15px
   transition: 0.2s
@@ -54,12 +54,12 @@ export default {
     -webkit-box-shadow: 0px 0px 5px 3px rgba(204,198,198,1)
     -moz-box-shadow: 0px 0px 5px 3px rgba(204,198,198,1)
   .img
-    width: 260px
+    width: 240px
     max-hight: 300px
     height: auto
     padding: 20px
   img
-    max-width: 260px
+    max-width: 240px
     max-height: 300px
     width: auto
 
