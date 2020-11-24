@@ -35,11 +35,11 @@ export default {
 }
 
 .img {
-  width: 200px;
+  width: 280px;
 }
 
 img {
-  width: 100%;
+  width: auto;
   max-height: 400px;
 }
 </style>
