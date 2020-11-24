@@ -53,9 +53,11 @@ export default {
     box-shadow: 0px 0px 5px 3px rgba(204,198,198,1)
     -webkit-box-shadow: 0px 0px 5px 3px rgba(204,198,198,1)
     -moz-box-shadow: 0px 0px 5px 3px rgba(204,198,198,1)
-
+  .img
+    width: 280px
+    hight: 300px
   img
-    max-width: 260px
+    max-width: 280px
     max-height: 300px
     width: auto
 
