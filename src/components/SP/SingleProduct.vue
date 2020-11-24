@@ -4,8 +4,8 @@
       <div class="img">
         <img :src="`${(!isDev? '/admin/' : '' ) + img}`" />
       </div>
+      <hr />
       <div class="text">
-        <hr />
         <h2>{{name}}</h2>
         <h3>RS: {{price}}</h3>
         <!-- <p>{{shortDesc}}</p> -->
