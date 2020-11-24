@@ -2,7 +2,7 @@
   <div>
     <Header2>
       <li>
-        <a href="#/InterdentalBrush">INTERDENTAL BRUSH</a>
+        <a href="#/Interdental">INTERDENTAL BRUSH</a>
       </li>
     </Header2>
     <Slider3 v-bind="SliderContent" image="idb-overview-header-prime-colorfull-1200x600.jpg">
@@ -31,7 +31,7 @@
     <dftc v-bind="dftc" />
     <SubPage row-direction="row-reverse" v-bind="text2Slider" />
     <FloatingText
-      h2-text="Dr. med. dent. Rolf Kufus recommends:  I love Curaprox interdental brushes. I recommend CPS prime for narrow interdental spaces and the CPS perio for larger interdental spaces."
+      h2-text="Dr.Rolf Kufus recommends:  I love Curaprox interdental brushes. I recommend CPS prime for narrow interdental spaces and the CPS perio for larger interdental spaces."
     />
 
     <TextWithImg v-bind="TxtImg">
@@ -91,11 +91,6 @@
         </div>
       </template>
     </CategoryComponent>
-    <TextBlockWithImg
-      img="curaprox-related-product-df-834-300x250.jpg"
-      h2Text="DENTAL FLOSS"
-      h3Text="TIDYING UP BETWEEN THE TEETH"
-    />
     <Footer />
   </div>
 </template>
@@ -109,7 +104,6 @@ import FloatingText from "../components/SP/FloatingText";
 import TextWithImg from "../components/SP/TextWithImg";
 import CategoryComponent from "../components/SP/CategoryComponent";
 import ProFeaturedComponent from "../components/SP/ProFeaturedComponent";
-import TextBlockWithImg from "../components/SP/TextBlockWithImg";
 import Footer from "../components/Layout/Footer";
 export default {
   name: "Cs5460",
@@ -122,7 +116,6 @@ export default {
     TextWithImg,
     ProFeaturedComponent,
     CategoryComponent,
-    TextBlockWithImg,
     Footer,
   },
   data() {
