@@ -251,6 +251,7 @@ export default {
 
 .productPage-inner .img {
   max-width: 700px;
+  width: 400px;
   -webkit-box-shadow: 0px 0px 6px 2px rgba(194, 194, 194, 1);
   -moz-box-shadow: 0px 0px 6px 2px rgba(194, 194, 194, 1);
   box-shadow: 0px 0px 6px 2px rgba(194, 194, 194, 1);
@@ -258,8 +259,9 @@ export default {
 
 .productPage-inner img {
   max-width: 400px;
-  width: 400px;
+  width: auto;
   height: 400px;
+  margin: auto;
 }
 
 .description {
