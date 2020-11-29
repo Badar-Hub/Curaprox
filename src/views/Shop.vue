@@ -25,7 +25,7 @@
         <div class="subcategory">
           <div v-for="(category, index) in metadata.categories" :key="index">
             <div style="justify-content: space-between;" class="row">
-              <router-link class="custom-link" :to="category.link">{{category.label}}</router-link>
+              <p @click="loadCategory(category)" class="custom-link">{{category.label}}</p>
               <p style="cursor:pointer" @click="category.displaySub = !category.displaySub">▼</p>
             </div>
             <hr />
@@ -59,6 +59,14 @@ export default {
         categories: categories.categories,
       },
     };
+  },
+  methods:{
+    loadCategory(category){
+      this.products = this.products.filter((product) => {
+        console.log(category,product.category );
+        return product.category.label === category.label
+      })
+    }
   },
   mounted() {
     window.scrollTo(0,0);

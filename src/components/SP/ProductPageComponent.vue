@@ -34,67 +34,10 @@
         </div>
         <hr />
         <div :style="`display:${display}`" class="description-inner">
-          <!-- <p>
-            <strong>{{product.shortDesc}}</strong>
-          </p>-->
+
           <div v-html="product.description"></div>
         </div>
       </div>
-      <!-- <div class="productDetails">
-        <div class="text">
-          <h1 @click="toogleProductDetail">Product Details</h1>
-          <h1 @click="toogleProductDetail">+</h1>
-        </div>
-        <hr />
-        <div :style="`display:${displays}`" class="productDetails-inner">
-          <div class="prd">
-            <div class="prd-left">
-              <p>
-                <strong>Colour</strong>
-              </p>
-
-              <p>
-                <strong>Softness</strong>
-              </p>
-              <p>
-                <strong>Needs</strong>
-              </p>
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <p>
-                <strong>Product variety</strong>
-              </p>
-              <p>
-                <strong>Productlines</strong>
-              </p>
-              <p>
-                <strong>Age group</strong>
-              </p>
-            </div>
-            <div class="prd-right">
-              <p>Assorted</p>
-              <p>Ultrasoft</p>
-              <p>Caries protection</p>
-              <p>Clean teeth</p>
-              <p>Gum care</p>
-              <p>Gum inflammation</p>
-              <p>Plaque</p>
-              <p>Sensitive teeth</p>
-              <p>Single Pack</p>
-              <p>CS5460</p>
-              <p>Adult</p>
-            </div>
-          </div>
-        </div>
-      </div>-->
       <div class="remProduct">
         <awesomeSlider>
           <template>
@@ -104,17 +47,12 @@
           </template>
         </awesomeSlider>
       </div>
-      <!-- <div class="viwProduct">
-        <h1>Viewed Products</h1>
-        <ProductSlider />
-      </div>-->
     </div>
   </div>
 </template>
 
 <script>
 import { mapActions } from "vuex";
-// import ProductSlider from "../SP/ProductSlider";
 import axios from "axios";
 import productData from "../data/database";
 import awesomeSlider from "./awesomeSlider";
