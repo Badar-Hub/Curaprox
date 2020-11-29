@@ -33,7 +33,7 @@
       </div>
       <div class="prod">
         <div class="smrow">
-          <SingleProduct v-for="prod of products" :key="prod._id" v-bind="prod" />
+          <SingleProduct v-for="prod of getProducts" :key="prod._id" v-bind="prod" />
         </div>
       </div>
     </div>
@@ -51,6 +51,7 @@ export default {
   data() {
     return {
       products: [],
+      filteredProducts: [],
       metadata: {
         categories: categories.categories,
       },
@@ -58,10 +59,15 @@ export default {
   },
   methods:{
     loadCategory(category){
-      this.products = this.products.filter((product) => {
+      this.filteredProducts = this.products.filter((product) => {
         console.log(category, product.category);
         return product.category === category.label
       })
+    }
+  },
+  computed: {
+    getProducts() {
+      return this.filteredProducts.length ? this.filteredProducts : this.products
     }
   },
   mounted() {
