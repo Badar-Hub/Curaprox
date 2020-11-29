@@ -70,7 +70,7 @@ export default {
       }
       this.filteredProducts = this.products.filter((product) => {
         console.log(category, product.category);
-        return product.category === category.label
+        return product.category.toLower() === category.label.toLower()
       })
     }
   },
