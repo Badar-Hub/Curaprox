@@ -74,7 +74,6 @@ export default {
         return;
       }
       this.filteredProducts = this.products.filter((product) => {
-        console.log(category, product.category);
         return product.category.toLowerCase() === category.label.toLowerCase()
       })
     }
@@ -90,10 +89,8 @@ export default {
       .get("/api/products")
       .then((res) => {
         this.products = res.data;
-        console.log(res, "result");
       })
-      .catch((ex) => {
-        console.log("mocking!", productData, ex);
+      .catch(() => {
         this.products = productData;
       });
   },
