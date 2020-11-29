@@ -22,7 +22,7 @@
     <div class="row">
       <div class="categoryBar">
         <div class="subcategory">
-          <template v-if="this.filteredProducts && this.filteredProducts.length">
+          <template v-if="this.filteredProducts">
             <div style="justify-content: space-between;" class="row">
               <p @click="loadCategory(null)" class="custom-link">Show All</p>
             </div>
@@ -41,6 +41,9 @@
       <div class="prod">
         <div class="smrow">
           <SingleProduct v-for="prod of getProducts" :key="prod._id" v-bind="prod" />
+          <template v-if="!getProducts.length">
+            <b style="margin: 20px 0">No products found in the selected category.</b>
+          </template>
         </div>
       </div>
     </div>
