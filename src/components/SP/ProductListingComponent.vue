@@ -59,8 +59,8 @@ export default {
   methods:{
     loadCategory(category){
       this.products = this.products.filter((product) => {
-        console.log(category,product.category );
-        return product.category.label === category.label
+        console.log(category, product.category);
+        return product.category === category.label
       })
     }
   },
