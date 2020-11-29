@@ -22,6 +22,11 @@
     <div class="row">
       <div class="categoryBar">
         <div class="subcategory">
+          <div v-if="this.filteredProducts && this.filteredProducts.length" style="justify-content: space-between;" class="row">
+            <p @click="loadCategory(null)" class="custom-link">Show All</p>
+            <hr />
+            <br />
+          </div>
           <div v-for="(category, index) in metadata.categories" :key="index">
             <div style="justify-content: space-between;" class="row">
               <p @click="loadCategory(category)" class="custom-link">{{category.label}}</p>
@@ -51,14 +56,18 @@ export default {
   data() {
     return {
       products: [],
-      filteredProducts: [],
+      filteredProducts: null,
       metadata: {
         categories: categories.categories,
       },
     };
   },
   methods:{
-    loadCategory(category){
+    loadCategory(category) {
+      if(category == null) {
+        this.filteredProducts = null;
+        return;
+      }
       this.filteredProducts = this.products.filter((product) => {
         console.log(category, product.category);
         return product.category === category.label
@@ -67,7 +76,7 @@ export default {
   },
   computed: {
     getProducts() {
-      return this.filteredProducts.length ? this.filteredProducts : this.products
+      return this.filteredProducts && this.filteredProducts.length ? this.filteredProducts : this.products
     }
   },
   mounted() {
