@@ -22,11 +22,13 @@
     <div class="row">
       <div class="categoryBar">
         <div class="subcategory">
-          <div v-if="this.filteredProducts && this.filteredProducts.length" style="justify-content: space-between;" class="row">
-            <p @click="loadCategory(null)" class="custom-link">Show All</p>
+          <template v-if="this.filteredProducts && this.filteredProducts.length">
+            <div style="justify-content: space-between;" class="row">
+              <p @click="loadCategory(null)" class="custom-link">Show All</p>
+            </div>
             <hr />
             <br />
-          </div>
+          </template>
           <div v-for="(category, index) in metadata.categories" :key="index">
             <div style="justify-content: space-between;" class="row">
               <p @click="loadCategory(category)" class="custom-link">{{category.label}}</p>
@@ -76,7 +78,7 @@ export default {
   },
   computed: {
     getProducts() {
-      return this.filteredProducts && this.filteredProducts.length ? this.filteredProducts : this.products
+      return this.filteredProducts ? this.filteredProducts : this.products
     }
   },
   mounted() {
