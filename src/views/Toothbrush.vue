@@ -129,6 +129,7 @@ export default {
   },
   mounted() {
     console.log("data", this.ProductData);
+    window.scrollTo(0,0);
   },
 };
 </script>

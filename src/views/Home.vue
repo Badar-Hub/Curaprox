@@ -35,7 +35,7 @@
             <a href="https://curaprox.ch/en/blog/post/how-do-i-look-after-my-braces">Learn More</a>
           </p>
           <p>
-            <a href="http://localhost:8080/#/Interdental">Buy</a>
+            <a href="/Interdental">Buy</a>
           </p>
         </div>
       </template>
@@ -48,7 +48,7 @@
         </h3>
         <div class="onel">
           <p>
-            <a href="/#/InterdentalBrush">Learn More</a>
+            <router-link to="#/InterdentalBrush">Learn More</router-link>
           </p>
           <p>
             <a href="#">Buy</a>
@@ -190,6 +190,9 @@ export default {
   data() {
     return {};
   },
+  mounted(){
+    window.scrollTo(0,0);
+  }
 };
 </script>
 

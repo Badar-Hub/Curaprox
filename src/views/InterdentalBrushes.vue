@@ -253,6 +253,9 @@ export default {
     Header2,
     SubPage2,
   },
+  mounted(){
+    window.scrollTo(0,0);
+  }
 };
 </script>
 

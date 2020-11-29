@@ -132,6 +132,9 @@ export default {
     ProductSlider,
     Header,
   },
+  mounted(){
+    window.scrollTo(0,0);
+  }
 };
 </script>
 
