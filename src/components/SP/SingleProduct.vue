@@ -14,6 +14,7 @@
 <script>
 export default {
   props: {
+    _id: String,
     img: String,
     name: String,
     price: String,
