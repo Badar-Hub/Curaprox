@@ -15,7 +15,7 @@
       </div>
       <div class="navigation">
         <div class="navigation-inner">
-          <a href="/">
+          <a style="margin: auto 0" href="/">
             <img src="../../assets/img/logo.jpg" alt="logo" />
           </a>
           <!-- <div id="nav">
@@ -37,7 +37,7 @@
                 <router-link to="/MouthwashPerio">MOUTHWASH</router-link>
               </li>
               <li>
-                <router-link to="/shop">SHOP</router-link>
+                <router-link style="background-color:#0167b1; color: white; padding:6px; border-radius: 15%" to="/shop">SHOP</router-link>
               </li>
             </ul>
             <ul>
@@ -74,6 +74,7 @@ export default {
 
 svg{
   stroke: white;
+  padding-right: 1.3rem;
 }
 
 svg:hover{
@@ -103,7 +104,6 @@ header .social-top p {
 a {
   color: white;
   text-decoration: none;
-  padding-right: 10px;
 }
 
 header .social-top-inner img {
@@ -176,7 +176,8 @@ ul {
 }
 
 nav ul li {
-  padding-left: 15px;
+  margin: auto 0;
+  padding-right: 1.3rem;
 }
 
 nav ul li a {
