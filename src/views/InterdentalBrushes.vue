@@ -1,6 +1,10 @@
 <template>
   <div>
-    <Header2 />
+    <Header2>
+      <li>
+        <a href="#/InterdentalBrush">INTERDENTAL BRUSH</a>
+      </li>
+    </Header2>
     <div class="easyin default">
       <h2>Easy: In. Out. Done</h2>
       <p>
@@ -238,11 +242,12 @@
         <img  src="@/assets/img/nonEdit/04285_prod3_detail_20.jpg" />
       </div>   
     </SubPage2>
-    
+    <Footer />
   </div>
 </template>
 
 <script>
+import Footer from '../components/Layout/Footer.vue';
 import Header2 from "../components/Layout/Header2";
 import SubPage2 from "../components/SP/SubPage2";
 export default {
@@ -252,6 +257,7 @@ export default {
   components: {
     Header2,
     SubPage2,
+    Footer,
   },
   mounted(){
     window.scrollTo(0,0);

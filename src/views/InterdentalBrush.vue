@@ -2,7 +2,7 @@
   <div>
     <Header2>
       <li>
-        <a href="#/Interdental">INTERDENTAL BRUSH</a>
+        <a href="#/InterdentalBrushes">INTERDENTAL BRUSHES</a>
       </li>
     </Header2>
     <Slider3 v-bind="SliderContent" image="idb-overview-header-prime-colorfull-1200x600.jpg">
@@ -33,12 +33,19 @@
     <FloatingText
       h2-text="Dr.Rolf Kufus recommends:  I love Curaprox interdental brushes. I recommend CPS prime for narrow interdental spaces and the CPS perio for larger interdental spaces."
     />
-
+    <BrushingText
+      h3Text="INTERDENTAL BRUSHES"
+      h2Text="CLEANING IN TIGHT SPACES"
+      pText="The front teeth, especially the lower ones, can be particularly close together. Flossing can be the best way to get into these interdental spaces to clean. Dental floss – especially when made of thick, fleecy thread – can also be used to effectively take care of dental implants."
+    />
     <TextWithImg v-bind="TxtImg">
       <button>
         <a href="https://www.youtube.com/watch?v=u_mOwkUmbZg&feature=youtu.be">Video the correct use</a>
       </button>
     </TextWithImg>
+    <div class="row">
+      <button class="btn">SHOP NOW</button>
+    </div>
     <ProFeaturedComponent img="need-gumcare-1200x600.jpg">
       <template v-slot:text>
         <h2 style="color:white;">GUM CARE</h2>
@@ -100,6 +107,7 @@ import Header2 from "../components/Layout/Header2";
 import Slider3 from "../components/Layout/Slider3";
 import SubPage from "../components/SP/SubPage";
 import dftc from "../components/SP/DoubleFloatingTextComponent";
+import BrushingText from "../components/SP/BurshingText";
 import FloatingText from "../components/SP/FloatingText";
 import TextWithImg from "../components/SP/TextWithImg";
 import CategoryComponent from "../components/SP/CategoryComponent";
@@ -113,6 +121,7 @@ export default {
     SubPage,
     FloatingText,
     dftc,
+    BrushingText,
     TextWithImg,
     ProFeaturedComponent,
     CategoryComponent,
@@ -220,5 +229,19 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 3% 0;
+}
+.btn {
+  padding: 15px;
+  border-radius: 10%;
+  font-size: 1.5rem;
+  color: white;
+  background-color: #0167b1;
+}
 </style>
