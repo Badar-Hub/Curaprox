@@ -44,13 +44,13 @@
               <li>
                 <div class="cart">
                   <a href="blog">
-                    <img style="padding-right:8px;" src="@/assets/img/blog.svg" />
+                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="25" src="https://curaprox.ch/themes/classic-rocket/assets/img/tooth.svg"><path d="M6.491 24c1.222 0 1.466-.853 1.466-4.812 0-2.934 1.466-5.084 3.526-5.118 2.059.034 3.525 2.15 3.525 5.118 0 3.959.28 4.812 1.466 4.812 1.431 0 2.373-3.788 2.373-9.453 0-1.74 2.653-5.596 2.653-8.292C21.5 3.525 19.79 1 16.23 1c-3.56 0-4.747 1.98-4.747 1.98S10.33 1 6.77 1C3.21 1 1.5 3.525 1.5 6.255c0 2.696 2.653 6.552 2.653 8.292 0 1.707-.07 9.453 2.338 9.453z" stroke-width="2" fill="none" stroke-linejoin="bevel"></path></svg>
                   </a>
 
                   <div class="showOrder">
                     <a href="/#/cart">
                       <p style="padding-left:8px">{{productsCounts}}</p>
-                      <img src="@/assets/img/bag.svg" />
+                      <svg xmlns="http://www.w3.org/2000/svg" width="21" height="25" src="/themes/classic-rocket/assets/img/basket.svg"><g transform="translate(0 1)" stroke-width="2" fill="none" fill-rule="evenodd"><rect x="1" y="5" width="19" height="18" rx="2"></rect><path d="M15 4c0-2.21-2.015-4-4.5-4S6 1.79 6 4"></path></g></svg>
                     </a>
                   </div>
                 </div>
@@ -71,6 +71,15 @@ export default {
 </script>
 
 <style scoped>
+
+svg{
+  stroke: white;
+}
+
+svg:hover{
+  stroke: #0167b1!important;
+}
+
 .router-link-active {
   color: #0167b1;
 }
@@ -91,7 +100,7 @@ header .social-top p {
   color: white;
 }
 
-header .social-top a {
+a {
   color: white;
   text-decoration: none;
   padding-right: 10px;
@@ -149,6 +158,10 @@ header img {
 header .navigation:hover {
   background-color: white;
   color: black;
+}
+
+header .navigation:hover svg{
+  stroke: black;
 }
 
 header .navigation:hover a {
