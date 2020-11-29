@@ -1,31 +1,38 @@
 <template>
   <div>
-    <div class="row subbar">
-      <div class="subcategory">
-        <h4 style="text-align: left;">Filter</h4>
+    <shop-head HeadingText="All Products" />
+    <div class="row">
+      <div style="text-align:left" class="categoryBar">
+        <h4 style="margin-right:10px">FILTERS</h4>
       </div>
-      <div class="product-inner">
-        <h4 style="text-align: right;">Sort By</h4>
+      <div class="prod">
+        <div style="justify-content: flex-end;" class="smrow">
+          <h4 style="margin-right:10px">SORT BY</h4>
+          <select>
+            <option>Relevance</option>
+            <option>Name, A to Z</option>
+            <option>Name, Z to A</option>
+            <option>Price, low to high</option>
+            <option>Price, high to low</option>
+          </select>
+        </div>
       </div>
     </div>
-    <hr  style="margin: 0"/>
+    <hr style="margin:0" />
     <div class="row">
-      <div class="subcategory">
-        <h4>Categories</h4>
-        <hr />
-        <h4>Categories</h4>
-        <hr />
-        <h4>Categories</h4>
-        <hr />
-        <h4>Categories</h4>
-        <hr />
-        <h4>Categories</h4>
-        <hr />
-        <h4>Categories</h4>
-        <hr />
+      <div class="categoryBar">
+        <div class="subcategory">
+          <div v-for="(category, index) in metadata.categories" :key="index">
+            <div style="justify-content: space-between;" class="row">
+              <p @click="loadCategory(category)" class="custom-link">{{category.label}}</p>
+              <p style="cursor:pointer" @click="category.displaySub = !category.displaySub">▼</p>
+            </div>
+            <hr />
+          </div>
+        </div>
       </div>
-      <div class="product-inner">
-        <div class="row">
+      <div class="prod">
+        <div class="smrow">
           <SingleProduct v-for="prod of products" :key="prod._id" v-bind="prod" />
         </div>
       </div>
@@ -34,19 +41,31 @@
 </template>
 
 <script>
-import SingleProduct from "./SingleProduct";
+import ShopHead from "@/components/Layout/ShopHead.vue";
+import SingleProduct from "@/components/SP/SingleProduct.vue";
+const categories = require("@/metadata/categories.json");
+const productData = require("@/metadata/products.js");
 import axios from "axios";
-import productData from "../data/database";
 export default {
-  components: {
-    SingleProduct,
-  },
+  components: { ShopHead, SingleProduct },
   data() {
     return {
       products: [],
+      metadata: {
+        categories: categories.categories,
+      },
     };
   },
+  methods:{
+    loadCategory(category){
+      this.products = this.products.filter((product) => {
+        console.log(category,product.category );
+        return product.category.label === category.label
+      })
+    }
+  },
   mounted() {
+    window.scrollTo(0,0);
     axios
       .get("/api/products")
       .then((res) => {
@@ -61,23 +80,61 @@ export default {
 };
 </script>
 
-<style scoped lang='scss'>
+<style scoped>
+.custom-link {
+  text-decoration: none;
+  color: black;
+  font-size: 1.3rem;
+}
+.custom-link:hover {
+  text-decoration: underline;
+}
+
+.custom-link-sub a {
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+}
+.custom-link-sub a:hover {
+  text-decoration: underline;
+}
 .row {
   display: flex;
   flex-direction: row;
   max-width: 1200px;
   margin: auto;
 }
-.subcategory{
+.categoryBar {
   flex: 3;
-  text-align: left;
-  margin: 0 50px;
 }
-.product-inner{
+.prod {
   flex: 9;
-  margin: 30px;
+  justify-content: center;
+  text-align: center;
 }
-.subbar{
-  background-color: white;
+.smrow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+select {
+  height: 20px;
+  margin: auto 0;
+}
+.subcategory {
+  padding-top: 40px;
+}
+
+p {
+  margin: 0;
+}
+
+@media (max-width: 765px) {
+  .categoryBar {
+    display: none;
+  }
+  .prod {
+    flex: 12;
+  }
 }
 </style>
