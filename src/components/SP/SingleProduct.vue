@@ -32,7 +32,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .prodmain {
   margin-right: 20px;
   cursor: pointer;
