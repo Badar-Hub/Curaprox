@@ -26,9 +26,6 @@ export default {
 </script>
 
 <style scoped>
-.productContainer {
-}
-
 .productContainer-inner {
   display: flex;
   flex-wrap: wrap;
