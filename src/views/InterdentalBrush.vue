@@ -2,7 +2,7 @@
   <div>
     <Header2>
       <li>
-        <a href="#/InterdentalBrushes">INTERDENTAL BRUSHES</a>
+        <a class="font-futura-semi-medium" href="#/InterdentalBrushes">INTERDENTAL BRUSHES</a>
       </li>
     </Header2>
     <Slider3 v-bind="SliderContent" image="idb-overview-header-prime-colorfull-1200x600.jpg">

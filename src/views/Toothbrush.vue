@@ -2,10 +2,10 @@
   <div>
     <Header2>
       <li>
-        <a href="#/Cs5460">CS 5460</a>
+        <a class="font-futura-semi-medium" href="#/Cs5460">CS 5460</a>
       </li>
       <li>
-        <a href="#/Cs1006">CS 1006</a>
+        <a class="font-futura-semi-medium" href="#/Cs1006">CS 1006</a>
       </li>
     </Header2>
     <ProFeaturedComponent img="toothbrush-cs5460-mood-beyou-1200x600.jpg">

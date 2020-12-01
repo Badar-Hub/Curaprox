@@ -2,7 +2,7 @@
   <div>
     <Header2>
       <li>
-        <a href="#/Mouthwash">MOUTHWASH</a>
+        <a class="font-futura-semi-medium" href="#/Mouthwash">MOUTHWASH</a>
       </li>
     </Header2>
     <Slider3

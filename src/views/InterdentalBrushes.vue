@@ -2,7 +2,7 @@
   <div>
     <Header2>
       <li>
-        <a href="#/InterdentalBrush">INTERDENTAL BRUSH</a>
+        <a class="font-futura-semi-medium" href="#/InterdentalBrush">INTERDENTAL BRUSH</a>
       </li>
     </Header2>
     <div class="easyin default">

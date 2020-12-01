@@ -2,15 +2,13 @@
   <div>
     <div class="backimg">
       <div class="slider">
-        <h3>PURE JOY</h3>
-        <h1>
+        <h3 class="font-futura-semi-medium">PURE JOY</h3>
+        <h1 class="font-futura-medium">
           FOR TEETH
           <br />FOR GUMS.
           <br />AND FOR YOU.
         </h1>
-        <button class="btn-shop">
-          <a href="/#/shop">SHOP NOW</a>
-        </button>
+        <a href="/#/shop" class="btn font-futura-semi-bold">SHOP</a>
       </div>
     </div>
   </div>
@@ -24,7 +22,16 @@ export default {};
 .backimg {
   background-color: #fcb6b6;
 }
-
+.btn{
+  background-color: #fcb6b6!important;
+  border: white 1px solid;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  max-width: 120px;
+  padding: 12px;
+  border-radius: 8%;
+}
 .slider {
   display: flex;
   flex-direction: column;
@@ -44,7 +51,7 @@ h1 {
   margin-top: 0;
 }
 h3 {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   margin-top: 0;
 }
 </style>

@@ -21,19 +21,19 @@
           <nav>
             <ul>
               <li>
-                <router-link to="/Toothbrush">TOOTHBRUSHES</router-link>
+                <router-link class="font-futura-semi-bold" to="/Toothbrush">TOOTHBRUSHES</router-link>
               </li>
               <li>
-                <router-link to="/BLACK-IS-WHITE">TOOTHPASTE</router-link>
+                <router-link class="font-futura-semi-bold" to="/BLACK-IS-WHITE">TOOTHPASTE</router-link>
               </li>
               <li>
-                <router-link to="/InterdentalBrush">INTERDENTAL</router-link>
+                <router-link class="font-futura-semi-bold" to="/InterdentalBrush">INTERDENTAL</router-link>
               </li>
               <li>
-                <router-link to="/MouthwashPerio">MOUTHWASH</router-link>
+                <router-link class="font-futura-semi-bold" to="/MouthwashPerio">MOUTHWASH</router-link>
               </li>
               <li>
-                <router-link style="background-color:#0167b1; color: white; padding:6px; border-radius: 15%" to="/shop">SHOP</router-link>
+                <router-link class="font-futura-semi-bold" style="background-color:#0167b1; color: white; padding:6px; border-radius: 15%" to="/shop">SHOP</router-link>
               </li>
             </ul>
             <ul>

@@ -2,7 +2,7 @@
   <div>
     <Header2>
       <li>
-        <a href="#/MouthwashPerio">MOUTHWASH PERIO</a>
+        <a class="font-futura-semi-medium" href="#/MouthwashPerio">MOUTHWASH PERIO</a>
       </li>
     </Header2>
     <ProFeaturedComponent img="curaprox-others-perioplus-range-full-1200x600.jpg">

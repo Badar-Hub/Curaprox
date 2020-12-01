@@ -2,10 +2,10 @@
   <div>
     <Header2>
       <li>
-        <a href="#/BE-YOU">[BE YOU.]</a>
+        <a class="font-futura-semi-medium" href="#/BE-YOU">[BE YOU.]</a>
       </li>
       <li>
-        <a href="#/BLACK-IS-WHITE">BLACK IS WHITE</a>
+        <a class="font-futura-semi-medium" href="#/BLACK-IS-WHITE">BLACK IS WHITE</a>
       </li>
     </Header2>
     <ProFeaturedComponent img="cps-toothpaste-teaser-beyou-colors-1200x600.jpg">
