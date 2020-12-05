@@ -87,7 +87,7 @@ export default {
 .Slider {
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   max-width: 1200px;
   min-height: 800px;
   margin: auto;
