@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "build:final": "npm run build && rm -r ../curaprox-back/dist && mv ./dist ../curaprox-back"
+    "start": "git pull && npm run build && rm -r ../curaprox-back/dist && mv ./dist ../curaprox-back"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
