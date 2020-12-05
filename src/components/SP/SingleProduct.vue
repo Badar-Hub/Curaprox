@@ -6,8 +6,8 @@
         <img :src="`${(!isDev? '/admin/' : '' ) + img}`" />
       </div>
       <hr />
-      <h2>{{name}}</h2>
-      <h3>RS: {{price}}</h3>
+      <h2 class="font-futura-medium">{{name}}</h2>
+      <h3 class="font-futura-semi-bold">RS: {{price}}</h3>
     </div>
   </router-link>
   </div>
@@ -64,4 +64,19 @@ img {
   width: auto;
   max-height: 400px;
 }
+
+a {
+  text-decoration:none!important;
+  color:black
+}
+
+h2{
+  margin-bottom: 0!important
+}
+
+h3{
+  margin-top: 0!important
+}
+
+
 </style>

@@ -3,25 +3,25 @@
     <div class="productPage">
       <div class="productPage-inner">
         <div class="text">
-          <h1>{{product.name}}</h1>
-          <p>Rs. {{product.price}}</p>
+          <h1 class="font-futura-semi-bold">{{product.name}}</h1>
+          <p class="font-info">Rs. {{product.price}}</p>
           <div class="qty">
             <button v-on:click="minusQty">
               <span>-</span>
             </button>
-            <p>{{quantity}}</p>
+            <p class="font-info">{{quantity}}</p>
             <button v-on:click="plusQty">
               <span>+</span>
             </button>
           </div>
           <br />
-          <p v-if="qtyAbove">Available Quantity: {{ product.qty }}</p>
+          <p class="font-info" v-if="qtyAbove">Available Quantity: {{ product.qty }}</p>
 
           <button
             @click="$set(product, 'cartQty', quantity); $set(product, 'total', product.price * quantity); updateCart(product)"
             class="addToCartBtn"
           >{{!isInvalidQty ? "Add To Cart" : "Out Of Stock"}}</button>
-          <h2>variant</h2>
+          <h2 class="font-info">variant</h2>
         </div>
         <div class="img">
           <img :src="`${(!isDev? '/admin/' : '') + product.img}`" />
@@ -29,8 +29,8 @@
       </div>
       <div class="description">
         <div class="text">
-          <h1 @click="toogleDesc">DESCRIPTION</h1>
-          <h1 @click="toogleDesc">+</h1>
+          <h1 class="font-futura-semi-bold" @click="toogleDesc">DESCRIPTION</h1>
+          <h1 class="font-futura-semi-bold" @click="toogleDesc">+</h1>
         </div>
         <hr />
         <div :style="`display:${display}`" class="description-inner">
