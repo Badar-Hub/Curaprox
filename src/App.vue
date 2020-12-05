@@ -9,6 +9,9 @@
 body {
   padding: 0;
   margin: 0;
+  p {
+    font-family: info-light!important;
+  }
 }
 
 @font-face {
@@ -22,6 +25,19 @@ body {
 @font-face {
   font-family: futura-bold;
   src: url("./assets/fonts/curaprox/futurapro/futurapro_bold/curaprox-font-futura_bold.otf");
+}
+
+@font-face {
+  font-family: info-light;
+  src: url("./assets/fonts/curaprox/infodisplaypro/curaprox-font-infodisplaypro_book.otf");
+}
+@font-face {
+  font-family: info-medium;
+  src: url("./assets/fonts/curaprox/infodisplaypro/curaprox-font-infodisplaypro_semibold.otf");
+}
+@font-face {
+  font-family: info-bold;
+  src: url("./assets/fonts/curaprox/infodisplaypro/curaprox-font-infodisplaypro_bold.otf");
 }
 
 .font-futura {
@@ -45,6 +61,32 @@ body {
   }
   &-bold {
     font-family: 'futura-bold'!important;
+    font-weight: 700!important;
+    letter-spacing: 2px;
+  }
+}
+
+.font-info {
+  font-family: 'info-light' !important;
+  font-weight: 300!important;
+  letter-spacing: 2px;
+  &-semi-medium {
+    font-family: 'info-medium'!important;
+    font-weight: 400!important;
+    letter-spacing: 2px;
+    }
+    &-medium {
+    font-family: 'info-medium'!important;
+    font-weight: 500!important;
+    letter-spacing: 2px;
+  }
+  &-semi-bold {
+    font-family: 'info-bold'!important;
+    font-weight: 600!important;
+    letter-spacing: 2px;
+  }
+  &-bold {
+    font-family: 'info-bold'!important;
     font-weight: 700!important;
     letter-spacing: 2px;
   }

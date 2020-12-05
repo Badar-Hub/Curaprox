@@ -11,13 +11,13 @@
       image="curaprox-perioplus.jpg"
     >
       <template v-slot:textOverlay>
-        <p>PERIO PLUS+</p>
-        <h2>
+        <h3 class="font-futura-semi-bold">PERIO PLUS+</h3>
+        <h2 class="font-futura-semi-bold">
           NATURALLY
           <br />EFFECTIVE
           <br />MOUTHWASHES
         </h2>
-        <p>
+        <p class="font-info">
           Perio Plus+ products contain Chlorhexidine...
           <br />together with CITROX® natural bioflavonoids –
           <br />extracted from bitter oranges – to reinforce the
@@ -26,9 +26,9 @@
         </p>
       </template>
       <template v-slot:smShow>
-        <p>PERIO PLUS+</p>
-        <h2>NATURALLY, EFFECTIVE, MOUTHWASHES</h2>
-        <p>Perio Plus+ products contain Chlorhexidine...together with CITROX® natural bioflavonoids – extracted from bitter oranges – to reinforce the antibacterial effect. Recommended for gum inflammation. Alcohol free.</p>
+        <h3 class="font-futura-semi-bold">PERIO PLUS+</h3>
+        <h2 class="font-futura-semi-bold">NATURALLY, EFFECTIVE, MOUTHWASHES</h2>
+        <p class="font-info">Perio Plus+ products contain Chlorhexidine...together with CITROX® natural bioflavonoids – extracted from bitter oranges – to reinforce the antibacterial effect. Recommended for gum inflammation. Alcohol free.</p>
       </template>
     </Slider3>
     <SubPage v-bind="textSlider" />

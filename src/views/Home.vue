@@ -2,16 +2,20 @@
   <div>
     <Header />
     <Slider />
-    <ProFeaturedComponent img="curaprox-others-perioplus-range-full-1200x600.jpg">
+    <ProFeaturedComponent
+      img="curaprox-others-perioplus-range-full-1200x600.jpg"
+    >
       <template v-slot:text>
-        <h2 style="color:black;">PERIO PLUS+</h2>
-        <h3 style="color:black;">
+        <h2 class="font-futura-semi-bold" style="color:black;">PERIO PLUS+</h2>
+        <h3 class="font-futura-semi-medium" style="color:black;">
           NATURALLY EFFECTIVE
           <br />MOUTHWASHES
         </h3>
         <p>
           <span style="color:#0167b8;">
-            <a href="https://curaprox.ch/en/info/dental-care/perio-plus">Learn More</a>
+            <a href="https://curaprox.ch/en/info/dental-care/perio-plus"
+              >Learn More</a
+            >
             >
           </span>
           <span style="color:#0167b8;">
@@ -24,15 +28,17 @@
     <!-- Category Component -->
     <CategoryComponent img-right="cps-colors.jpg" img-left="teaser-ortho.jpg">
       <template v-slot:left>
-        <h2>ORTHODONTICS</h2>
-        <h3>
+        <h2 class="font-futura-semi-bold">ORTHODONTICS</h2>
+        <h3 class="font-futura-semi-medium">
           PERFECT ORTHO CARE
-          <br />SOLUTIONS FOR
-          <br />YOUR BRACES
+          <br />SOLUTIONS FOR <br />YOUR BRACES
         </h3>
         <div class="onel">
           <p>
-            <a href="https://curaprox.ch/en/blog/post/how-do-i-look-after-my-braces">Learn More</a>
+            <a
+              href="https://curaprox.ch/en/blog/post/how-do-i-look-after-my-braces"
+              >Learn More</a
+            >
           </p>
           <p>
             <a href="/Interdental">Buy</a>
@@ -40,11 +46,10 @@
         </div>
       </template>
       <template v-slot:right>
-        <h2>INTERDENTAL BRUSHES</h2>
-        <h3>
+        <h2 class="font-futura-semi-bold">INTERDENTAL BRUSHES</h2>
+        <h3 class="font-futura-semi-bold">
           RIGHT IN THE MIDDLE
-          <br />OF THE INTERDENTAL
-          <br />SPACE.
+          <br />OF THE INTERDENTAL <br />SPACE.
         </h3>
         <div class="onel">
           <p>
@@ -72,13 +77,10 @@
         <h4>…THAT LOVE THE GUMLINE</h4>
         <h2>TOOTHBRUSH</h2>
         <p>
-          Brushing your teeth is also about
-          cleaning your gumline. The sulcus – the
-          groove between the teeth and gums –
-          is a breeding ground for bacteria that
-          cause inflammation and periodontitis.
-          Our toothbrushes are so gentle, they
-          clean perfectly – even in the gumline.
+          Brushing your teeth is also about cleaning your gumline. The sulcus –
+          the groove between the teeth and gums – is a breeding ground for
+          bacteria that cause inflammation and periodontitis. Our toothbrushes
+          are so gentle, they clean perfectly – even in the gumline.
         </p>
         <a href="/#/toothbrush">Learn More</a>
         <a href="#">Buy</a>
@@ -88,13 +90,10 @@
         <h4>INTERDENTAL BRUSHES</h4>
         <h2>ONCE IN AND OUT. DONE.</h2>
         <p>
-          Exceptional cleanliness where it
-          matters most – in the difficult-to-reach
-          narrow spaces between the teeth. All
-          thanks to super-fine, extra-long, ultra-
-          resilient filaments. Combat tooth decay,
-          inflammation and periodontitis. Quick.
-          Easy. Pleasant.
+          Exceptional cleanliness where it matters most – in the
+          difficult-to-reach narrow spaces between the teeth. All thanks to
+          super-fine, extra-long, ultra- resilient filaments. Combat tooth
+          decay, inflammation and periodontitis. Quick. Easy. Pleasant.
         </p>
         <a href="/#/InterdentalBrush">Learn More</a>
         <a href="#">Buy</a>
@@ -106,12 +105,10 @@
         <h4>TOOTHPASTE</h4>
         <h2>THE BEST IN THE WORLD?</h2>
         <p>
-          Toothpastes that improve your oral
-          health – and bring joy to your brushing
-          routine. Beautifully-crafted flavours.
-          Healthy ingredients – no nasties.
-          Whitening that actually cares for your
-          tooth enamel. Curaprox toothpastes.
+          Toothpastes that improve your oral health – and bring joy to your
+          brushing routine. Beautifully-crafted flavours. Healthy ingredients –
+          no nasties. Whitening that actually cares for your tooth enamel.
+          Curaprox toothpastes.
         </p>
         <a href="/#/BLACK-IS-WHITE">Learn More</a>
         <a href="#">Buy</a>
@@ -128,7 +125,10 @@
       <AwesomeSlider class="default" />
     </div>
     <!-- <oralHealth /> -->
-    <CategoryComponent img-right="need-teaser-implants-585x600.jpg" img-left="others-teaser.jpg">
+    <CategoryComponent
+      img-right="need-teaser-implants-585x600.jpg"
+      img-left="others-teaser.jpg"
+    >
       <template v-slot:left>
         <h2>BDC FOR DENTURES</h2>
         <h3>
@@ -154,7 +154,8 @@
           <p>
             <a
               href="https://curaprox.ch/en/blog/post/how-do-i-look-after-my-dental-implants"
-            >Learn More</a>
+              >Learn More</a
+            >
           </p>
           <p>
             <a href="#">Buy</a>
@@ -190,9 +191,9 @@ export default {
   data() {
     return {};
   },
-  mounted(){
-    window.scrollTo(0,0);
-  }
+  mounted() {
+    window.scrollTo(0, 0);
+  },
 };
 </script>
 

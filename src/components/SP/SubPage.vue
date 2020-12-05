@@ -3,8 +3,8 @@
     <div :style="`background-color:${backgroundColor}`" class="sub">
       <div :style="`flex-direction:${rowDirection}`" class="sub-inner">
         <div class="text">
-          <h2>{{h2text}}</h2>
-          <p>{{ptext}}</p>
+          <h2 class="font-futura-semi-bold">{{h2text}}</h2>
+          <p class="font-info">{{ptext}}</p>
         </div>
         <div class="img">
           <img :src="require(`@/assets/img/${img}`)" />
@@ -54,7 +54,6 @@ img {
 }
 
 .sub .sub-inner .text {
-  padding-top: 10%;
   text-align: left;
   max-width: 48%;
 }
@@ -66,14 +65,10 @@ img {
 
 .sub .sub-inner .text h2 {
   font-size: 50px;
-  margin: 0;
-  padding: 0;
 }
 
 .sub .sub-inner .text p {
   font-size: 22px;
-  margin: 0;
-  padding: 0;
   font-weight: 500;
   font-family: ff-info-text-web-pro, sans-serif;
 }
@@ -84,21 +79,15 @@ img {
   }
 
   .sub .sub-inner .text {
-    padding-top: 10%;
     text-align: left;
     max-width: 48%;
     margin: auto;
   }
   .sub .sub-inner .text h2 {
     font-size: 2.3rem;
-    margin: 0;
-    padding: 0;
   }
 
   .sub .sub-inner .text p {
-    font-size: 1.2rem;
-    margin: 0;
-    padding: 0;
     font-weight: 500;
     font-family: ff-info-text-web-pro, sans-serif;
   }
@@ -109,15 +98,11 @@ img {
     margin: auto;
   }
   .sub .sub-inner .text h2 {
-    font-size: 1.5rem;
-    margin: 0;
-    padding: 0;
+    font-size: 1.5rem
   }
 
   .sub .sub-inner .text p {
     font-size: 1.22rem;
-    margin: 0;
-    padding: 0;
     font-weight: 500;
     font-family: ff-info-text-web-pro, sans-serif;
   }

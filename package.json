@@ -17,6 +17,7 @@
     "@syncfusion/ej2-vue-richtexteditor": "^18.3.44",
     "axios": "^0.20.0",
     "core-js": "^3.6.5",
+    "sass": "^1.29.0",
     "swiper": "^6.3.3",
     "vue": "^2.6.11",
     "vue-awesome-swiper": "^4.1.1",

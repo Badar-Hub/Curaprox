@@ -58,13 +58,15 @@ export default {
 }
 
 h2 {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   margin: 0;
+  letter-spacing: 1px;
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin: 20px 0;
+  letter-spacing: 0px;
 }
 
 span {

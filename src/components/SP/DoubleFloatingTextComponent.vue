@@ -3,12 +3,12 @@
     <div class="main">
       <div class="main-inner">
         <div class="leftText">
-          <h2>{{left.title}}</h2>
-          <p>{{left.desc}}</p>
+          <h2 class="font-futura-semi-bold">{{left.title}}</h2>
+          <p class="font-info">{{left.desc}}</p>
         </div>
         <div class="rightText">
-          <h2>{{right.title}}</h2>
-          <p>{{right.desc}}</p>
+          <h2 class="font-futura-semi-bold">{{right.title}}</h2>
+          <p class="font-info">{{right.desc}}</p>
         </div>
       </div>
     </div>

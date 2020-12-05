@@ -13,25 +13,25 @@
       <div class="col">
         <img :src="require(`@/assets/img/${content1.img}`)" />
         <div class="text-after">
-          <p>{{content1.pText}}</p>
+          <p class="font-info">{{content1.pText}}</p>
         </div>
       </div>
       <div class="col">
         <img :src="require(`@/assets/img/${content2.img}`)" />
         <div class="text-after">
-          <p>{{content2.pText}}</p>
+          <p class="font-info">{{content2.pText}}</p>
         </div>
       </div>
       <div class="col">
         <img :src="require(`@/assets/img/${content3.img}`)" />
         <div class="text-after">
-          <p>{{content3.pText}}</p>
+          <p class="font-info">{{content3.pText}}</p>
         </div>
       </div>
       <div class="col">
         <img :src="require(`@/assets/img/${content4.img}`)" />
         <div class="text-after">
-          <p>{{content4.pText}}</p>
+          <p class="font-info">{{content4.pText}}</p>
         </div>
       </div>
     </div>
@@ -101,15 +101,17 @@ export default {
 }
 
 h2 {
-  font-family: futura-pt, sans-serif;
-  font-size: 70px;
+  font-size: 5.2rem;
   margin: 30px 0;
 }
 
 p {
-  font-family: ff-info-text-web-pro, sans-serif;
-  font-size: 22px;
-  margin: 0;
+  font-size: 1.3rem;
+  letter-spacing: 3px;
+}
+
+h3 {
+  font-size: 1.5rem;
   letter-spacing: 3px;
 }
 
@@ -176,7 +178,6 @@ p {
   p {
     font-family: ff-info-text-web-pro, sans-serif;
     font-size: 15px;
-    margin: 0;
     letter-spacing: 2px;
   }
 }
@@ -199,15 +200,12 @@ p {
   }
 
   h2 {
-    font-family: futura-pt, sans-serif;
     font-size: 40px;
     margin: 10px 0;
   }
 
   p {
-    font-family: ff-info-text-web-pro, sans-serif;
     font-size: 15px;
-    margin: 0;
     letter-spacing: 2px;
   }
 }

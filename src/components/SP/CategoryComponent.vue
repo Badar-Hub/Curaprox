@@ -53,15 +53,16 @@ export default {
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin: 1.5rem;
   margin-bottom: 1rem;
 }
 
 h3 {
   font-size: 2.5rem;
-  line-height: 3rem;
+  line-height: 2.5rem;
   margin: 0 1.5rem;
+  letter-spacing: 3px;
 }
 p {
   font-size: 1.2rem;

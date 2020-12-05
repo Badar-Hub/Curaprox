@@ -47,11 +47,13 @@ export default {};
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 4.3rem;
   margin-top: 0;
+  margin-bottom: 1.5rem;
+
 }
 h3 {
-  font-size: 1.5rem;
-  margin-top: 0;
+  font-size: 1.3rem;
+  margin: 0!important;
 }
 </style>
