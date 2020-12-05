@@ -39,9 +39,13 @@
     <SubPage row-direction="row-reverse" v-bind="text2Slider" />
     <SubPage v-bind="text3Slider" />
     <GifComponent img="curaprox-toothpaste-biw-image-fullwith-1200x400.jpg" />
-    <FloatingText
+    <FloatingText style="background-color:#f9f9f9"
       h2-text="Why Black Is White?  Beautiful, whiter teeth give you new confidence. But normal whitening toothpastes are harmful. Curaprox – the oral health experts – show that you can have the best of both worlds. Gentle, natural, effective whitening with activated carbon."
     />
+    <div class="floatingtxt">
+      <h2 class="font-futura-semi-bold">TEETH WHITENING WITH ACTIVATED CARBON</h2>
+      <p class="font-info">Activated carbon is completely natural. Because it’s porous, it simply absorbs discoloured particles. It whitens teeth and keeps your mouth feeling fresh.</p>
+    </div>
 
     <ProFeaturedComponent img="need-post-whitening-new-1200x600.jpg">
       <template v-slot:text>
@@ -194,5 +198,20 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.floatingtxt {
+  display: flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  max-width:1200px;
+  margin:auto
+}
+
+h2{
+  font-size:3.6rem;
+  margin-bottom:0;
+}
+p{
+  font-size:2rem
+}
 </style>
