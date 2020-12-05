@@ -2,9 +2,9 @@
   <div>
     <div class="burshing">
       <div class="burshing-inner">
-        <h3>{{h3Text}}</h3>
-        <h2>{{h2Text}}</h2>
-        <p>{{pText}}</p>
+        <h3 class="font-futura-semi-bold">{{h3Text}}</h3>
+        <h2 class="font-futura-medium">{{h2Text}}</h2>
+        <p class="font-info">{{pText}}</p>
       </div>
     </div>
   </div>

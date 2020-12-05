@@ -2,7 +2,7 @@
   <div>
     <div class="text">
       <div class="text-inner">
-        <h2>{{h2Text}}</h2>
+        <h2 class="font-info">{{h2Text}}</h2>
       </div>
     </div>
   </div>
