@@ -71,6 +71,7 @@ a {
 }
 
 h2{
+  font-size: 1.3rem;
   margin-bottom: 0!important
 }
 
