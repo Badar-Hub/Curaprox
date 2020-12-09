@@ -40,55 +40,59 @@
         </div>
         <hr />
       </div>
+      <Modal @click="display = !display" :style="[display ? 'block' : 'none']">
+        <template>
+          <div class="row">
+            <div class="promo">
+              <div class="promo-inner">
+                <div class="promo-text">
+                  <h3>Have A Promotional Code?</h3>
+                  <hr />
+                  <input type="text" placeholder="Coupon code" />
+                  <input type="Submit" placeholder="Submit" />
+                </div>
+              </div>
+            </div>
+            <div class="checkout">
+              <div class="checkout-inner">
+                <h3>Cart Total</h3>
+                <hr />
+                <div class="subtotal">
+                  <p>
+                    <strong>Subtotal</strong>
+                  </p>
+                  <p>
+                    <strong>Rs. {{getTotalCost}}</strong>
+                  </p>
+                </div>
+                <hr />
+                <div class="shipping">
+                  <p>
+                    <strong>Shipping</strong>
+                  </p>
+                  <p>
+                    <strong>Rs. {{shippingPrice}}</strong>
+                  </p>
+                </div>
+                <hr />
+                <div class="total">
+                  <p>
+                    <strong>Total</strong>
+                  </p>
+                  <p>
+                    <strong>Rs. {{getTotalCost + shippingPrice}}</strong>
+                  </p>
+                </div>
+                <hr />
+                <div class="btn">
+                  <button>Proceed To Checkout</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </template>
+      </Modal>
 
-      <div class="row">
-        <div class="promo">
-          <div class="promo-inner">
-            <div class="promo-text">
-              <h3>Have A Promotional Code?</h3>
-              <hr />
-              <input type="text" placeholder="Coupon code" />
-              <input type="Submit" placeholder="Submit" />
-            </div>
-          </div>
-        </div>
-        <div class="checkout">
-          <div class="checkout-inner">
-            <h3>Cart Total</h3>
-            <hr />
-            <div class="subtotal">
-              <p>
-                <strong>Subtotal</strong>
-              </p>
-              <p>
-                <strong>Rs. {{getTotalCost}}</strong>
-              </p>
-            </div>
-            <hr />
-            <div class="shipping">
-              <p>
-                <strong>Shipping</strong>
-              </p>
-              <p>
-                <strong>Rs. {{shippingPrice}}</strong>
-              </p>
-            </div>
-            <hr />
-            <div class="total">
-              <p>
-                <strong>Total</strong>
-              </p>
-              <p>
-                <strong>Rs. {{getTotalCost + shippingPrice}}</strong>
-              </p>
-            </div>
-            <hr />
-            <div class="btn">
-              <button>Proceed To Checkout</button>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
     <CheckOut />
   </div>
@@ -96,15 +100,18 @@
 
 <script>
 import { mapActions, mapGetters } from "vuex";
+import Modal from "./Modal"
 import CheckOut from "../Layout/Checkout";
 export default {
   components: {
     CheckOut,
+    Modal
   },
   data() {
     return {
       shippingPrice: 200,
       isDev: false,
+      display:false
     };
   },
   methods: {
