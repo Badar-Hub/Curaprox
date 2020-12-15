@@ -4,15 +4,9 @@
     <q-dialog v-model="toolbar">
         <q-card>
           <q-toolbar>
-            <q-avatar>
-              <img src="https://cdn.quasar.dev/logo/svg/quasar-logo.svg">
-            </q-avatar>
-
-            <q-toolbar-title><span class="text-weight-bold">Quasar</span> Framework</q-toolbar-title>
-
+            <q-toolbar-title>Checkout</q-toolbar-title>
             <q-btn flat round dense icon="close" v-close-popup />
           </q-toolbar>
-
           <q-card-section>
             <slot></slot>
           </q-card-section>

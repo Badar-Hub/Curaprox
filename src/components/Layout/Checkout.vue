@@ -1,20 +1,37 @@
 <template>
   <div>
-    <div class="main">
-      <div class="contact-us">
-        <div class="imgtxt">
-          <h3>✔</h3>
-          <h3>HELLO</h3>
+    <div class="row">
+  <div class="col-75">
+    <div class="container">
+      <form action="/action_page.php">
+        <div class="row">
+          <div class="col-50">
+            <h3>Billing Address</h3>
+            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Musa Ilyas">
+            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+            <input type="text" id="email" name="email" placeholder="m.m.ilyas@live.com">
+            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+            <input type="text" id="adr" name="address" placeholder="Askari Towers DHA Phase 2">
+            <label for="city"><i class="fa fa-institution"></i> City</label>
+            <input type="text" id="city" name="city" placeholder="Rawalpindi">
+            <div class="row">
+              <div class="col-50">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" placeholder="Punjab">
+              </div>
+              <div class="col-50">
+                <label for="zip">Zip</label>
+                <input type="text" id="zip" name="zip" placeholder="46000">
+              </div>
+            </div>
+          </div>
         </div>
-        <h3>Need Assistance? Call customer service at 0323-7672072</h3>
-        <div class="imgtxt2">
-          <a href>
-            <img src="@/assets/img/cart.png" />
-            <h3>VIEW CART</h3>
-          </a>
-        </div>
-      </div>
+        <input type="submit" value="Continue to checkout" class="btn">
+      </form>
     </div>
+  </div>
+  </div>
   </div>
 </template>
 
@@ -23,36 +40,101 @@ export default {};
 </script>
 
 <style scoped>
-.contact-us {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  max-width: 1200px;
-  margin: auto;
-  border: 1px solid black;
+* {
+  box-sizing: border-box;
 }
-.imgtxt {
+
+.row {
+  display: -ms-flexbox; /* IE10 */
   display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
   flex-wrap: wrap;
+  margin: 0 -16px;
 }
 
-.imgtxt2 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
 }
 
-.imgtxt2 a {
-  display: flex;
-  flex-wrap: wrap;
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
 }
 
-.imgtxt2 img {
-  max-width: 40px;
-  max-height: 35px;
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
 }
 
-h3 {
-  font-size: 1rem;
-  margin: 5px;
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
 }
 </style>
