@@ -121,6 +121,7 @@ h6,
 a {
   font-family: futura-pt, sans-serif;
   font-weight: 200;
+  line-height: normal!important;
   font-style: normal;
 }
 
@@ -128,12 +129,14 @@ p {
   font-family: ff-info-text-web-pro, sans-serif;
   font-weight: 200;
   font-style: normal;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
 
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
 }
@@ -174,4 +177,5 @@ p {
 .bg-primary {
   background-color: #0167b1;
 }
+
 </style>

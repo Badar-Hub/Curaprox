@@ -139,6 +139,14 @@ export default {
 </script>
 
 <style scoped>
+h1{
+  font-size:1.8rem
+}
+
+h2{
+  font-size:1.2rem
+}
+
 .productPage {
   margin: 50px 15px;
 }

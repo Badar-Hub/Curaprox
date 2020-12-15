@@ -1,5 +1,6 @@
 module.exports = {
   publicPath: "",
+
   devServer: {
     proxy: {
       // proxy all requests starting with /api to backend
@@ -19,4 +20,15 @@ module.exports = {
       },
     },
   },
+
+  pluginOptions: {
+    quasar: {
+      importStrategy: 'kebab',
+      rtlSupport: false
+    }
+  },
+
+  transpileDependencies: [
+    'quasar'
+  ]
 };

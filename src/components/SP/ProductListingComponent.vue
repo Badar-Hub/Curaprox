@@ -3,11 +3,11 @@
     <shop-head HeadingText="All Products" />
     <div class="row">
       <div style="text-align:left" class="categoryBar">
-        <h4 style="margin-right:10px">FILTERS</h4>
+        <h4 style="margin-right:10px; font-size:14px">FILTERS</h4>
       </div>
       <div class="prod">
         <div style="justify-content: flex-end;" class="smrow">
-          <h4 style="margin-right:10px">SORT BY</h4>
+          <h4 style="margin-right:10px; font-size:14px">SORT BY</h4>
           <select>
             <option>Relevance</option>
             <option>Name, A to Z</option>

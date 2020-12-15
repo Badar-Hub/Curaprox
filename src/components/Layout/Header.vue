@@ -3,7 +3,7 @@
     <header>
       <div class="social-top">
         <div class="social-top-inner">
-          <p>
+          <p style="margin:none">
             <img src="../../assets/img/flag-swiss-16X16.png" alt="Swiss" /> Swiss premium
             oral care / Free delivery for all orders!
           </p>

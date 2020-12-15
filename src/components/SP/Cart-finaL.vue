@@ -40,8 +40,6 @@
         </div>
         <hr />
       </div>
-      <Modal @click="display = !display" :style="[display ? 'block' : 'none']">
-        <template>
           <div class="row">
             <div class="promo">
               <div class="promo-inner">
@@ -90,11 +88,12 @@
               </div>
             </div>
           </div>
-        </template>
-      </Modal>
-
     </div>
-    <CheckOut />
+    <Modal>
+      <template>
+        <CheckOut />
+      </template>
+    </Modal>
   </div>
 </template>
 

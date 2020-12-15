@@ -7,7 +7,7 @@
       </div>
       <hr />
       <h2 class="font-futura-medium">{{name}}</h2>
-      <h3 class="font-futura-semi-bold">RS: {{price}}</h3>
+      <h3 style="font-size:17px" class="font-futura-semi-bold">RS: {{price}}</h3>
     </div>
   </router-link>
   </div>

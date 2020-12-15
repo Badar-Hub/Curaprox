@@ -52,6 +52,7 @@ export default {};
 }
 
 h3 {
+  font-size: 1rem;
   margin: 5px;
 }
 </style>
