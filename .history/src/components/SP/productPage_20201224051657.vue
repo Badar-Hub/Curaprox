@@ -92,7 +92,7 @@
           <div v-html="product.description"></div>
         </div>
       </div>
-      <div class="recommended q-pa-md">
+      <div class="recommended">
         <div>
           <q-carousel
             v-model="slide"
