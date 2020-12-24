@@ -171,6 +171,7 @@ import CategoryComponent from "../components/SP/CategoryComponent";
 import TextBlockWithImg from "../components/SP/TextBlockWithImg";
 import Footer from "../components/Layout/Footer";
 export default {
+  name: "Cs5460",
   components: {
     Header2,
     Slider3,

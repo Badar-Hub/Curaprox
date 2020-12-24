@@ -117,7 +117,7 @@ export default {
 .custom-link {
   text-decoration: none;
   color: black;
-  font-size: 19px;
+  font-size: 1.3rem;
 }
 .custom-link:hover {
   text-decoration: underline;
@@ -160,6 +160,7 @@ select {
 
 p {
   margin: 0;
+  font-size: 19px;
 }
 
 @media (max-width: 765px) {

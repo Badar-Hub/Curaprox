@@ -168,9 +168,11 @@ import SubPage from "../components/SP/SubPage";
 import FloatingText from "../components/SP/FloatingText";
 import TextWithImg from "../components/SP/TextWithImg";
 import CategoryComponent from "../components/SP/CategoryComponent";
+import ProFeaturedComponent from "../components/SP/ProFeaturedComponent";
 import TextBlockWithImg from "../components/SP/TextBlockWithImg";
 import Footer from "../components/Layout/Footer";
 export default {
+  name: "Cs5460",
   components: {
     Header2,
     Slider3,
@@ -179,6 +181,7 @@ export default {
     SubPage,
     FloatingText,
     TextWithImg,
+    ProFeaturedComponent,
     CategoryComponent,
     TextBlockWithImg,
     Footer,

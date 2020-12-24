@@ -20,29 +20,28 @@
         </h2>
         <p>
           Plaque on the teeth and in the gumline.
-          <br />Discoloured particles. The CS single cleans up – <br />even in
-          those hard-to-reach-spots. It’s like <br />having a personal dental
-          hygienist in your <br />bathroom.
+          <br />Discoloured particles. The CS single cleans up –
+          <br />even in those hard-to-reach-spots. It’s like
+          <br />having a personal dental hygienist in your
+          <br />bathroom.
         </p>
       </template>
       <template v-slot:smShow>
         <p>CS SINGLE TOOTHBRUSH</p>
         <h2>
-          WHEN LESS IS MORE
+          WHEN LESS
+          IS MORE
         </h2>
         <p>
-          Plaque on the teeth and in the gumline. Discoloured particles. The CS
-          single cleans up – even in those hard-to-reach-spots. It’s like having
-          a personal dental hygienist in your bathroom.
+          Plaque on the teeth and in the gumline. Discoloured particles. The CS single cleans up – even in those hard-to-reach-spots. It’s like
+          having a personal dental hygienist in your bathroom.
         </p>
       </template>
     </Slider3>
     <DFTC v-bind="dftc" />
     <Slider5>
       <div
-        :style="
-          `background-image: url(${require('@/assets/img/curaprox-toothbrush-single-white-1200x550.jpg')})`
-        "
+        :style="`background-image: url(${require('@/assets/img/curaprox-toothbrush-single-white-1200x550.jpg')})`"
         class="imgBack-inner"
       >
         <div class="heading">
@@ -58,9 +57,7 @@
       </div>
       <div class="hidden">
         <h3>SMALL BRUSH… BIG DIFFERENCE</h3>
-        <p>
-          Bigger is not always better. Small brush head. Huge cleaning power.
-        </p>
+        <p>Bigger is not always better. Small brush head. Huge cleaning power.</p>
       </div>
       <div class="txt">
         <div class="c1">
@@ -68,10 +65,11 @@
             <strong>Old ways. New technology.</strong>
           </h4>
           <p>
-            Old ways. New technology.In the olden days – before the modern
-            toothbrush was invented – people were already brushing their teeth.
-            They chewed twigs or roots until the ends frayed… and used them as
-            toothbrushes. The CS single is inspired by this tradition.
+            Old ways. New technology.In the olden days – before the
+            modern toothbrush was invented – people were already brushing
+            their teeth. They chewed twigs or roots until the ends frayed…
+            and used them as toothbrushes. The CS single is inspired by this
+            tradition.
           </p>
         </div>
         <div class="c1">
@@ -79,10 +77,10 @@
             <strong>Delicately does it</strong>
           </h4>
           <p>
-            The filaments of the CS single are stiffer than the filaments in our
-            other toothbrushes. Carefully place the outer bristles of the tuft
-            head so they only just enter the gumline. As you carefully clean,
-            tooth-by-tooth, the filaments fan up and clean in the gumline.
+            The filaments of the CS single are stiffer than the filaments in
+            our other toothbrushes. Carefully place the outer bristles of the
+            tuft head so they only just enter the gumline. As you carefully
+            clean, tooth-by-tooth, the filaments fan up and clean in the gumline.
           </p>
         </div>
         <div class="c1">
@@ -90,9 +88,9 @@
             <strong>Always by your side</strong>
           </h4>
           <p>
-            There’s no need for toothpaste. So you can clean with the CS single
-            whenever you like… while watching a movie, reading a book, waiting
-            for a bus, travelling to work on the train…
+            There’s no need for toothpaste. So you can clean with the CS single whenever
+            you like… while watching a movie, reading a book, waiting for a bus, travelling
+            to work on the train…
           </p>
         </div>
       </div>
@@ -110,10 +108,26 @@
     <TextWithImg v-bind="TxtImg">
       <button>How to brush - the video</button>
     </TextWithImg>
-    <CategoryComponent
-      img-right="cps-colors.jpg"
-      img-left="need-teaser-gum-care-585x600.jpg"
-    >
+    <ProFeaturedComponent img="curaprox-sonic-toothbrush-teaser-pro-single-1200x600.jpg">
+      <template v-slot:text>
+        <h2 style="color:black;">HYDROSONIC PRO</h2>
+        <h3 style="color:black;">
+          SONIC TOOTHBRUSH WITH
+          <br />SINGLE BRUSHHEAD
+        </h3>
+        <p>
+          <span style="color:#0167b1;">
+            <a href="link1.href">Learn More</a>
+            >
+          </span>
+          <span style="color:#0167b1;">
+            <a href="link2.href">Buy</a>
+            >
+          </span>
+        </p>
+      </template>
+    </ProFeaturedComponent>
+    <CategoryComponent img-right="cps-colors.jpg" img-left="need-teaser-gum-care-585x600.jpg">
       <template v-slot:left>
         <h2 style="color:white">GUM CARE</h2>
         <h3 style="color:white">
@@ -133,7 +147,8 @@
         <h2>INTERDENTAL BRUSHES</h2>
         <h3>
           EFFECTIVE BRUSHING
-          <br />IN THE SPACES <br />BETWEEN YOUR TEETH
+          <br />IN THE SPACES
+          <br />BETWEEN YOUR TEETH
         </h3>
         <div class="onel">
           <p>
@@ -168,9 +183,11 @@ import SubPage from "../components/SP/SubPage";
 import FloatingText from "../components/SP/FloatingText";
 import TextWithImg from "../components/SP/TextWithImg";
 import CategoryComponent from "../components/SP/CategoryComponent";
+import ProFeaturedComponent from "../components/SP/ProFeaturedComponent";
 import TextBlockWithImg from "../components/SP/TextBlockWithImg";
 import Footer from "../components/Layout/Footer";
 export default {
+  name: "Cs5460",
   components: {
     Header2,
     Slider3,
@@ -179,6 +196,7 @@ export default {
     SubPage,
     FloatingText,
     TextWithImg,
+    ProFeaturedComponent,
     CategoryComponent,
     TextBlockWithImg,
     Footer,
@@ -290,10 +308,11 @@ export default {
       },
     };
   },
-  mounted() {
-    window.scrollTo(0, 0);
-  },
+  mounted(){
+    window.scrollTo(0,0);
+  }
 };
 </script>
 
-<style></style>
+<style>
+</style>
