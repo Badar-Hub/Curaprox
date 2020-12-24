@@ -135,9 +135,6 @@ export default {
   max-height: 400px;
   max-width: 400px;
 }
-.input {
-    border: 1px solid rgb(128, 128, 128);
-}
 .left-side {
     margin-left: 150px;
     text-align: left;

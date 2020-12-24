@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="main-shop-page">
-      <div class="row cont">
+      <div class="row">
         <div class="col left-side">
           <h1>CS 5460</h1>
           <p>Rs. 250</p>
@@ -124,9 +124,6 @@ export default {
 </script>
 
 <style scoped>
-.cont {
-    margin-top: 40px;
-}
 .main-shop-page {
   max-width: 1200px;
   margin: auto;
@@ -134,9 +131,6 @@ export default {
 .prod-img {
   max-height: 400px;
   max-width: 400px;
-}
-.input {
-    border: 1px solid rgb(128, 128, 128);
 }
 .left-side {
     margin-left: 150px;
