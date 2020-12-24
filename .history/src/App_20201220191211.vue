@@ -14,11 +14,6 @@ body {
   }
 }
 
-.row {
-    margin-right: 0!important;
-    margin-left: 0!important;
-}
-
 @font-face {
   font-family: futura-light;
   src: url("./assets/fonts/curaprox/futurapro/futurapro_light/curaprox-font-futura_light.otf");

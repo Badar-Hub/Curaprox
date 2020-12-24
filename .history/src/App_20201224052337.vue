@@ -15,8 +15,8 @@ body {
 }
 
 .row {
-    margin-right: 0!important;
-    margin-left: 0!important;
+    margin-right: 0;
+    margin-left: 0;
 }
 
 @font-face {
