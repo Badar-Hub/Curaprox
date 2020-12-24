@@ -1,17 +1,15 @@
 <template>
   <div class="prodmain">
-    <router-link :to="`/shop/${_id}`">
-      <div class="singleProduct">
-        <div class="img">
-          <img :src="`${(!isDev ? '/admin/' : '') + img}`" />
-        </div>
-        <hr />
-        <h2 style="font-size: 2rem" class="font-futura-medium">{{ name }}</h2>
-        <h3 style="font-size:17px" class="font-futura-semi-bold">
-          RS: {{ price }}
-        </h3>
+  <router-link :to="`/shop/${_id}`">
+    <div class="singleProduct">
+      <div class="img">
+        <img :src="`${(!isDev? '/admin/' : '' ) + img}`" />
       </div>
-    </router-link>
+      <hr />
+      <h2 class="font-futura-medium">{{name}}</h2>
+      <h3 style="font-size:17px" class="font-futura-semi-bold">RS: {{price}}</h3>
+    </div>
+  </router-link>
   </div>
 </template>
 
@@ -23,14 +21,14 @@ export default {
     name: String,
     price: Number,
   },
-  data() {
+  data(){
     return {
-      isDev: false,
-    };
+      isDev: false
+    }
   },
-  mounted() {
+  mounted(){
     this.isDev = process.env.NODE_ENV == "development";
-  },
+  }
 };
 </script>
 
@@ -68,16 +66,18 @@ img {
 }
 
 a {
-  text-decoration: none !important;
-  color: black;
+  text-decoration:none!important;
+  color:black
 }
 
-h2 {
+h2{
   font-size: 1.3rem;
-  margin-bottom: 0 !important;
+  margin-bottom: 0!important
 }
 
-h3 {
-  margin-top: 0 !important;
+h3{
+  margin-top: 0!important
 }
+
+
 </style>
