@@ -58,10 +58,7 @@
           </div>
         </div>
         <div class="col">
-          <img
-            class="prod-img"
-            :src="`${(!isDev ? '/admin/' : '') + product.img}`"
-          />
+          <img class="prod-img" src="@/assets/cs-5460.jpg" />
           <div class="row justify-center">
             <img class="sub-imgs" src="@/assets/1.jpg" />
             <img class="sub-imgs" src="@/assets/2.jpg" />
