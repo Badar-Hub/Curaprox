@@ -1,7 +1,7 @@
 <template>
   <div>
     <shop-head HeadingText="All Products" />
-    <div class="row-page-page">
+    <div class="row">
       <div style="text-align:left" class="categoryBar">
         <h4 style="margin-right:10px; font-size:14px">FILTERS</h4>
       </div>
@@ -19,27 +19,20 @@
       </div>
     </div>
     <hr style="margin:0" />
-    <div class="row-page">
+    <div class="row">
       <div class="categoryBar">
         <div class="subcategory">
           <template v-if="this.filteredProducts">
-            <div style="justify-content: space-between;" class="row-page">
+            <div style="justify-content: space-between;" class="row">
               <p @click="loadCategory(null)" class="custom-link">Show All</p>
             </div>
             <hr />
             <br />
           </template>
           <div v-for="(category, index) in metadata.categories" :key="index">
-            <div style="justify-content: space-between;" class="row-page">
-              <p @click="loadCategory(category)" class="custom-link">
-                {{ category.label }}
-              </p>
-              <p
-                style="cursor:pointer"
-                @click="category.displaySub = !category.displaySub"
-              >
-                ▼
-              </p>
+            <div style="justify-content: space-between;" class="row">
+              <p @click="loadCategory(category)" class="custom-link">{{category.label}}</p>
+              <p style="cursor:pointer" @click="category.displaySub = !category.displaySub">▼</p>
             </div>
             <hr />
           </div>
@@ -47,15 +40,9 @@
       </div>
       <div class="prod">
         <div class="smrow">
-          <SingleProduct
-            v-for="prod of getProducts"
-            :key="prod._id"
-            v-bind="prod"
-          />
+          <SingleProduct v-for="prod of getProducts" :key="prod._id" v-bind="prod" />
           <template v-if="!getProducts.length">
-            <b style="margin: 20px 0"
-              >No products found in the selected category.</b
-            >
+            <b style="margin: 20px 0">No products found in the selected category.</b>
           </template>
         </div>
       </div>
@@ -80,24 +67,24 @@ export default {
       },
     };
   },
-  methods: {
+  methods:{
     loadCategory(category) {
-      if (category == null) {
+      if(category == null) {
         this.filteredProducts = null;
         return;
       }
       this.filteredProducts = this.products.filter((product) => {
-        return product.category.toLowerCase() === category.label.toLowerCase();
-      });
-    },
+        return product.category.toLowerCase() === category.label.toLowerCase()
+      })
+    }
   },
   computed: {
     getProducts() {
-      return this.filteredProducts ? this.filteredProducts : this.products;
-    },
+      return this.filteredProducts ? this.filteredProducts : this.products
+    }
   },
   mounted() {
-    window.scrollTo(0, 0);
+    window.scrollTo(0,0);
     axios
       .get("/api/products")
       .then((res) => {
@@ -128,7 +115,7 @@ export default {
 .custom-link-sub a:hover {
   text-decoration: underline;
 }
-.row-page {
+.row {
   display: flex;
   flex-direction: row;
   max-width: 1200px;
