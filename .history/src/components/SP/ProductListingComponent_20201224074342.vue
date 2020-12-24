@@ -30,10 +30,7 @@
             <br />
           </template>
           <div v-for="(category, index) in metadata.categories" :key="index">
-            <div
-              style="font-size:1.8rem; justify-content: space-between;"
-              class="row-page"
-            >
+            <div style="justify-content: space-between;" class="row-page">
               <p @click="loadCategory(category)" class="custom-link">
                 {{ category.label }}
               </p>
