@@ -48,22 +48,12 @@
         </div>
         <div class="col">
           <img class="prod-img" src="@/assets/cs-5460.jpg" />
-          <div class="row justify-center">
+          <div class="row">
             <img class="sub-imgs" src="@/assets/1.jpg" />
             <img class="sub-imgs" src="@/assets/2.jpg" />
-            <img class="sub-imgs" src="@/assets/3.jpg" />
+            <img class="sub-imgs" src="@/assets/2.jpg" />
           </div>
         </div>
-      </div>
-      <div class="desc">
-        <h3>Description</h3>
-        <h3>+</h3>
-      </div>
-      <div class="desc">
-          <hr style="width:100%; color:black;" />    
-      </div>
-      <div class="desc">
-          <div v-html="product.description"></div>
       </div>
     </div>
   </div>
@@ -178,14 +168,7 @@ export default {
   height: 80px;
 }
 .sub-imgs {
-  max-width: 120px;
-  height: 85px;
-  padding-right: 10px;
-}
-.desc {
-  display: flex;
-  justify-content: space-between;
-  max-width: 800px;
-  margin: auto;
+    max-width: 90px;
+    height: 70px;
 }
 </style>

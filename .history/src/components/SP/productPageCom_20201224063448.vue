@@ -29,41 +29,26 @@
               />
             </div>
           </div>
-          <q-btn
-            size="22px"
-            class="q-px-xl q-py-xs q-my-md"
-            color="purple"
-            label="ADD TO CART"
-          />
-          <div class="row q-px-lg">
-            <div class="col col-2">
-              <img class="sugested" src="@/assets/1.jpg" />
-              <p>! CS1006</p>
+            <q-btn
+              size="22px"
+              class="q-px-xl q-py-xs q-my-md"
+              color="purple"
+              label="ADD TO CART"
+            />
+            <div class="row">
+                <div class="col col-2">
+                    <img class="sugested" src="@/assets/1.jpg" />
+                    <p>! CS1006</p>
+                </div>
+                <div class="col col-2">
+                    <img class="sugested" src="@/assets/1.jpg" />
+                    <p>! CS1006</p>
+                </div>
             </div>
-            <div class="col col-2">
-              <img class="sugested" src="@/assets/1.jpg" />
-              <p>! CS1006</p>
-            </div>
-          </div>
         </div>
         <div class="col">
           <img class="prod-img" src="@/assets/cs-5460.jpg" />
-          <div class="row justify-center">
-            <img class="sub-imgs" src="@/assets/1.jpg" />
-            <img class="sub-imgs" src="@/assets/2.jpg" />
-            <img class="sub-imgs" src="@/assets/3.jpg" />
-          </div>
         </div>
-      </div>
-      <div class="desc">
-        <h3>Description</h3>
-        <h3>+</h3>
-      </div>
-      <div class="desc">
-          <hr style="width:100%; color:black;" />    
-      </div>
-      <div class="desc">
-          <div v-html="product.description"></div>
       </div>
     </div>
   </div>
@@ -174,18 +159,7 @@ export default {
   text-align: left;
 }
 .sugested {
-  max-width: 130px;
-  height: 80px;
-}
-.sub-imgs {
-  max-width: 120px;
-  height: 85px;
-  padding-right: 10px;
-}
-.desc {
-  display: flex;
-  justify-content: space-between;
-  max-width: 800px;
-  margin: auto;
+    max-width: 130px;
+    height: 80px;
 }
 </style>

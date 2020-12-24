@@ -60,10 +60,7 @@
         <h3>+</h3>
       </div>
       <div class="desc">
-          <hr style="width:100%; color:black;" />    
-      </div>
-      <div class="desc">
-          <div v-html="product.description"></div>
+          <hr style="width:100%"/>
       </div>
     </div>
   </div>

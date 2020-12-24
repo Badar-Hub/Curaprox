@@ -56,17 +56,11 @@
         </div>
       </div>
       <div class="desc">
-        <h3>Description</h3>
-        <h3>+</h3>
-      </div>
-      <div class="desc">
-          <hr style="width:100%; color:black;" />    
-      </div>
-      <div class="desc">
-          <div v-html="product.description"></div>
+              <h3>Description</h3>
+              <h3>+</h3>
       </div>
     </div>
-  </div>
+    </div>
 </template>
 
 <script>
@@ -178,14 +172,14 @@ export default {
   height: 80px;
 }
 .sub-imgs {
-  max-width: 120px;
-  height: 85px;
-  padding-right: 10px;
+    max-width: 120px;
+    height: 85px;
+    padding-right: 10px;
 }
 .desc {
-  display: flex;
-  justify-content: space-between;
-  max-width: 800px;
-  margin: auto;
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: auto;
 }
 </style>

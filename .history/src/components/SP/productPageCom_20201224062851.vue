@@ -4,10 +4,10 @@
       <div class="row cont">
         <div class="col left-side">
           <h1>CS 5460</h1>
-          <h6 class="q-my-md" style="font-size:2rem">Rs. 250</h6>
+          <h6 style="font-size:2rem">Rs. 250</h6>
           <div class="row">
             <h5 class="q-pr-md" style="margin:auto 0">Quantity</h5>
-            <div class="input q-my-md">
+            <div class="input">
               <q-btn
                 @click="minusQty"
                 flat
@@ -29,41 +29,10 @@
               />
             </div>
           </div>
-          <q-btn
-            size="22px"
-            class="q-px-xl q-py-xs q-my-md"
-            color="purple"
-            label="ADD TO CART"
-          />
-          <div class="row q-px-lg">
-            <div class="col col-2">
-              <img class="sugested" src="@/assets/1.jpg" />
-              <p>! CS1006</p>
-            </div>
-            <div class="col col-2">
-              <img class="sugested" src="@/assets/1.jpg" />
-              <p>! CS1006</p>
-            </div>
-          </div>
         </div>
         <div class="col">
           <img class="prod-img" src="@/assets/cs-5460.jpg" />
-          <div class="row justify-center">
-            <img class="sub-imgs" src="@/assets/1.jpg" />
-            <img class="sub-imgs" src="@/assets/2.jpg" />
-            <img class="sub-imgs" src="@/assets/3.jpg" />
-          </div>
         </div>
-      </div>
-      <div class="desc">
-        <h3>Description</h3>
-        <h3>+</h3>
-      </div>
-      <div class="desc">
-          <hr style="width:100%; color:black;" />    
-      </div>
-      <div class="desc">
-          <div v-html="product.description"></div>
       </div>
     </div>
   </div>
@@ -156,7 +125,7 @@ export default {
 
 <style scoped>
 .cont {
-  margin-top: 40px;
+    margin-top: 40px;
 }
 .main-shop-page {
   max-width: 1200px;
@@ -167,25 +136,10 @@ export default {
   max-width: 400px;
 }
 .input {
-  border: 1px solid rgb(128, 128, 128);
+    border: 1px solid rgb(128, 128, 128);
 }
 .left-side {
-  margin-left: 150px;
-  text-align: left;
-}
-.sugested {
-  max-width: 130px;
-  height: 80px;
-}
-.sub-imgs {
-  max-width: 120px;
-  height: 85px;
-  padding-right: 10px;
-}
-.desc {
-  display: flex;
-  justify-content: space-between;
-  max-width: 800px;
-  margin: auto;
+    margin-left: 150px;
+    text-align: left;
 }
 </style>
