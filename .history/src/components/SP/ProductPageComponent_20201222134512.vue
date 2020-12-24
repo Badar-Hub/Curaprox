@@ -3,52 +3,34 @@
     <div class="productPage">
       <div class="productPage-inner">
         <div class="text">
-          <h1 class="font-futura-semi-bold">{{ product.name }}</h1>
-          <p class="font-info">Rs. {{ product.price }}</p>
+          <h1 class="font-futura-semi-bold">{{product.name}}</h1>
+          <p class="font-info">Rs. {{product.price}}</p>
           <div class="qty">
-            <!-- <button v-on:click="minusQty">
+            <button v-on:click="minusQty">
               <span>-</span>
             </button>
             <q-input
-              v-model.number="quantity"
-              type="number"
-              filled
-              style="max-width: 100px"
-            />
+      v-model.number="model"
+      type="number"
+      filled
+      style="max-width: 200px"
+    />
+            <p class="font-info">{{quantity}}</p>
             <button v-on:click="plusQty">
               <span>+</span>
-            </button> -->
-             <span class="input-group-btn">
-              <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
-                  <span class="glyphicon glyphicon-minus"></span>
-              </button>
-          </span>
-          <input v-model="quantity" style="width:100px" type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
-          <span class="input-group-btn">
-              <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
-                  <span class="glyphicon glyphicon-plus"></span>
-              </button>
-          </span>
+            </button>
           </div>
           <br />
-          <p class="font-info" v-if="qtyAbove">
-            Available Quantity: {{ product.qty }}
-          </p>
+          <p class="font-info" v-if="qtyAbove">Available Quantity: {{ product.qty }}</p>
 
           <button
-            @click="
-              $set(product, 'cartQty', quantity);
-              $set(product, 'total', product.price * quantity);
-              updateCart(product);
-            "
+            @click="$set(product, 'cartQty', quantity); $set(product, 'total', product.price * quantity); updateCart(product)"
             class="addToCartBtn"
-          >
-            {{ !isInvalidQty ? "Add To Cart" : "Out Of Stock" }}
-          </button>
+          >{{!isInvalidQty ? "Add To Cart" : "Out Of Stock"}}</button>
           <h2 class="font-info">variant</h2>
         </div>
         <div class="img">
-          <img :src="`${(!isDev ? '/admin/' : '') + product.img}`" />
+          <img :src="`${(!isDev? '/admin/' : '') + product.img}`" />
         </div>
       </div>
       <div class="description">
@@ -58,6 +40,7 @@
         </div>
         <hr />
         <div :style="`display:${display}`" class="description-inner">
+
           <div v-html="product.description"></div>
         </div>
       </div>
@@ -65,11 +48,7 @@
         <awesomeSlider>
           <template>
             <swiper-slide>
-              <SingleProduct
-                v-for="prod of relatedProducts"
-                :key="prod._id"
-                v-bind="prod"
-              />
+              <SingleProduct v-for="prod of relatedProducts" :key="prod._id" v-bind="prod" />
             </swiper-slide>
           </template>
         </awesomeSlider>
@@ -166,12 +145,12 @@ export default {
 </script>
 
 <style scoped>
-h1 {
-  font-size: 1.8rem;
+h1{
+  font-size:1.8rem
 }
 
-h2 {
-  font-size: 1.2rem;
+h2{
+  font-size:1.2rem
 }
 
 .productPage {
@@ -209,6 +188,7 @@ h2 {
 }
 
 .productPage-inner .text .qty button {
+  padding: 15px;
   margin: 0;
   color: white;
   background-color: dodgerblue;

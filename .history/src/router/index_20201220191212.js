@@ -64,7 +64,7 @@ const routes = [
       {
         path: ":id",
         name: "shop-product",
-        component: () => import("../components/SP/productPage.vue"),
+        component: () => import("../components/SP/ProductPageComponent.vue"),
       },
     ],
   },

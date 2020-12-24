@@ -6,29 +6,39 @@
           <h1 class="font-futura-semi-bold">{{ product.name }}</h1>
           <p class="font-info">Rs. {{ product.price }}</p>
           <div class="qty">
-            <!-- <button v-on:click="minusQty">
-              <span>-</span>
-            </button>
-            <q-input
-              v-model.number="quantity"
-              type="number"
-              filled
-              style="max-width: 100px"
+            <span class="input-group-btn">
+              <button
+                v-on:click="minusQty"
+                type="button"
+                class="btn btn-default btn-number"
+                disabled="disabled"
+                data-type="minus"
+                data-field="quant[1]"
+              >
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+            </span>
+            <input
+              type="text"
+              name="quant[1]"
+              class="form-control input-number"
+              disabled
+              style="height:fit-content; width:100px"
+              value="1"
+              min="1"
+              max="10"
             />
-            <button v-on:click="plusQty">
-              <span>+</span>
-            </button> -->
-             <span class="input-group-btn">
-              <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
-                  <span class="glyphicon glyphicon-minus"></span>
+            <span class="input-group-btn">
+              <button
+                v-on:click="plusQty"
+                type="button"
+                class="btn btn-default btn-number"
+                data-type="plus"
+                data-field="quant[1]"
+              >
+                <span class="glyphicon glyphicon-plus"></span>
               </button>
-          </span>
-          <input v-model="quantity" style="width:100px" type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
-          <span class="input-group-btn">
-              <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
-                  <span class="glyphicon glyphicon-plus"></span>
-              </button>
-          </span>
+            </span>
           </div>
           <br />
           <p class="font-info" v-if="qtyAbove">
