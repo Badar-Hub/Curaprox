@@ -105,7 +105,7 @@
                   :key="prod._id"
                   class="rounded-borders col-3 full-height"
                 >
-                  <img :src="`${(!isDev ? '/admin/' : '') + prod.img}`" />
+                  <img :src="prod.img" alt="" />
                 </div>
               </div>
             </q-carousel-slide>
