@@ -106,6 +106,18 @@
                   class="rounded-borders col-3 full-height"
                   :src="prod.img"
                 />
+                <q-img
+                  class="rounded-borders col-3 full-height"
+                  src="https://cdn.quasar.dev/img/parallax1.jpg"
+                />
+                <q-img
+                  class="rounded-borders col-3 full-height"
+                  src="https://cdn.quasar.dev/img/parallax1.jpg"
+                />
+                <q-img
+                  class="rounded-borders col-3 full-height"
+                  src="https://cdn.quasar.dev/img/parallax1.jpg"
+                />
               </div>
             </q-carousel-slide>
             <q-carousel-slide :name="2" class="column no-wrap">
