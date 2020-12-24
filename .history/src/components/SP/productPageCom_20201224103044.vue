@@ -84,7 +84,7 @@
         ></div>
       </div>
       <div class="recommended">
-        <h3 class="text-left">Related Products</h3>
+        <h1>Related Products</h1>
         <div class="q-pa-md">
           <q-carousel
             v-model="slide"
