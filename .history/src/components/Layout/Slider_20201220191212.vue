@@ -2,10 +2,11 @@
   <div>
     <div class="backimg">
       <div class="slider">
-        <h3 style="font-size:28px" class="font-futura-semi-medium">PURE JOY</h3>
-        <h1 style="font-size:62px" class="font-futura-medium">
+        <h3 class="font-futura-semi-medium">PURE JOY</h3>
+        <h1 class="font-futura-medium">
           FOR TEETH
-          <br />FOR GUMS. <br />AND FOR YOU.
+          <br />FOR GUMS.
+          <br />AND FOR YOU.
         </h1>
         <a href="/#/shop" class="btn font-futura-semi-bold">SHOP</a>
       </div>
@@ -21,8 +22,8 @@ export default {};
 .backimg {
   background-color: #fcb6b6;
 }
-.btn {
-  background-color: #fcb6b6 !important;
+.btn{
+  background-color: #fcb6b6!important;
   border: white 1px solid;
   color: white;
   text-align: center;
@@ -49,9 +50,10 @@ h1 {
   font-size: 4.3rem;
   margin-top: 0;
   margin-bottom: 1.5rem;
+
 }
 h3 {
   font-size: 1.3rem;
-  margin: 0 !important;
+  margin: 0!important;
 }
 </style>

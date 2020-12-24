@@ -213,7 +213,7 @@ export default {
 }
 
 .dental-care-inner h2 {
-  font-size: 64px;
+  font-size: 4rem;
   text-align: center;
   margin-bottom: 50px;
   margin: auto;
@@ -221,7 +221,7 @@ export default {
 }
 
 .dental-care-inner p {
-  font-size: 35px;
+  font-size: 30px;
   text-align: center;
   margin: 20px 10%;
   padding: 0 5rem;

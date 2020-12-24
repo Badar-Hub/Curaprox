@@ -15,7 +15,6 @@ export default {};
 <style scoped>
 .product {
   background-color: #fbf4f8;
-  padding: 30px 0;
 }
 .product-inner {
   display: grid;
@@ -58,6 +57,6 @@ p {
 a {
   padding-right: 20px;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 22px;
 }
 </style>

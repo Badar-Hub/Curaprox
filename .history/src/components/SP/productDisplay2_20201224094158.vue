@@ -15,7 +15,6 @@ export default {};
 <style scoped>
 .product {
   background-color: #fbf4f8;
-  padding: 30px 0;
 }
 .product-inner {
   display: grid;
@@ -52,12 +51,12 @@ h2 {
 }
 
 p {
-  font-size: 20px;
+  font-size: 24px;
 }
 
 a {
   padding-right: 20px;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 20px;
 }
 </style>

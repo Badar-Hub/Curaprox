@@ -51,7 +51,7 @@ export default {
 }
 
 .pro-featured-inner .text a {
-  font-size: 19px;
+  font-size: 10px;
   color: inherit;
   text-decoration: none;
   padding-right: 5px;

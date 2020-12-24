@@ -2,7 +2,7 @@
   <div>
     <div class="backimg">
       <div class="slider">
-        <h3 style="font-size:28px" class="font-futura-semi-medium">PURE JOY</h3>
+        <h3 class="font-futura-semi-medium">PURE JOY</h3>
         <h1 style="font-size:62px" class="font-futura-medium">
           FOR TEETH
           <br />FOR GUMS. <br />AND FOR YOU.

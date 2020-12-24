@@ -51,7 +51,6 @@ export default {
 }
 
 .pro-featured-inner .text a {
-  font-size: 19px;
   color: inherit;
   text-decoration: none;
   padding-right: 5px;
@@ -89,7 +88,6 @@ span {
   a,
   p,
   span {
-    font-size: 19px;
     margin: 0;
   }
   .pro-featured-inner img {

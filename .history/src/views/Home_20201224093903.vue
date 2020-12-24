@@ -223,7 +223,7 @@ export default {
 .dental-care-inner p {
   font-size: 35px;
   text-align: center;
-  margin: 20px 10%;
+  margin: auto
   padding: 0 5rem;
   color: #0060aa;
 }

@@ -78,6 +78,7 @@ p {
 }
 a {
   text-decoration: none;
+  font-size: 1.2rem;
 }
 a:hover {
   text-decoration: underline;
@@ -85,28 +86,28 @@ a:hover {
 
 @media (max-width: 1099px) {
   h2 {
-    font-size: 19px;
+    font-size: 1.2rem;
     margin-bottom: 1rem;
   }
 
   h3 {
-    font-size: 28px;
+    font-size: 2rem;
   }
   p {
-    font-size: 13px;
+    font-size: 0.8rem;
     margin: 1.5rem;
   }
 }
 
 @media (max-width: 650px) {
   h2 {
-    font-size: 16px;
+    font-size: 1rem;
     margin: 1rem;
     margin-bottom: 1rem;
   }
 
   h3 {
-    font-size: 25px;
+    font-size: 2rem;
     line-height: 2.5rem;
     margin: 0 1rem;
   }

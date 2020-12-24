@@ -58,6 +58,6 @@ p {
 a {
   padding-right: 20px;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 22px;
 }
 </style>

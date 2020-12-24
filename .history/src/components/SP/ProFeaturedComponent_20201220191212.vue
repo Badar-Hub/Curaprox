@@ -51,20 +51,20 @@ export default {
 }
 
 .pro-featured-inner .text a {
-  font-size: 19px;
   color: inherit;
   text-decoration: none;
   padding-right: 5px;
+  font-size: 1.3rem;
 }
 
 h2 {
-  font-size: 26px;
+  font-size: 1.5rem;
   margin: 0;
   letter-spacing: 1px;
 }
 
 h3 {
-  font-size: 32px;
+  font-size: 2.5rem;
   margin: 20px 0;
   letter-spacing: 0px;
 }
@@ -79,17 +79,19 @@ span {
 
 @media (max-width: 900px) {
   h3 {
+    font-size: 1.8rem;
     margin: 5px 0;
   }
 
   h2 {
+    font-size: 1.1rem;
     margin: 0;
   }
 
   a,
   p,
   span {
-    font-size: 19px;
+    font-size: 1.1rem;
     margin: 0;
   }
   .pro-featured-inner img {
