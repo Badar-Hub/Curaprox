@@ -4,8 +4,8 @@
       <div class="social-top">
         <div class="social-top-inner">
           <p>
-            <img src="../../assets/img/flag-swiss-16X16.png" alt="Swiss" />
-            Swiss premium oral care / Free delivery for all orders!
+            <img src="../../assets/img/flag-swiss-16X16.png" alt="Swiss" /> Swiss premium
+            oral care / Free delivery for all orders!
           </p>
           <p>
             <a href="#">Sign In</a>
@@ -21,82 +21,33 @@
           <nav>
             <ul>
               <li>
-                <router-link class="font-futura-semi-bold" to="/Toothbrush"
-                  >TOOTHBRUSHES</router-link
-                >
+                <router-link class="font-futura-semi-bold" to="/Toothbrush">TOOTHBRUSHES</router-link>
               </li>
               <li>
-                <router-link class="font-futura-semi-bold" to="/BLACK-IS-WHITE"
-                  >TOOTHPASTE</router-link
-                >
+                <router-link class="font-futura-semi-bold" to="/BLACK-IS-WHITE">TOOTHPASTE</router-link>
               </li>
               <li>
-                <router-link
-                  class="font-futura-semi-bold"
-                  to="/InterdentalBrush"
-                  >INTERDENTAL</router-link
-                >
+                <router-link class="font-futura-semi-bold" to="/InterdentalBrush">INTERDENTAL</router-link>
               </li>
               <li>
-                <router-link class="font-futura-semi-bold" to="/MouthwashPerio"
-                  >MOUTHWASH</router-link
-                >
+                <router-link class="font-futura-semi-bold" to="/MouthwashPerio">MOUTHWASH</router-link>
               </li>
               <li>
-                <router-link
-                  class="font-futura-semi-bold"
-                  style="background-color:#0167b1; color: white; padding:6px; border-radius: 15%"
-                  to="/shop"
-                  >SHOP</router-link
-                >
+                <router-link class="font-futura-semi-bold" style="background-color:#0167b1; color: white; padding:6px; border-radius: 15%" to="/shop">SHOP</router-link>
               </li>
             </ul>
             <ul>
               <li>
                 <div class="cart">
                   <a href="blog">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="23"
-                      height="25"
-                      src="https://curaprox.ch/themes/classic-rocket/assets/img/tooth.svg"
-                    >
-                      <path
-                        d="M6.491 24c1.222 0 1.466-.853 1.466-4.812 0-2.934 1.466-5.084 3.526-5.118 2.059.034 3.525 2.15 3.525 5.118 0 3.959.28 4.812 1.466 4.812 1.431 0 2.373-3.788 2.373-9.453 0-1.74 2.653-5.596 2.653-8.292C21.5 3.525 19.79 1 16.23 1c-3.56 0-4.747 1.98-4.747 1.98S10.33 1 6.77 1C3.21 1 1.5 3.525 1.5 6.255c0 2.696 2.653 6.552 2.653 8.292 0 1.707-.07 9.453 2.338 9.453z"
-                        stroke-width="2"
-                        fill="none"
-                        stroke-linejoin="bevel"
-                      ></path>
-                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="25" src="https://curaprox.ch/themes/classic-rocket/assets/img/tooth.svg"><path d="M6.491 24c1.222 0 1.466-.853 1.466-4.812 0-2.934 1.466-5.084 3.526-5.118 2.059.034 3.525 2.15 3.525 5.118 0 3.959.28 4.812 1.466 4.812 1.431 0 2.373-3.788 2.373-9.453 0-1.74 2.653-5.596 2.653-8.292C21.5 3.525 19.79 1 16.23 1c-3.56 0-4.747 1.98-4.747 1.98S10.33 1 6.77 1C3.21 1 1.5 3.525 1.5 6.255c0 2.696 2.653 6.552 2.653 8.292 0 1.707-.07 9.453 2.338 9.453z" stroke-width="2" fill="none" stroke-linejoin="bevel"></path></svg>
                   </a>
 
                   <div class="showOrder">
                     <a href="/#/cart">
-                      <p style="padding-left:8px">{{ productsCounts }}</p>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="21"
-                        height="25"
-                        src="/themes/classic-rocket/assets/img/basket.svg"
-                      >
-                        <g
-                          transform="translate(0 1)"
-                          stroke-width="2"
-                          fill="none"
-                          fill-rule="evenodd"
-                        >
-                          <rect
-                            x="1"
-                            y="5"
-                            width="19"
-                            height="18"
-                            rx="2"
-                          ></rect>
-                          <path
-                            d="M15 4c0-2.21-2.015-4-4.5-4S6 1.79 6 4"
-                          ></path>
-                        </g>
-                      </svg>
+                      <p style="padding-left:8px">{{productsCounts}}</p>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="21" height="25" src="/themes/classic-rocket/assets/img/basket.svg"><g transform="translate(0 1)" stroke-width="2" fill="none" fill-rule="evenodd"><rect x="1" y="5" width="19" height="18" rx="2"></rect><path d="M15 4c0-2.21-2.015-4-4.5-4S6 1.79 6 4"></path></g></svg>
+
                     </a>
                   </div>
                 </div>
@@ -128,13 +79,13 @@ export default {
 </script>
 
 <style scoped>
-svg {
+svg{
   stroke: black;
-  margin-right: 20px;
+  padding-right: 1.3rem;
 }
 
-svg:hover {
-  stroke: #0167b1 !important;
+svg:hover{
+  stroke: #0167b1!important;
 }
 
 hr {
@@ -285,6 +236,6 @@ nav ul li a:hover {
 .cart p {
   position: absolute;
   /* bottom: 700px; */
-  top: 77px;
+  top: 93px;
 }
 </style>

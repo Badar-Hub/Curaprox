@@ -3,7 +3,7 @@
     <header>
       <div class="social-top">
         <div class="social-top-inner">
-          <p>
+          <p style="margin:none">
             <img src="../../assets/img/flag-swiss-16X16.png" alt="Swiss" />
             Swiss premium oral care / Free delivery for all orders!
           </p>
@@ -105,17 +105,6 @@
           </nav>
         </div>
       </div>
-      <div class="sub-bar">
-        <hr />
-        <div class="sub-bar-inner">
-          <ul>
-            <slot></slot>
-          </ul>
-          <span>
-            <button>BUY</button>
-          </span>
-        </div>
-      </div>
     </header>
   </div>
 </template>
@@ -123,13 +112,13 @@
 <script>
 import { mapGetters } from "vuex";
 export default {
-  computed: mapGetters(["productsCount", "productsCounts"]),
+  computed: mapGetters(["productsCounts"]),
 };
 </script>
 
 <style scoped>
 svg {
-  stroke: black;
+  stroke: white;
   margin-right: 20px;
 }
 
@@ -137,8 +126,8 @@ svg:hover {
   stroke: #0167b1 !important;
 }
 
-hr {
-  margin-top: 0;
+.router-link-active {
+  color: #0167b1;
 }
 
 header .social-top {
@@ -174,10 +163,12 @@ header {
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
+  background-color: #fcb6b6;
+  padding: 0 !important;
 }
 
 header .navigation {
-  background-color: white;
+  background-color: #fcb6b6;
 }
 
 header .navigation-inner {
@@ -192,17 +183,7 @@ header .navigation-inner {
 header .navigation-inner a {
   font-family: futura-pt, sans-serif;
   font-size: 14px;
-  color: black;
-}
-
-header img {
-  width: 180px;
-  height: 35px;
-  margin: auto 0;
-}
-
-header .navigation:hover a {
-  color: black;
+  color: white;
 }
 
 nav {
@@ -211,8 +192,25 @@ nav {
 
 nav img {
   max-width: 25px;
-  height: auto;
+  height: 25px !important;
   cursor: pointer;
+}
+
+header img {
+  width: 180px;
+}
+
+header .navigation:hover {
+  background-color: white;
+  color: black;
+}
+
+header .navigation:hover svg {
+  stroke: black;
+}
+
+header .navigation:hover a {
+  color: black;
 }
 
 ul {
@@ -223,8 +221,8 @@ ul {
 }
 
 nav ul li {
-  padding-right: 15px;
-  margin: auto;
+  margin: auto 0;
+  padding-right: 1.3rem;
 }
 
 nav ul li a {
@@ -234,49 +232,6 @@ nav ul li a {
 nav ul li a:hover {
   color: pink;
 }
-.sub-bar {
-  transition: background 250ms ease;
-  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
-  padding-bottom: 10px;
-}
-
-.sub-bar-inner {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.sub-bar-inner ul {
-  padding: 0;
-  margin: 0;
-  margin-top: 6px;
-}
-
-.sub-bar-inner a {
-  padding-right: 20px;
-  text-decoration: none;
-  color: black;
-  font-size: 23px;
-}
-
-.sub-bar-inner button {
-  background-color: white;
-  color: #0167b1;
-  border: #0167b1 1px solid;
-  padding: 5px 20px;
-  border-radius: 10%;
-  font-size: 20px;
-}
-
-.sub-bar-inner button:hover {
-  border: #007bff 2px solid;
-}
-
-.sub-bar-inner a:hover {
-  color: #0167b1;
-}
 .cart {
   display: flex;
   flex-wrap: wrap;
@@ -285,6 +240,6 @@ nav ul li a:hover {
 .cart p {
   position: absolute;
   /* bottom: 700px; */
-  top: 77px;
+  top: 93px;
 }
 </style>

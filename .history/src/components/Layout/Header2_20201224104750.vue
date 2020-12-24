@@ -285,6 +285,6 @@ nav ul li a:hover {
 .cart p {
   position: absolute;
   /* bottom: 700px; */
-  top: 77px;
+  top: 93px;
 }
 </style>
