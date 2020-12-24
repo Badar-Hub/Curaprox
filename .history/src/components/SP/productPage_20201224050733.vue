@@ -281,7 +281,6 @@ export default {
 
 .prod-img {
   max-width: 483px;
-  max-height: 400px;
 }
 
 .sub-image {
