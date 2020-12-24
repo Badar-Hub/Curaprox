@@ -1,9 +1,6 @@
 <template>
   <div class="main">
-    <div
-      :style="`background-image: url(${require(`@/assets/img/${image}`)});`"
-      class="Slider"
-    >
+    <div :style="`background-image: url(${require(`@/assets/img/${image}`)});`" class="Slider">
       <div class="text">
         <slot name="textOverlay"></slot>
       </div>
@@ -16,19 +13,25 @@
       <div class="col">
         <img :src="require(`@/assets/img/${content1.img}`)" />
         <div class="text-after">
-          <p>{{ content1.pText }}</p>
+          <p class="font-info">{{content1.pText}}</p>
         </div>
       </div>
       <div class="col">
         <img :src="require(`@/assets/img/${content2.img}`)" />
         <div class="text-after">
-          <p>{{ content2.pText }}</p>
+          <p class="font-info">{{content2.pText}}</p>
         </div>
       </div>
       <div class="col">
         <img :src="require(`@/assets/img/${content3.img}`)" />
         <div class="text-after">
-          <p>{{ content3.pText }}</p>
+          <p class="font-info">{{content3.pText}}</p>
+        </div>
+      </div>
+      <div class="col">
+        <img :src="require(`@/assets/img/${content4.img}`)" />
+        <div class="text-after">
+          <p class="font-info">{{content4.pText}}</p>
         </div>
       </div>
     </div>
@@ -60,6 +63,16 @@ export default {
       },
       pText: String,
     },
+    content4: {
+      img: {
+        type: String,
+        required: false,
+      },
+      pText: {
+        type: String,
+        required: false,
+      },
+    },
   },
 };
 </script>
@@ -68,6 +81,7 @@ export default {
 .main {
   margin-bottom: 3%;
   padding-bottom: 3%;
+  background-color: #f9f9f9;
 }
 
 .Slider {
@@ -75,6 +89,7 @@ export default {
   background-repeat: no-repeat;
   background-size: contain;
   max-width: 1200px;
+  min-height: 800px;
   margin: auto;
   text-align: justify;
 }
@@ -86,15 +101,17 @@ export default {
 }
 
 h2 {
-  font-family: futura-pt, sans-serif;
-  font-size: 70px;
+  font-size: 5.2rem;
   margin: 30px 0;
 }
 
 p {
-  font-family: ff-info-text-web-pro, sans-serif;
-  font-size: 22px;
-  margin: 0;
+  font-size: 1.3rem;
+  letter-spacing: 3px;
+}
+
+h3 {
+  font-size: 1.5rem;
   letter-spacing: 3px;
 }
 
@@ -161,17 +178,11 @@ p {
   p {
     font-family: ff-info-text-web-pro, sans-serif;
     font-size: 15px;
-    margin: 0;
     letter-spacing: 2px;
   }
 }
 
 @media (max-width: 650px) {
-  .text {
-    padding: 0;
-    background-size: contain;
-    line-height: 1.4;
-  }
   .Slider {
     min-height: 400px;
   }
@@ -189,15 +200,12 @@ p {
   }
 
   h2 {
-    font-family: futura-pt, sans-serif;
     font-size: 40px;
     margin: 10px 0;
   }
 
   p {
-    font-family: ff-info-text-web-pro, sans-serif;
     font-size: 15px;
-    margin: 0;
     letter-spacing: 2px;
   }
 }

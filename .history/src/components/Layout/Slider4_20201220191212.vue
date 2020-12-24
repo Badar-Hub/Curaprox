@@ -1,9 +1,6 @@
 <template>
   <div class="main">
-    <div
-      :style="`background-image: url(${require(`@/assets/img/${image}`)});`"
-      class="Slider"
-    >
+    <div :style="`background-image: url(${require(`@/assets/img/${image}`)});`" class="Slider">
       <div class="text">
         <slot name="textOverlay"></slot>
       </div>
@@ -16,19 +13,19 @@
       <div class="col">
         <img :src="require(`@/assets/img/${content1.img}`)" />
         <div class="text-after">
-          <p>{{ content1.pText }}</p>
+          <p>{{content1.pText}}</p>
         </div>
       </div>
       <div class="col">
         <img :src="require(`@/assets/img/${content2.img}`)" />
         <div class="text-after">
-          <p>{{ content2.pText }}</p>
+          <p>{{content2.pText}}</p>
         </div>
       </div>
       <div class="col">
         <img :src="require(`@/assets/img/${content3.img}`)" />
         <div class="text-after">
-          <p>{{ content3.pText }}</p>
+          <p>{{content3.pText}}</p>
         </div>
       </div>
     </div>
@@ -75,6 +72,7 @@ export default {
   background-repeat: no-repeat;
   background-size: contain;
   max-width: 1200px;
+  min-height: 800px;
   margin: auto;
   text-align: justify;
 }
