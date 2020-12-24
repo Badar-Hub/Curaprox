@@ -96,15 +96,18 @@
             arrows
             height="300px"
           >
-            <q-carousel-slide :name="1" class="column no-wrap">
+            <q-carousel-slide
+              v-for="prod in relatedProducts"
+              :key="prod._id"
+              :name="1"
+              class="column no-wrap"
+            >
               <div
-                v-for="prod in relatedProducts"
-                :key="prod._id"
                 class="row fit justify-start items-center q-gutter-xs q-col-gutter no-wrap"
               >
                 <q-img
                   class="rounded-borders col-3 full-height"
-                  :src="prod.img"
+                  src="https://cdn.quasar.dev/img/mountains.jpg"
                 />
                 <q-img
                   class="rounded-borders col-3 full-height"
