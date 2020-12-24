@@ -36,15 +36,10 @@
             </p>
           </div>
           <q-btn
-            @click="
-              $set(product, 'cartQty', quantity);
-              $set(product, 'total', product.price * quantity);
-              updateCart(product);
-            "
             size="22px"
             class="q-px-xl q-py-xs q-my-md"
             color="purple"
-            :label="!isInvalidQty ? 'ADD TO CART' : 'OUT OF STOCK!'"
+            label="ADD TO CART"
           />
           <div class="row q-px-lg">
             <div class="col col-2">

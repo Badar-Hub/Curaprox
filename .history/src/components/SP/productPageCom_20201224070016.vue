@@ -3,10 +3,8 @@
     <div class="main-shop-page">
       <div class="row cont">
         <div class="col left-side">
-          <h1>{{ product.name }}</h1>
-          <h6 class="q-my-md" style="font-size:2rem">
-            Rs. {{ product.price }}
-          </h6>
+          <h1>CS 5460</h1>
+          <h6 class="q-my-md" style="font-size:2rem">Rs. 250</h6>
           <div class="row">
             <h5 class="q-pr-md" style="margin:auto 0">Quantity</h5>
             <div class="input q-my-md">
@@ -30,21 +28,12 @@
                 label="+"
               />
             </div>
-            <br />
-            <p class="font-info" v-if="qtyAbove">
-              Available Quantity: {{ product.qty }}
-            </p>
           </div>
           <q-btn
-            @click="
-              $set(product, 'cartQty', quantity);
-              $set(product, 'total', product.price * quantity);
-              updateCart(product);
-            "
             size="22px"
             class="q-px-xl q-py-xs q-my-md"
             color="purple"
-            :label="!isInvalidQty ? 'ADD TO CART' : 'OUT OF STOCK!'"
+            label="ADD TO CART"
           />
           <div class="row q-px-lg">
             <div class="col col-2">
@@ -162,7 +151,6 @@ import productData from "../data/database";
 export default {
   data() {
     return {
-      slide: 1,
       quantity: 1,
       display: "flex",
       displays: "flex",
@@ -174,6 +162,7 @@ export default {
       // quantity: 0,
       img: require(`@/assets/cs-5460.jpg`),
       // display: true,
+      slide: 1,
     };
   },
   methods: {
