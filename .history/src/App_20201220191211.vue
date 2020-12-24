@@ -10,7 +10,7 @@ body {
   padding: 0;
   margin: 0;
   p {
-    font-family: info-light!important;
+    font-family: info-light !important;
   }
 }
 
@@ -41,53 +41,53 @@ body {
 }
 
 .font-futura {
-  font-family: 'futura-light' !important;
-  font-weight: 300!important;
+  font-family: "futura-light" !important;
+  font-weight: 300 !important;
   letter-spacing: 2px;
   &-semi-medium {
-    font-family: 'futura-medium'!important;
-    font-weight: 400!important;
+    font-family: "futura-medium" !important;
+    font-weight: 400 !important;
     letter-spacing: 2px;
-    }
-    &-medium {
-    font-family: 'futura-medium'!important;
-    font-weight: 500!important;
+  }
+  &-medium {
+    font-family: "futura-medium" !important;
+    font-weight: 500 !important;
     letter-spacing: 2px;
   }
   &-semi-bold {
-    font-family: 'futura-bold'!important;
-    font-weight: 600!important;
+    font-family: "futura-bold" !important;
+    font-weight: 600 !important;
     letter-spacing: 2px;
   }
   &-bold {
-    font-family: 'futura-bold'!important;
-    font-weight: 700!important;
+    font-family: "futura-bold" !important;
+    font-weight: 700 !important;
     letter-spacing: 2px;
   }
 }
 
 .font-info {
-  font-family: 'info-light' !important;
-  font-weight: 300!important;
+  font-family: "info-light" !important;
+  font-weight: 300 !important;
   letter-spacing: 2px;
   &-semi-medium {
-    font-family: 'info-medium'!important;
-    font-weight: 400!important;
+    font-family: "info-medium" !important;
+    font-weight: 400 !important;
     letter-spacing: 2px;
-    }
-    &-medium {
-    font-family: 'info-medium'!important;
-    font-weight: 500!important;
+  }
+  &-medium {
+    font-family: "info-medium" !important;
+    font-weight: 500 !important;
     letter-spacing: 2px;
   }
   &-semi-bold {
-    font-family: 'info-bold'!important;
-    font-weight: 600!important;
+    font-family: "info-bold" !important;
+    font-weight: 600 !important;
     letter-spacing: 2px;
   }
   &-bold {
-    font-family: 'info-bold'!important;
-    font-weight: 700!important;
+    font-family: "info-bold" !important;
+    font-weight: 700 !important;
     letter-spacing: 2px;
   }
 }
@@ -109,7 +109,7 @@ body {
 
 .btn-shop a {
   color: white;
-  font-size: 1rem;
+  font-size: 16px;
   text-decoration: none;
 }
 h1,
@@ -121,7 +121,7 @@ h6,
 a {
   font-family: futura-pt, sans-serif;
   font-weight: 200;
-  line-height: normal!important;
+  line-height: normal !important;
   font-style: normal;
 }
 
@@ -177,5 +177,4 @@ p {
 .bg-primary {
   background-color: #0167b1;
 }
-
 </style>
