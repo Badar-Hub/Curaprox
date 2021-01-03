@@ -2,15 +2,15 @@
   <div class="prodmain">
     <router-link :to="`/shop/${_id}`">
       <div class="singleProduct">
-        <q-btn
+        <!-- <q-btn
           dense
-          color="blue"
+          color="pink"
           round
           label="Sale"
           size="md"
           class="q-ml-md q-mt-md badgee"
         >
-        </q-btn>
+        </q-btn> -->
         <div class="img">
           <img :src="`${(!isDev ? '/admin/' : '') + img}`" />
         </div>
@@ -95,7 +95,6 @@ h3 {
   margin-top: 0 !important;
 }
 .badgee {
-  display: flex;
   position: absolute;
   z-index: 1;
 }

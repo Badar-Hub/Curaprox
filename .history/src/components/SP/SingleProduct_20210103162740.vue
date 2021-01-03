@@ -4,7 +4,7 @@
       <div class="singleProduct">
         <q-btn
           dense
-          color="blue"
+          color="pink"
           round
           label="Sale"
           size="md"
@@ -95,7 +95,6 @@ h3 {
   margin-top: 0 !important;
 }
 .badgee {
-  display: flex;
   position: absolute;
   z-index: 1;
 }

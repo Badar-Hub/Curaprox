@@ -4,7 +4,7 @@
       <div class="singleProduct">
         <q-btn
           dense
-          color="blue"
+          color="pink"
           round
           label="Sale"
           size="md"
