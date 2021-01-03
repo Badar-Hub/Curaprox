@@ -24,7 +24,7 @@
         <div class="row">
           <p
             :class="[discount ? 'simple-price-after' : 'simple-price']"
-            class="q-ma-none"
+            class="q-ma-none simple-price"
           >
             RS: {{ price }}
           </p>
@@ -55,7 +55,6 @@ export default {
     img: String,
     name: String,
     price: Number,
-    discount: Number,
   },
   data() {
     return {
@@ -121,6 +120,7 @@ h3 {
 }
 .simple-price {
   font-size: 18px;
+  color: #ff0000;
 }
 .simple-price-after {
   font-size: 13px;
