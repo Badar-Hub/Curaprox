@@ -5,17 +5,8 @@
         <div class="col left-side">
           <h1>{{ product.name }}</h1>
           <div class="row">
-            <h6
-              class="q-my-md"
-              :class="[discount ? 'discount-price' : 'simple-price']"
-            >
+            <h6 class="q-my-md" style="font-size:2rem">
               Rs. {{ product.price }}
-            </h6>
-            <h6
-              class="q-my-md"
-              :class="[discount ? 'discounted-price' : 'non-discount-prod']"
-            >
-              Rs. {{ product.discount }}
             </h6>
           </div>
           <div class="row">
@@ -323,19 +314,5 @@ export default {
 .related-products {
   max-height: 270px;
   max-width: 200px;
-}
-
-.simple-price {
-  font-size: 32px;
-}
-.discount-price {
-  font-size: 27rem;
-  text-decoration: line-through;
-}
-.discounted-price {
-  font-size: 32px;
-}
-.non-discount-prod {
-  display: none;
 }
 </style>
