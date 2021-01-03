@@ -55,6 +55,7 @@ export default {
   data() {
     return {
       isDev: false,
+      discount: false,
     };
   },
   mounted() {

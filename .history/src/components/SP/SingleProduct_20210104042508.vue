@@ -24,7 +24,7 @@
         <div class="row">
           <p
             class="q-ma-none"
-            :class="[discount ? 'discount-price' : 'simple-price']"
+            :class="[discount ? 'discount' : 'simple-price']"
           >
             RS: {{ price }}
           </p>
@@ -119,6 +119,7 @@ h3 {
 }
 .discount-price {
   font-size: 13px;
+  color: #ff0000;
   text-decoration: line-through;
   margin-top: 5px;
 }
@@ -127,5 +128,6 @@ h3 {
 }
 .discounted-price {
   font-size: 18px;
+  color: #ff0000;
 }
 </style>
