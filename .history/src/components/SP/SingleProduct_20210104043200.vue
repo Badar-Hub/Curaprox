@@ -16,10 +16,13 @@
           <img :src="`${(!isDev ? '/admin/' : '') + img}`" />
         </div>
         <hr />
-        <h2 style="font-size: 18px" class="font-futura-medium q-pa-sm">
+        <h2
+          style="font-size: 2rem; max-width: 245px"
+          class="font-futura-medium"
+        >
           {{ name }}
         </h2>
-        <div class="row justify-center">
+        <div class="row">
           <p
             class="q-ma-none"
             :class="[discount ? 'discount-price' : 'simple-price']"
@@ -114,18 +117,16 @@ h3 {
 }
 .simple-price {
   font-size: 18px;
-  font-weight: 800;
 }
 .discount-price {
-  font-size: 15px;
+  font-size: 13px;
   text-decoration: line-through;
-  margin-top: 4px;
+  margin-top: 5px;
 }
 .non-discount-prod {
   display: none;
 }
 .discounted-price {
   font-size: 18px;
-  font-weight: 800;
 }
 </style>
