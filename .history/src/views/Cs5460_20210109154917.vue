@@ -82,7 +82,7 @@
       <Modal width="1198px" v-model="toggle">
         <iframe
           width="1198"
-          height="650"
+          height="674"
           src="https://www.youtube.com/embed/UshVQPMoCMI"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

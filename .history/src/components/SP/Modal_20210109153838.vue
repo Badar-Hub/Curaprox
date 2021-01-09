@@ -1,7 +1,7 @@
 <template>
   <div class="modal-main">
     <q-dialog @input="$emit('input', $event)" :value="value">
-      <q-card style="width: 100%;" :style="`max-width: ${width}`">
+      <q-card>
         <q-toolbar class="custom-modal">
           <q-toolbar-title :title="title"></q-toolbar-title>
           <q-btn
@@ -31,12 +31,11 @@ export default {
   props: {
     title: String,
     value: Boolean,
-    width: String,
   },
 };
 </script>
 
-<style lang="scss">
+<style>
 .custom-modal {
   position: absolute;
   z-index: 1;
@@ -45,7 +44,7 @@ export default {
 .close-btn-modal {
   background-color: white;
 }
-.q-card__section--vert {
+.modal-main .q-card__section--vert {
   padding: 0 !important;
 }
 </style>

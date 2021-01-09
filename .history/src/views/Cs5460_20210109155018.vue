@@ -81,7 +81,7 @@
     <TextWithImg v-bind="TxtImg">
       <Modal width="1198px" v-model="toggle">
         <iframe
-          width="1198"
+          width="1195"
           height="650"
           src="https://www.youtube.com/embed/UshVQPMoCMI"
           frameborder="0"

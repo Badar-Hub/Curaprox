@@ -12,94 +12,84 @@
         <div v-for="prod in getAllProducts" :key="prod._id" class="title-inner">
           <div class="product">
             <div class="textP">
-              <img :src="`${(!isDev ? '/admin/' : '') + prod.img}`" />
+              <img :src="`${(!isDev? '/admin/' : '' ) + prod.img}`" />
               <div class="text">
-                <p>{{ prod.name }}</p>
+                <p>{{prod.name}}</p>
               </div>
             </div>
           </div>
           <div class="price">
-            <p>Rs. {{ prod.price }}</p>
+            <p>Rs. {{prod.price}}</p>
           </div>
           <div class="quantity">
             <div class="qty">
               <button
                 class="btn-secondary bg-danger"
-                v-on:click="
-                  $set(prod, 'qty', prod.qty - 1);
-                  $set(prod, 'total', prod.qty * prod.price);
-                "
-              >
-                -
-              </button>
-              <p>{{ prod.qty }}</p>
+                v-on:click="$set(prod, 'qty', prod.qty-1); $set(prod, 'total', prod.qty * prod.price)"
+              >-</button>
+              <p>{{prod.qty}}</p>
               <button
                 class="btn-secondary"
-                v-on:click="
-                  $set(prod, 'qty', prod.qty + 1);
-                  $set(prod, 'total', prod.qty * prod.price);
-                "
-              >
-                +
-              </button>
+                v-on:click="$set(prod, 'qty', prod.qty+1); $set(prod, 'total', prod.qty * prod.price)"
+              >+</button>
             </div>
           </div>
           <div class="total">
-            <p>Rs. {{ prod.total }}</p>
+            <p>Rs. {{prod.total}}</p>
           </div>
         </div>
         <hr />
       </div>
-      <div class="row">
-        <div class="promo">
-          <div class="promo-inner">
-            <div class="promo-text">
-              <h3>Have A Promotional Code?</h3>
-              <hr />
-              <input type="text" placeholder="Coupon code" />
-              <input type="Submit" placeholder="Submit" />
+          <div class="row">
+            <div class="promo">
+              <div class="promo-inner">
+                <div class="promo-text">
+                  <h3>Have A Promotional Code?</h3>
+                  <hr />
+                  <input type="text" placeholder="Coupon code" />
+                  <input type="Submit" placeholder="Submit" />
+                </div>
+              </div>
+            </div>
+            <div class="checkout">
+              <div class="checkout-inner">
+                <h3>Cart Total</h3>
+                <hr />
+                <div class="subtotal">
+                  <p>
+                    <strong>Subtotal</strong>
+                  </p>
+                  <p>
+                    <strong>Rs. {{getTotalCost}}</strong>
+                  </p>
+                </div>
+                <hr />
+                <div class="shipping">
+                  <p>
+                    <strong>Shipping</strong>
+                  </p>
+                  <p>
+                    <strong>Rs. {{shippingPrice}}</strong>
+                  </p>
+                </div>
+                <hr />
+                <div class="total">
+                  <p>
+                    <strong>Total</strong>
+                  </p>
+                  <p>
+                    <strong>Rs. {{getTotalCost + shippingPrice}}</strong>
+                  </p>
+                </div>
+                <hr />
+                <div class="btn">
+                  <button>Proceed To Checkout</button>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="checkout">
-          <div class="checkout-inner">
-            <h3>Cart Total</h3>
-            <hr />
-            <div class="subtotal">
-              <p>
-                <strong>Subtotal</strong>
-              </p>
-              <p>
-                <strong>Rs. {{ getTotalCost }}</strong>
-              </p>
-            </div>
-            <hr />
-            <div class="shipping">
-              <p>
-                <strong>Shipping</strong>
-              </p>
-              <p>
-                <strong>Rs. {{ shippingPrice }}</strong>
-              </p>
-            </div>
-            <hr />
-            <div class="total">
-              <p>
-                <strong>Total</strong>
-              </p>
-              <p>
-                <strong>Rs. {{ getTotalCost + shippingPrice }}</strong>
-              </p>
-            </div>
-            <hr />
-            <div class="btn">
-              <button>Proceed To Checkout</button>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-    <Modal title="Checkout">
+    <Modal>
       <template>
         <CheckOut />
       </template>
@@ -109,18 +99,18 @@
 
 <script>
 import { mapActions, mapGetters } from "vuex";
-import Modal from "./Modal";
+import Modal from "./Modal"
 import CheckOut from "../Layout/Checkout";
 export default {
   components: {
     CheckOut,
-    Modal,
+    Modal
   },
   data() {
     return {
       shippingPrice: 200,
       isDev: false,
-      display: false,
+      display:false
     };
   },
   methods: {
@@ -147,7 +137,7 @@ export default {
       .price-main
         flex: 2
       .quantity-main
-        flex: 2
+        flex: 2 
       .total-main
         flex: 2
     .title-inner
@@ -159,7 +149,7 @@ export default {
         flex: 2
         margin: auto 0
       .quantity
-        flex: 2
+        flex: 2 
         margin: auto 0
       .total
         flex: 2
@@ -171,7 +161,7 @@ export default {
       .text
         margin: auto 0
       .qty
-        display: flex
+        display: flex      
   .row
     display: flex
     max-width: 1200px
@@ -193,17 +183,19 @@ export default {
       padding: 20px
       .subtotal
         display: flex
-        justify-content: space-between
+        justify-content: space-between    
       .shipping
         display: flex
-        justify-content: space-between
+        justify-content: space-between    
       .total
         display: flex
-        justify-content: space-between
+        justify-content: space-between    
       .btn
         display: flex
         flex-direction: column
-      button
+      button 
         max-width: 200px
-        margin: 5px auto
+        margin: 5px auto  
+
+
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div class="modal-main">
     <q-dialog @input="$emit('input', $event)" :value="value">
-      <q-card style="width: 100%;" :style="`max-width: ${width}`">
+      <q-card style="width: 700px; max-width: 80vw;>
         <q-toolbar class="custom-modal">
           <q-toolbar-title :title="title"></q-toolbar-title>
           <q-btn

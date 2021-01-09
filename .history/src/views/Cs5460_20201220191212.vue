@@ -16,22 +16,25 @@
         <p>TOOTHBRUSH CS 5460</p>
         <h2>
           GENTAL ON
-          <br />TEETH AND <br />GUMS
+          <br />TEETH AND
+          <br />GUMS
         </h2>
         <p>
           Each and every one of the 5,460 CUREN®
-          <br />filaments works together to combat plaque. <br />Hard on plaque.
-          Gentle on teeth and gums.
+          <br />filaments works together to combat plaque.
+          <br />Hard on plaque. Gentle on teeth and gums.
         </p>
       </template>
       <template v-slot:smShow>
         <p>TOOTHBRUSH CS 5460</p>
         <h2>
-          GENTAL ON TEETH AND GUMS
+          GENTAL ON
+          TEETH AND
+          GUMS
         </h2>
         <p>
-          Each and every one of the 5,460 CUREN® Hard on plaque. Gentle on teeth
-          and gums.
+          Each and every one of the 5,460 CUREN®
+          Hard on plaque. Gentle on teeth and gums.
         </p>
       </template>
     </Slider3>
@@ -58,38 +61,32 @@
         <p></p>
         <h2>
           TENDER
-          <br />LOVING <br />CARE
+          <br />LOVING
+          <br />CARE
         </h2>
         <p>
           Many people brush with too much pressure…
-          <br />and with hard bristles. This leads to damage <br />such as
-          receding gums. Our ultra-fine CUREN® <br />filaments make all the
-          difference. They’re <br />gentle. And they clean exceptionally well.
+          <br />and with hard bristles. This leads to damage
+          <br />such as receding gums. Our ultra-fine CUREN®
+          <br />filaments make all the difference. They’re
+          <br />gentle. And they clean exceptionally well.
         </p>
       </template>
       <template v-slot:smShow>
         <p>TOOTHBRUSH CS 5460</p>
         <h2>
-          GENTAL ON TEETH AND GUMS
+          GENTAL ON
+          TEETH AND
+          GUMS
         </h2>
         <p>
-          Each and every one of the 5,460 CUREN® Hard on plaque. Gentle on teeth
-          and gums.
+          Each and every one of the 5,460 CUREN®
+          Hard on plaque. Gentle on teeth and gums.
         </p>
       </template>
     </Slider4>
     <TextWithImg v-bind="TxtImg">
-      <Modal width="1198px" v-model="toggle">
-        <iframe
-          width="1198"
-          height="650"
-          src="https://www.youtube.com/embed/UshVQPMoCMI"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </Modal>
-      <button @click="toggle = !toggle">How to brush - the video</button>
+      <button>How to brush - the video</button>
     </TextWithImg>
     <ProFeaturedComponent img="need-teaser-sensitive-teeth.jpg">
       <template v-slot:text>
@@ -166,7 +163,6 @@ import Slider4 from "../components/Layout/Slider4";
 import SubPage from "../components/SP/SubPage";
 import FloatingText from "../components/SP/FloatingText";
 import TextWithImg from "../components/SP/TextWithImg";
-import Modal from "../components/SP/Modal";
 import CategoryComponent from "../components/SP/CategoryComponent";
 import ProFeaturedComponent from "../components/SP/ProFeaturedComponent";
 import TextBlockWithImg from "../components/SP/TextBlockWithImg";
@@ -183,7 +179,6 @@ export default {
     ProFeaturedComponent,
     CategoryComponent,
     TextBlockWithImg,
-    Modal,
     Footer,
   },
   data() {
@@ -296,14 +291,13 @@ export default {
           pText: "Small, gentle circles – let your toothbrush guide you",
         },
       },
-
-      toggle: false,
     };
   },
-  mounted() {
-    window.scrollTo(0, 0);
-  },
+  mounted(){
+    window.scrollTo(0,0);
+  }
 };
 </script>
 
-<style></style>
+<style>
+</style>

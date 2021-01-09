@@ -79,10 +79,10 @@
       </template>
     </Slider4>
     <TextWithImg v-bind="TxtImg">
-      <Modal width="1198px" v-model="toggle">
+      <Modal width="700px" v-model="toggle">
         <iframe
-          width="1198"
-          height="650"
+          width="700"
+          height="500"
           src="https://www.youtube.com/embed/UshVQPMoCMI"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

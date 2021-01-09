@@ -79,17 +79,17 @@
       </template>
     </Slider4>
     <TextWithImg v-bind="TxtImg">
-      <Modal width="1198px" v-model="toggle">
+      <Modal v-model="toggle">
         <iframe
-          width="1198"
-          height="650"
+          width="1280"
+          height="720"
           src="https://www.youtube.com/embed/UshVQPMoCMI"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         ></iframe>
       </Modal>
-      <button @click="toggle = !toggle">How to brush - the video</button>
+      <button>How to brush - the video</button>
     </TextWithImg>
     <ProFeaturedComponent img="need-teaser-sensitive-teeth.jpg">
       <template v-slot:text>
@@ -297,7 +297,7 @@ export default {
         },
       },
 
-      toggle: false,
+      toggle: (Boolean = false),
     };
   },
   mounted() {
