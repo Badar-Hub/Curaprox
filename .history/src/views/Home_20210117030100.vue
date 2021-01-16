@@ -17,7 +17,7 @@
             >
           </span>
           <span style="color:#0167b8;">
-            <a href="http://curaprox.cf/#/shop/5fe1b07dcb1555b636987205">Buy</a>
+            <a href="link2.href">Buy</a>
             >
           </span>
         </p>
