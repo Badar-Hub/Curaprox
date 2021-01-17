@@ -47,9 +47,7 @@
           <br />OF THE INTERDENTAL <br />SPACE.
         </h3>
         <div class="onel">
-          <p>
-            <a href="/#/InterdentalBrush">Learn More</a>
-          </p>
+          <a href="/#/InterdentalBrush">Learn More</a>
           <p>
             <a href="#">Buy</a>
           </p>
