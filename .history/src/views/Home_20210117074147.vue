@@ -78,7 +78,7 @@
           are so gentle, they clean perfectly – even in the gumline.
         </p>
         <a href="/#/toothbrush">Learn More</a>
-        <a href="http://curaprox.cf/#/shop/5f82043e4a427122f3318fb2">Buy</a>
+        <a href="#">Buy</a>
       </div>
       <div class="prodis">
         <img src="@/assets/img/products/interdental.png" />
@@ -91,7 +91,7 @@
           decay, inflammation and periodontitis. Quick. Easy. Pleasant.
         </p>
         <a href="/#/InterdentalBrush">Learn More</a>
-        <a href="http://curaprox.cf/#/shop/5fe1c094cb1555b636987209">Buy</a>
+        <a href="#">Buy</a>
       </div>
     </productDisplay2>
     <productDisplay2>
@@ -106,7 +106,7 @@
           Curaprox toothpastes.
         </p>
         <a href="/#/BLACK-IS-WHITE">Learn More</a>
-        <a href="http://curaprox.cf/#/shop/5fe0bad6cb1555b636987202">Buy</a>
+        <a href="#">Buy</a>
       </div>
     </productDisplay2>
     <div class="new-products">
@@ -132,7 +132,10 @@
         </h3>
         <div class="onel">
           <p>
-            <a href="http://curaprox.cf/#/shop/5fe1cb69cb1555b636987211">Buy</a>
+            <a href="#">Learn More</a>
+          </p>
+          <p>
+            <a href="#">Buy</a>
           </p>
         </div>
       </template>
@@ -144,10 +147,13 @@
         </h3>
         <div class="onel">
           <p>
-            <a href="http://curaprox.cf/blog/#/implant">Learn More</a>
+            <a
+              href="https://curaprox.ch/en/blog/post/how-do-i-look-after-my-dental-implants"
+              >Learn More</a
+            >
           </p>
           <p>
-            <a href="http://curaprox.cf/#/shop/5fb61820782b62d5d5bf0261">Buy</a>
+            <a href="#">Buy</a>
           </p>
         </div>
       </template>

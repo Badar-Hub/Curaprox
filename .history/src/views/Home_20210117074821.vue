@@ -132,7 +132,10 @@
         </h3>
         <div class="onel">
           <p>
-            <a href="http://curaprox.cf/#/shop/5fe1cb69cb1555b636987211">Buy</a>
+            <a href="#">Learn More</a>
+          </p>
+          <p>
+            <a href="#">Buy</a>
           </p>
         </div>
       </template>

@@ -132,7 +132,10 @@
         </h3>
         <div class="onel">
           <p>
-            <a href="http://curaprox.cf/#/shop/5fe1cb69cb1555b636987211">Buy</a>
+            <a href="#">Learn More</a>
+          </p>
+          <p>
+            <a href="#">Buy</a>
           </p>
         </div>
       </template>
@@ -144,10 +147,13 @@
         </h3>
         <div class="onel">
           <p>
-            <a href="http://curaprox.cf/blog/#/implant">Learn More</a>
+            <a
+              href="https://curaprox.ch/en/blog/post/how-do-i-look-after-my-dental-implants"
+              >Learn More</a
+            >
           </p>
           <p>
-            <a href="http://curaprox.cf/#/shop/5fb61820782b62d5d5bf0261">Buy</a>
+            <a href="#">Buy</a>
           </p>
         </div>
       </template>
