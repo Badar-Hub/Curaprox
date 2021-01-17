@@ -72,7 +72,10 @@
         <h3>THE ULTIMATE GUIDE</h3>
         <div class="onel">
           <p>
-            <a href="http://curaprox.cf/blog/#/clean-teeth">Learn More</a>
+            <a href="/blog/#/clean-teeth">Learn More</a>
+          </p>
+          <p>
+            <a href="#">Buy</a>
           </p>
         </div>
       </template>
@@ -84,10 +87,10 @@
         </h3>
         <div class="onel">
           <p>
-            <a href="/#/InterdentalBrush">Learn More</a>
+            <a href="#">Learn More</a>
           </p>
           <p>
-            <a href="http://curaprox.cf/#/shop/5fe1c094cb1555b636987209">Buy</a>
+            <a href="#">Buy</a>
           </p>
         </div>
       </template>

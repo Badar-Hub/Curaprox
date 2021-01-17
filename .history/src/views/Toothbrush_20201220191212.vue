@@ -17,11 +17,11 @@
         </h3>
         <p>
           <span style="color:#0167b1;">
-            <a href="/#/toothbrush">Learn More</a>
+            <a href="link1.href">Learn More</a>
             >
           </span>
           <span style="color:#0167b1;">
-            <a href="http://curaprox.cf/#/shop/5f82043e4a427122f3318fb2">Buy</a>
+            <a href="link2.href">Buy</a>
             >
           </span>
         </p>
@@ -36,10 +36,10 @@
         <h3>CS SINGLE</h3>
         <div class="onel">
           <p>
-            <a href="/#/Cs1006">Learn More</a>
+            <a href="#">Learn More</a>
           </p>
           <p>
-            <a href="http://curaprox.cf/#/shop/5fb61d9d782b62d5d5bf0264">Buy</a>
+            <a href="#">Buy</a>
           </p>
         </div>
       </template>
@@ -47,11 +47,15 @@
         <h2>BABY TOOTHBRUSH</h2>
         <h3>
           FUN, GENTLE,
-          <br />EFFECTIVE – FROM THE <br />FIRST TOOTH
+          <br />EFFECTIVE – FROM THE
+          <br />FIRST TOOTH
         </h3>
         <div class="onel">
           <p>
-            <a href="http://curaprox.cf/#/shop/5fb6187e782b62d5d5bf0262">Buy</a>
+            <a href="#">Learn More</a>
+          </p>
+          <p>
+            <a href="#">Buy</a>
           </p>
         </div>
       </template>
@@ -63,16 +67,16 @@
     />
     <ProductComponent :products="ProductData" />
     <!-- <ProFeaturedComponent img="Hawaii-Edition_Desktop-1200x600.jpg"></ProFeaturedComponent> -->
-    <CategoryComponent
-      img-right="cps-colors.jpg"
-      img-left="need-post-cleen-teeth-585x600.jpg"
-    >
+    <CategoryComponent img-right="cps-colors.jpg" img-left="need-post-cleen-teeth-585x600.jpg">
       <template v-slot:left>
         <h2>CLEAN TEETH</h2>
         <h3>THE ULTIMATE GUIDE</h3>
         <div class="onel">
           <p>
-            <a href="http://curaprox.cf/blog/#/clean-teeth">Learn More</a>
+            <a href="#">Learn More</a>
+          </p>
+          <p>
+            <a href="#">Buy</a>
           </p>
         </div>
       </template>
@@ -80,14 +84,15 @@
         <h2>INTERDENTAL BRUSHES</h2>
         <h3>
           RIGHT IN THE MIDDLE
-          <br />OF THE INTERDENTAL <br />SPACE
+          <br />OF THE INTERDENTAL
+          <br />SPACE
         </h3>
         <div class="onel">
           <p>
-            <a href="/#/InterdentalBrush">Learn More</a>
+            <a href="#">Learn More</a>
           </p>
           <p>
-            <a href="http://curaprox.cf/#/shop/5fe1c094cb1555b636987209">Buy</a>
+            <a href="#">Buy</a>
           </p>
         </div>
       </template>
@@ -124,9 +129,10 @@ export default {
   },
   mounted() {
     console.log("data", this.ProductData);
-    window.scrollTo(0, 0);
+    window.scrollTo(0,0);
   },
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+</style>

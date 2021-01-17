@@ -36,10 +36,10 @@
         <h3>CS SINGLE</h3>
         <div class="onel">
           <p>
-            <a href="/#/Cs1006">Learn More</a>
+            <a href="#">Learn More</a>
           </p>
           <p>
-            <a href="http://curaprox.cf/#/shop/5fb61d9d782b62d5d5bf0264">Buy</a>
+            <a href="#">Buy</a>
           </p>
         </div>
       </template>
@@ -51,7 +51,10 @@
         </h3>
         <div class="onel">
           <p>
-            <a href="http://curaprox.cf/#/shop/5fb6187e782b62d5d5bf0262">Buy</a>
+            <a href="#">Learn More</a>
+          </p>
+          <p>
+            <a href="#">Buy</a>
           </p>
         </div>
       </template>
@@ -72,7 +75,10 @@
         <h3>THE ULTIMATE GUIDE</h3>
         <div class="onel">
           <p>
-            <a href="http://curaprox.cf/blog/#/clean-teeth">Learn More</a>
+            <a href="#">Learn More</a>
+          </p>
+          <p>
+            <a href="#">Buy</a>
           </p>
         </div>
       </template>
@@ -84,10 +90,10 @@
         </h3>
         <div class="onel">
           <p>
-            <a href="/#/InterdentalBrush">Learn More</a>
+            <a href="#">Learn More</a>
           </p>
           <p>
-            <a href="http://curaprox.cf/#/shop/5fe1c094cb1555b636987209">Buy</a>
+            <a href="#">Buy</a>
           </p>
         </div>
       </template>
