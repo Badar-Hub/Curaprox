@@ -84,6 +84,39 @@
         </p>
       </template>
     </ProFeaturedComponent>
+    <!-- <CategoryComponent
+      img-right="curaprox-toothpaste-teaser-biw-sonic-toothbrush-585x600.jpg"
+      img-left="curaprox-toothpaste-teaser-biw-585x600.jpg"
+    >
+      <template v-slot:left>
+        <h2 style="color:white">CS 5460</h2>
+        <h3 style="color:white">
+          THE MOST EFFECTIVE
+          <br />TOOTHBRUSH IN THE
+          <br />WORLD?
+        </h3>
+        <div class="onel">
+          <p>
+            <a style="color:white" href="#">Buy</a>
+          </p>
+        </div>
+      </template>
+      <template v-slot:right>
+        <h2 style="color:white">BLACK IS WHITE HYDROSONIC</h2>
+        <h3 style="color:white">
+          ORAL HEALTH GETS AN
+          <br />ELEGANT MAKEOVER
+        </h3>
+        <div class="onel">
+          <p>
+            <a style="color:white" href="#">Learn More</a>
+          </p>
+          <p>
+            <a style="color:white" href="#">Buy</a>
+          </p>
+        </div>
+      </template>
+    </CategoryComponent> -->
     <Footer />
   </div>
 </template>

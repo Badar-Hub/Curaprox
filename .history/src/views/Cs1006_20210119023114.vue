@@ -108,17 +108,7 @@
       :img="text4Slider.img"
     />
     <TextWithImg v-bind="TxtImg">
-      <Modal width="1198px" v-model="toggle">
-        <iframe
-          width="1198"
-          height="674"
-          src="https://www.youtube.com/embed/TB45OpaU4lc"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </Modal>
-      <button @click="toggle = !toggle">Video for solo technique</button>
+      <button>How to brush - the video</button>
     </TextWithImg>
     <CategoryComponent
       img-right="cps-colors.jpg"
@@ -179,7 +169,6 @@
 import Header2 from "../components/Layout/Header2";
 import Slider3 from "../components/Layout/Slider3";
 import DFTC from "../components/SP/DoubleFloatingTextComponent";
-import Modal from "../components/SP/Modal.vue";
 import Slider5 from "../components/Layout/Slider5";
 import SubPage from "../components/SP/SubPage";
 import FloatingText from "../components/SP/FloatingText";
@@ -192,7 +181,6 @@ export default {
     Header2,
     Slider3,
     DFTC,
-    Modal,
     Slider5,
     SubPage,
     FloatingText,
@@ -203,7 +191,6 @@ export default {
   },
   data() {
     return {
-      toggle: false,
       textSlider: {
         h2text: "5,460 GOOD REASONS",
         ptext:

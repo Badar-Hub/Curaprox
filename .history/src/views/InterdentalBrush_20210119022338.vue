@@ -71,11 +71,11 @@
         </h3>
         <p>
           <span style="color:white;">
-            <a href="http://curaprox.cf/blog/#/gum-care">Learn More</a>
+            <a href="link1.href">Learn More</a>
             >
           </span>
           <span style="color:white;">
-            <a href="http://curaprox.cf/#/shop">Buy</a>
+            <a href="link2.href">Buy</a>
             >
           </span>
         </p>
@@ -90,16 +90,10 @@
         <h3 style="color:white">TOOTH BY TOOTH</h3>
         <div class="onel">
           <p>
-            <a style="color:white" href="http://curaprox.cf/#/Cs1006"
-              >Learn More</a
-            >
+            <a style="color:white" href="#">Learn More</a>
           </p>
           <p>
-            <a
-              style="color:white"
-              href="http://curaprox.cf/#/shop/5fb61d9d782b62d5d5bf0264"
-              >Buy</a
-            >
+            <a style="color:white" href="#">Buy</a>
           </p>
         </div>
       </template>
@@ -111,16 +105,10 @@
         </h3>
         <div class="onel">
           <p>
-            <a style="color:#0167b1" href="http://curaprox.cf/#/Cs5460"
-              >Learn More</a
-            >
+            <a style="color:#0167b1" href="#">Learn More</a>
           </p>
           <p>
-            <a
-              style="color:#0167b1"
-              href="http://curaprox.cf/#/shop/5f82043e4a427122f3318fb2"
-              >Buy</a
-            >
+            <a style="color:#0167b1" href="#">Buy</a>
           </p>
         </div>
       </template>

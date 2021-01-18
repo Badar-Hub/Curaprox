@@ -112,13 +112,13 @@
         <iframe
           width="1198"
           height="674"
-          src="https://www.youtube.com/embed/TB45OpaU4lc"
+          src="https://www.youtube.com/embed/u_mOwkUmbZg"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         ></iframe>
       </Modal>
-      <button @click="toggle = !toggle">Video for solo technique</button>
+      <button @click="toggle = !toggle">How to brush - the video</button>
     </TextWithImg>
     <CategoryComponent
       img-right="cps-colors.jpg"

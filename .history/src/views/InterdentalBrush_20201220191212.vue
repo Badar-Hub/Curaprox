@@ -2,37 +2,29 @@
   <div>
     <Header2>
       <li>
-        <a class="font-futura-semi-medium" href="#/InterdentalBrushes"
-          >INTERDENTAL BRUSHES</a
-        >
+        <a class="font-futura-semi-medium" href="#/InterdentalBrushes">INTERDENTAL BRUSHES</a>
       </li>
     </Header2>
-    <Slider3
-      v-bind="SliderContent"
-      image="idb-overview-header-prime-colorfull-1200x600.jpg"
-    >
+    <Slider3 v-bind="SliderContent" image="idb-overview-header-prime-colorfull-1200x600.jpg">
       <template v-slot:textOverlay>
         <p>CPS INTERDENTAL BRUSHES</p>
         <h2>
           THE
-          <br />INTERDENTAL <br />SECRET
+          <br />INTERDENTAL
+          <br />SECRET
         </h2>
         <p>
           So what’s the secret to exceptional cleanliness
-          <br />in those difficult-to-reach narrow spaces <br />between the
-          teeth? Super-fine, extra-long, <br />ultra-resilient filaments. Gentle
-          and effective <br />cleaning with a single-brush action. Once a day.
+          <br />in those difficult-to-reach narrow spaces
+          <br />between the teeth? Super-fine, extra-long,
+          <br />ultra-resilient filaments. Gentle and effective
+          <br />cleaning with a single-brush action. Once a day.
         </p>
       </template>
       <template v-slot:smShow>
         <p>CPS INTERDENTAL BRUSHES</p>
         <h2>THE INTERDENTAL SECRET</h2>
-        <p>
-          So what’s the secret to exceptional cleanliness in those
-          difficult-to-reach narrow spaces between the teeth? Super-fine,
-          extra-long, ultra-resilient filaments. Gentle and effective cleaning
-          with a single-brush action. Once a day.
-        </p>
+        <p>So what’s the secret to exceptional cleanliness in those difficult-to-reach narrow spaces between the teeth? Super-fine, extra-long, ultra-resilient filaments. Gentle and effective cleaning with a single-brush action. Once a day.</p>
       </template>
     </Slider3>
     <SubPage v-bind="textSlider" />
@@ -47,17 +39,9 @@
       pText="The front teeth, especially the lower ones, can be particularly close together. Flossing can be the best way to get into these interdental spaces to clean. Dental floss – especially when made of thick, fleecy thread – can also be used to effectively take care of dental implants."
     />
     <TextWithImg v-bind="TxtImg">
-      <Modal width="1198px" v-model="toggle">
-        <iframe
-          width="1198"
-          height="674"
-          src="https://www.youtube.com/embed/u_mOwkUmbZg"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </Modal>
-      <button @click="toggle = !toggle">How to brush - the video</button>
+      <button>
+        <a href="https://www.youtube.com/watch?v=u_mOwkUmbZg&feature=youtu.be">Video the correct use</a>
+      </button>
     </TextWithImg>
     <div class="row">
       <button class="btn">SHOP NOW</button>
@@ -67,15 +51,16 @@
         <h2 style="color:white;">GUM CARE</h2>
         <h3 style="color:white;">
           HOW TO DEAL WITH
-          <br />AND PREVENT <br />BLEEDING GUMS
+          <br />AND PREVENT
+          <br />BLEEDING GUMS
         </h3>
         <p>
           <span style="color:white;">
-            <a href="http://curaprox.cf/blog/#/gum-care">Learn More</a>
+            <a href="link1.href">Learn More</a>
             >
           </span>
           <span style="color:white;">
-            <a href="http://curaprox.cf/#/shop">Buy</a>
+            <a href="link2.href">Buy</a>
             >
           </span>
         </p>
@@ -90,16 +75,10 @@
         <h3 style="color:white">TOOTH BY TOOTH</h3>
         <div class="onel">
           <p>
-            <a style="color:white" href="http://curaprox.cf/#/Cs1006"
-              >Learn More</a
-            >
+            <a style="color:white" href="#">Learn More</a>
           </p>
           <p>
-            <a
-              style="color:white"
-              href="http://curaprox.cf/#/shop/5fb61d9d782b62d5d5bf0264"
-              >Buy</a
-            >
+            <a style="color:white" href="#">Buy</a>
           </p>
         </div>
       </template>
@@ -111,16 +90,10 @@
         </h3>
         <div class="onel">
           <p>
-            <a style="color:#0167b1" href="http://curaprox.cf/#/Cs5460"
-              >Learn More</a
-            >
+            <a style="color:#0167b1" href="#">Learn More</a>
           </p>
           <p>
-            <a
-              style="color:#0167b1"
-              href="http://curaprox.cf/#/shop/5f82043e4a427122f3318fb2"
-              >Buy</a
-            >
+            <a style="color:#0167b1" href="#">Buy</a>
           </p>
         </div>
       </template>
@@ -156,7 +129,6 @@ export default {
   },
   data() {
     return {
-      toggle: false,
       textSlider: {
         h2text: "THE PERFECT INTERDENTAL BRUSHES FOR YOU – GUARANTEED",
         ptext:
@@ -251,9 +223,9 @@ export default {
       },
     };
   },
-  mounted() {
-    window.scrollTo(0, 0);
-  },
+  mounted(){
+    window.scrollTo(0,0);
+  }
 };
 </script>
 

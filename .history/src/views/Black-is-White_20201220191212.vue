@@ -17,44 +17,34 @@
         <p>TOOTHPASTE BLACK IS WHITE</p>
         <h2>
           WHITER
-          <br />TEETH – THE <br />GENTLE WAY
+          <br />TEETH – THE
+          <br />GENTLE WAY
         </h2>
         <p>
           Black Is White toothpaste removes stains gently.
-          <br />No bleaching agents. No harsh, abrasive <br />ingredients. The
-          activated carbon simply <br />absorbs unattractive, discoloured
-          particles <br />caused by things like smoking, coffee or red
+          <br />No bleaching agents. No harsh, abrasive
+          <br />ingredients. The activated carbon simply
+          <br />absorbs unattractive, discoloured particles
+          <br />caused by things like smoking, coffee or red
           <br />wine.
         </p>
       </template>
       <template v-slot:smShow>
         <p>TOOTHPASTE BLACK IS WHITE</p>
         <h2>WHITER TEETH – THE GENTLE WAY</h2>
-        <p>
-          Black Is White toothpaste removes stains gently. No bleaching agents.
-          No harsh, abrasive ingredients. The activated carbon simply absorbs
-          unattractive, discoloured particles caused by things like smoking,
-          coffee or red wine.
-        </p>
+        <p>Black Is White toothpaste removes stains gently. No bleaching agents. No harsh, abrasive ingredients. The activated carbon simply absorbs unattractive, discoloured particles caused by things like smoking, coffee or red wine.</p>
       </template>
     </Slider3>
     <SubPage v-bind="textSlider" />
     <SubPage row-direction="row-reverse" v-bind="text2Slider" />
     <SubPage v-bind="text3Slider" />
     <GifComponent img="curaprox-toothpaste-biw-image-fullwith-1200x400.jpg" />
-    <FloatingText
-      style="background-color:#f9f9f9"
+    <FloatingText style="background-color:#f9f9f9"
       h2-text="Why Black Is White?  Beautiful, whiter teeth give you new confidence. But normal whitening toothpastes are harmful. Curaprox – the oral health experts – show that you can have the best of both worlds. Gentle, natural, effective whitening with activated carbon."
     />
     <div class="floatingtxt">
-      <h2 class="font-futura-semi-bold">
-        TEETH WHITENING WITH ACTIVATED CARBON
-      </h2>
-      <p class="font-info">
-        Activated carbon is completely natural. Because it’s porous, it simply
-        absorbs discoloured particles. It whitens teeth and keeps your mouth
-        feeling fresh.
-      </p>
+      <h2 class="font-futura-semi-bold">TEETH WHITENING WITH ACTIVATED CARBON</h2>
+      <p class="font-info">Activated carbon is completely natural. Because it’s porous, it simply absorbs discoloured particles. It whitens teeth and keeps your mouth feeling fresh.</p>
     </div>
 
     <ProFeaturedComponent img="need-post-whitening-new-1200x600.jpg">
@@ -66,24 +56,49 @@
         </h3>
         <p>
           <span>
-            <a
-              style="color:white"
-              href="http://curaprox.cf/blog/#/teeth-whitening"
-              >Learn More</a
-            >
+            <a style="color:white" href="link1.href">Learn More</a>
             >
           </span>
           <span>
-            <a
-              style="color:white"
-              href="http://curaprox.cf/#/shop/5fe0bad6cb1555b636987202"
-              >Buy</a
-            >
+            <a style="color:white" href="link2.href">Buy</a>
             >
           </span>
         </p>
       </template>
     </ProFeaturedComponent>
+    <!-- <CategoryComponent
+      img-right="curaprox-toothpaste-teaser-biw-sonic-toothbrush-585x600.jpg"
+      img-left="curaprox-toothpaste-teaser-biw-585x600.jpg"
+    >
+      <template v-slot:left>
+        <h2 style="color:white">CS 5460</h2>
+        <h3 style="color:white">
+          THE MOST EFFECTIVE
+          <br />TOOTHBRUSH IN THE
+          <br />WORLD?
+        </h3>
+        <div class="onel">
+          <p>
+            <a style="color:white" href="#">Buy</a>
+          </p>
+        </div>
+      </template>
+      <template v-slot:right>
+        <h2 style="color:white">BLACK IS WHITE HYDROSONIC</h2>
+        <h3 style="color:white">
+          ORAL HEALTH GETS AN
+          <br />ELEGANT MAKEOVER
+        </h3>
+        <div class="onel">
+          <p>
+            <a style="color:white" href="#">Learn More</a>
+          </p>
+          <p>
+            <a style="color:white" href="#">Buy</a>
+          </p>
+        </div>
+      </template>
+    </CategoryComponent> -->
     <Footer />
   </div>
 </template>
@@ -177,26 +192,26 @@ export default {
       },
     };
   },
-  mounted() {
-    window.scrollTo(0, 0);
-  },
+  mounted(){
+    window.scrollTo(0,0);
+  }
 };
 </script>
 
 <style scoped>
 .floatingtxt {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: 1200px;
-  margin: auto;
+  flex-wrap:wrap;
+  justify-content:center;
+  max-width:1200px;
+  margin:auto
 }
 
-h2 {
-  font-size: 3.6rem;
-  margin-bottom: 0;
+h2{
+  font-size:3.6rem;
+  margin-bottom:0;
 }
-p {
-  font-size: 2rem;
+p{
+  font-size:2rem
 }
 </style>

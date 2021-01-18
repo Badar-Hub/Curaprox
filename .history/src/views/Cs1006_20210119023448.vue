@@ -118,7 +118,7 @@
           allowfullscreen
         ></iframe>
       </Modal>
-      <button @click="toggle = !toggle">Video for solo technique</button>
+      <button @click="toggle = !toggle">How to brush - the video</button>
     </TextWithImg>
     <CategoryComponent
       img-right="cps-colors.jpg"
