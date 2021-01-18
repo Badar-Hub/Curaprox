@@ -119,10 +119,16 @@
                 <div
                   class="row fit justify-start items-center q-gutter-xs q-col-gutter no-wrap"
                 >
-                  <img
-                    class="related-products"
-                    :src="`${(!isDev ? '/admin/' : '') + prod.img}`"
-                  />
+                  <div
+                    v-for="prod in relatedProducts"
+                    :key="prod._id"
+                    class="rounded-borders col-3 full-height"
+                  >
+                    <img
+                      class="related-products"
+                      :src="`${(!isDev ? '/admin/' : '') + prod.img}`"
+                    />
+                  </div>
                 </div>
               </q-carousel-slide>
               <q-carousel-slide :name="2" class="column no-wrap">

@@ -137,12 +137,10 @@
         </h3>
         <div class="onel">
           <p>
-            <a style="color:#0167b1" href="http://curaprox.cf/blog/#/gum-care"
-              >Learn More</a
-            >
+            <a style="color:#0167b1" href="#">Learn More</a>
           </p>
           <p>
-            <a style="color:#0167b1" href="http://curaprox.cf/#/shop">Buy</a>
+            <a style="color:#0167b1" href="#">Buy</a>
           </p>
         </div>
       </template>
