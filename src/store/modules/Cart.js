@@ -40,7 +40,7 @@ const mutations = {
     if (prod) {
       console.log(prod.cartQty, prod.qty, product.qty, "update mutation");
       prod.cartQty += product.cartQty;
-      prod.total = prod.cartQty * prod.price;
+      prod.total = prod.cartQty * (prod.discount ? prod.discount : prod.price);
       console.log(
         "test",
         state.products.find((p) => p.id == product.id)
